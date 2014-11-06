@@ -229,18 +229,6 @@
       "1.0.2"
     ],
     [
-      "vbelolapotkov:munchkin-accounts",
-      "0.0.1"
-    ],
-    [
-      "vbelolapotkov:munchkin-game",
-      "0.0.1"
-    ],
-    [
-      "vbelolapotkov:munchkin-lobby",
-      "0.0.1"
-    ],
-    [
       "webapp",
       "1.1.4"
     ],

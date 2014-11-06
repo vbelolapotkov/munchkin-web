@@ -8,8 +8,21 @@ Package.onUse(function (api) {
     var both = ['client', 'server'];
 
     api.use('meteor-platform', both);
-    
-    api.addFiles('./views/index.html','client');
-    api.addFiles('./views/styles.css','client');
+    api.use('vbelolapotkov:munchkin-accounts');
+    api.use('vbelolapotkov:munchkin-lobby');
+
+
     api.addFiles('namespace.js', both);
+    api.addFiles('views/header.html','client');
+    api.addFiles('views/footer.html','client');
+    api.addFiles('views/layout.html','client');
+    api.addFiles('views/index.html','client');
+    api.addFiles('views/page_not_found.html', 'client');
+    api.addFiles('views/styles.css','client');
+    api.addFiles('views/loading.html','client');
+    
+
+    //EXPORT FOR TEST AND DEBUG ONLY
+    api.export('Munchkin', both);
+
 });

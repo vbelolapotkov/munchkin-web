@@ -1,0 +1,28 @@
+@CHARSET "UTF-8";
+
+/* Lobby styles */
+.lobby {
+    background-color: #fffda9;
+    margin: 30px auto 0 auto;
+    width: 90%;
+    padding-top: 30px;
+}
+
+.main,.main a {
+    font-size: 16px;
+    font-family: "Courier New", sans;
+    color: #7a4300;
+}
+
+.main h1 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.main {
+    background-color: #fed19a;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 74.074074%;
+    min-height: 200px;
+}

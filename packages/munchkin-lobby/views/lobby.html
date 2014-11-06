@@ -1,0 +1,9 @@
+<template name="munchkinLobby">
+    <div id="gameLobby" class="lobby">
+        <div class="main">
+            {{#each gamesOnServer}}
+                <h1><a href="{{pathFor 'munchkinGamePage'}}" name="">{{_id}}:{{name}}</a></h1>  
+            {{/each}}
+        </div>
+    </div>
+</template>
