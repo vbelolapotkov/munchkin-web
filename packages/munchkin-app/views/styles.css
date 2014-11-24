@@ -66,7 +66,7 @@ a:hover {
     top: 60px;
     margin: 0 auto;
     padding: 0 20px;
-    width: 66.666667%;
+    width: 60%;
     height: 60px;
     background-color: #7a4300;
 }
@@ -109,7 +109,7 @@ a:hover {
 
 .footer {
     font-size: 0.7em;
-    background-color: #fffda9;
+    /*background-color: #fffda9;*/
     margin: 0 auto;
     width: 90%;
     height: 50px;
@@ -119,3 +119,13 @@ a:hover {
     padding-top: 10px;
 }
 
+.accessDenied {
+    min-height: 400px;
+    padding: 30px 0;
+    text-align: center;
+}
+.deniedMessage {
+    font-family: "Courier New", sans;
+    font-weight: bold;
+    color: red;
+}

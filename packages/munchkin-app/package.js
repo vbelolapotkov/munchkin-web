@@ -20,6 +20,7 @@ Package.onUse(function (api) {
     api.addFiles('views/page_not_found.html', 'client');
     api.addFiles('views/styles.css','client');
     api.addFiles('views/loading.html','client');
+    api.addFiles('views/access_denied.html', 'client');
     
 
     //EXPORT FOR TEST AND DEBUG ONLY

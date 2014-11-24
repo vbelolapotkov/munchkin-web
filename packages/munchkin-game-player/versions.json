@@ -1,22 +1,6 @@
 {
   "dependencies": [
     [
-      "accounts-base",
-      "1.1.2"
-    ],
-    [
-      "accounts-password",
-      "1.0.4"
-    ],
-    [
-      "accounts-ui",
-      "1.1.3"
-    ],
-    [
-      "accounts-ui-unstyled",
-      "1.1.4"
-    ],
-    [
       "application-configuration",
       "1.0.3"
     ],
@@ -65,10 +49,6 @@
       "1.0.4"
     ],
     [
-      "email",
-      "1.0.4"
-    ],
-    [
       "fastclick",
       "1.0.1"
     ],
@@ -109,16 +89,8 @@
       "1.0.0"
     ],
     [
-      "less",
-      "1.0.11"
-    ],
-    [
       "livedata",
       "1.0.11"
-    ],
-    [
-      "localstorage",
-      "1.0.1"
     ],
     [
       "logging",
@@ -147,10 +119,6 @@
     [
       "mongo",
       "1.0.8"
-    ],
-    [
-      "npm-bcrypt",
-      "0.7.7"
     ],
     [
       "observe-sequence",
@@ -185,16 +153,8 @@
       "1.0.2"
     ],
     [
-      "service-configuration",
-      "1.0.2"
-    ],
-    [
       "session",
       "1.0.4"
-    ],
-    [
-      "sha",
-      "1.0.1"
     ],
     [
       "spacebars",
@@ -203,10 +163,6 @@
     [
       "spacebars-compiler",
       "1.0.3"
-    ],
-    [
-      "srp",
-      "1.0.1"
     ],
     [
       "templating",
@@ -227,22 +183,6 @@
     [
       "url",
       "1.0.2"
-    ],
-    [
-      "vbelolapotkov:munchkin-accounts",
-      "0.0.1"
-    ],
-    [
-      "vbelolapotkov:munchkin-game",
-      "0.0.1"
-    ],
-    [
-      "vbelolapotkov:munchkin-game-player",
-      "0.0.1"
-    ],
-    [
-      "vbelolapotkov:munchkin-lobby",
-      "0.0.1"
     ],
     [
       "webapp",

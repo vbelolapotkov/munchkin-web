@@ -12,4 +12,6 @@ Package.onUse(function (api) {
     
 
     api.addFiles('router.js',both);
+
+    api.export('Router');
 });

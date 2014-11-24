@@ -1,3 +1,41 @@
 <template name="munchkinGamePage">
-    Page for game with id: {{_id}} name: {{name}} description: "{{description}}"
+    <div class="gameArea">
+        <div class="itemsArea">
+            {{#if currentPlayer}}
+                {{> munchkinPlayerItems}}
+            {{/if}}
+        </div>
+        <div id="sideBarRigth" class="sideBarRight">
+            <div id="gameControls">Game controls</div>
+            <div id="preview">Preview</div>
+        </div>
+        <div id="table" class="gameTableContainer">
+            <div class="playersArea">
+                {{#if currentPlayer}}
+                    {{#with currentPlayer}}
+                        {{> currentPlayerStats}}
+                        {{> playerHand}}
+                    {{/with}}
+                {{else}}
+                    <input id="addPlayer" type="button" class="joinBtn" value="Присоединиться к игре">
+                {{/if}}
+            </div>
+            <div class="decks">
+                <div id="decktres" class="deck">
+                    <img class="tres" src="/img/gold.gif" alt="treasure">
+                </div>
+                <div id="droptres" class="deck"></div>
+                <br>
+                <div id="deckdoors" class="deck">
+                    <img class="doors" src="/img/door.gif" alt="door">
+                </div>
+                <div id="dropdoors" class="deck"></div>   
+            </div>
+            
+          Page for game: {{name}}       
+      </div>
+      <!-- <div id="chat">Chat area</div>  -->
+
+
+  </div>
 </template>

@@ -1,0 +1,134 @@
+.playerItems {
+    /*border: 1px solid red;*/
+    min-height: 250px;
+    /*border-top: 1px solid #666;*/
+    background-color: #8f8f8f;
+    /*padding-left: 0.5%;*/
+}
+
+#tab-container
+{
+}
+ul.itemsTabs
+{
+    list-style: none;
+    padding: 0.5% 0.5% 0;
+    /*vertical-align: top;*/
+   /*text-align: center;*/
+}
+ul.itemsTabs > li
+{
+    display: inline-block;
+    width: 15%;
+    border: 1px solid #666;
+    border-radius: 10px 10px 0 0;
+    background-color: #ffcc33;
+    padding: 0 0.5%;
+    min-height: 2.25em;
+    vertical-align: top;
+}
+
+ul.itemsTabs > li:hover {
+    background-color: #ff9933;
+}
+
+ul.itemsTabs > li > span {
+    vertical-align: -0.5em;
+}
+
+ul.itemsTabs li.selected
+{
+   border-bottom: 1px solid #ffd484;
+   background-color: #ffd484;
+}
+
+.playerItemsArea {
+    min-height: 250px;
+    background-color: #ffd484;
+    border: 1px solid #666;
+    border-top: none;
+}
+
+/*.tabs,.playerItemsArea {
+    display: inline-block;
+}
+
+.tabs .tab,.playerItemsArea {
+    border: 1px solid gray;
+    background-color: #ffd484;
+    padding: 2px;
+}
+
+*/
+
+.currentPlayer {
+    border: 2px solid gray;
+    border-radius: 5px;
+    background-color: #ffd484;
+    /*font-size: 14pt;*/
+    padding: 2px;
+}
+
+.myHand {
+    width: 240px;
+    height: 360px;
+    margin: 2px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 5px;
+    overflow: auto;
+}
+
+.playerName {
+    margin: 0 0.5%;
+}
+
+.stats ul {
+    margin: 0 0.5%;
+    padding: 0;
+} 
+.stats li {
+    display: inline;
+    vertical-align: middle;
+    /*margin-left: 5px;*/
+}
+
+.stats .icon {
+    width: 1.3em;
+    height: 1.3em;
+    vertical-align: text-top;
+    /*border: none;*/
+    /*margin-right: 3px;*/
+}
+
+.statInput {
+    display: inline;
+    border:none;
+    padding: 0;
+    margin: 0;
+    width: 2em;
+
+}
+
+.decBtn,.incBtn {
+    /*width: 1.3em;
+    height: 1.3em;*/
+    background-color: #ffd484;
+    border: none;
+    padding: 0;
+    /*margin: 0;*/
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.decBtn {
+   color: red;
+}
+.incBtn {
+    color: green;
+}
+
+#setLevelBtn {
+    background: url('/icons/level.gif') center no-repeat;
+    background-size: contain;
+}

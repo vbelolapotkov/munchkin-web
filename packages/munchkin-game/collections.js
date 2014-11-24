@@ -1,6 +1,7 @@
-Game.Collections = {};
+Collections = {};
 
 //define collections here
-Game.Collections.Games = new Meteor.Collection('games');
+Collections.Games = new Mongo.Collection('games');
+
 
 

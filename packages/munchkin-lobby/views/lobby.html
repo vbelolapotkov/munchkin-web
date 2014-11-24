@@ -1,9 +1,34 @@
 <template name="munchkinLobby">
     <div id="gameLobby" class="lobby">
         <div class="main">
+            <h1>Игры на сервере</h1>
+            <table class="gamesOnServer">
+                <tr>
+                    <th>Название</th>
+                    <th>Создатель</th>
+                    <th>Дата создания</th>
+                    <th>Игроки</th>
+                </tr>
             {{#each gamesOnServer}}
-                <h1><a href="{{pathFor 'munchkinGamePage'}}" name="">{{_id}}:{{name}}</a></h1>  
+            <tr>
+                <td>
+                    <a href="{{pathFor 'munchkinGamePage'}}" name="">{{name}}</a>   
+                </td>
+                <td>
+                    {{owner}}
+                </td>
+                <td>
+                    {{createdStr}}
+                </td>
+                <td>{{playersCnt}}</td>
+            </tr>
             {{/each}}
+            </table>
+            {{#if currentUser}}
+                {{> munchkinLobbyNewGame}}
+            {{else}}
+                <h2>Только авторизованные пользователи могут создавать игры</h2>
+            {{/if}}    
         </div>
     </div>
 </template>

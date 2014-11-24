@@ -1,5 +1,8 @@
 Template.munchkinLobby.helpers({
     gamesOnServer: function() {
-        return Game.Collections.Games.find();
+    return Game.getGamesOnServer();
+    },
+    playersCnt: function () {
+        return Game.getPlayersCnt(this._id);
     }
 });

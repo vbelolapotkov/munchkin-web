@@ -1,0 +1,84 @@
+.gameArea {
+    padding: 10px 0;
+    /*width: 60%;*/
+    margin: 0 auto;
+}
+
+.itemsArea {
+    padding: 0.5%;
+}
+
+.sideBarRight {
+    width: 19%;
+    float:right;
+}
+
+.gameTableContainer {
+    margin-right: 20%;
+    margin-left: 0.5%;
+    background-color: #8f8f8f;
+}
+
+.gameTableContainer,.sideBarRight {
+    padding: 0 0.5% 0.5%;
+    /*min-height: 400px;*/
+}
+
+.playersArea {
+    display: inline-block;
+    /*border: 1px solid red;*/
+    margin-top: 0.5%;
+}
+
+#gameControls,#preview,#chat {
+    border: 1px solid red;
+}
+
+#gameControls {
+    min-height: 30%;
+}
+
+#preview {
+    position: relative;
+    margin-top: 1%;
+    height: 70%;
+
+}
+
+#chat {
+    min-height: 50px;
+}
+
+input.joinBtn {
+    padding: 4px;
+    border: 2px solid #7a4300;
+    background-color: #7a4300;
+    font-family: "Courier New", sans;
+    font-weight: bold;
+    font-size: 1em;
+    color: #fed19a;
+}
+
+.doors,.tres,.deck {
+    width: 80px;
+    height: 120px;
+    border-radius: 10px;
+}
+
+.deck {
+    display: inline-block;
+    border: 1px solid orange;
+}   
+
+.decks {
+    display: inline-block;
+    margin-top: 0.5%;
+}
+
+.decks,.playersArea {
+    vertical-align: top;
+}
+
+.deck > img {
+    position: absolute;
+}
