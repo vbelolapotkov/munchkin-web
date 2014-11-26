@@ -9,6 +9,7 @@ Package.onUse(function (api) {
 
     api.use('meteor-platform');
     api.use('vbelolapotkov:munchkin-game', both);
+    api.use('vbelolapotkov:munchkin-player', both);
 
     api.addFiles('namespace.js', both);
     api.addFiles('views/lobby.html','client');

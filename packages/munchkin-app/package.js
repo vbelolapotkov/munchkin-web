@@ -10,6 +10,8 @@ Package.onUse(function (api) {
     api.use('meteor-platform', both);
     api.use('vbelolapotkov:munchkin-accounts');
     api.use('vbelolapotkov:munchkin-lobby');
+    api.use('vbelolapotkov:munchkin-resources-game');
+    api.use('vbelolapotkov:munchkin-resources-player');
 
 
     api.addFiles('namespace.js', both);
@@ -24,6 +26,6 @@ Package.onUse(function (api) {
     
 
     //EXPORT FOR TEST AND DEBUG ONLY
-    api.export('Munchkin', both);
+    // api.export('Munchkin', both);
 
 });

@@ -20,6 +20,7 @@ Routes.gamePage = {
         Meteor.subscribe('gameId', this.params._id);
         Meteor.subscribe('playersForGame', this.params._id);
         Meteor.subscribe('gameStats',this.params._id);
+        Meteor.subscribe('gameDecks',this.params._id);
     },
     data: function() {
         return Game.getGameData(this.params._id);

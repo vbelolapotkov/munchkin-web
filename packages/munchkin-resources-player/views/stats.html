@@ -1,0 +1,60 @@
+<template name="playerStats">
+    <div class="stats">
+        <div class="playerName">P{{position}}: {{formatedName}}</div>
+            {{#with stats}}
+                <ul>
+                    <li name="level">
+                        <img src="/icons/level.gif" alt="level" class="icon">
+                        {{level}}
+                    </li>
+                    <li name="power">
+                        <img src="/icons/power.png" alt="power" class="icon">
+                        {{power}}
+                    </li>
+                    <li name="gender">
+                        <img src="/icons/gender.png" alt="gender" class="icon">
+                        {{gender}}
+                    </li>
+                    <li name="cardsCnt">
+                        <img src="/icons/cards.png" alt="cards" class="icon">
+                        {{cardsCnt}}
+                    </li>
+                </ul>
+            {{/with}}
+    </div>
+</template>
+
+<template name="currentPlayerStats">
+    <div class="stats currentPlayer">
+        <div class="playerName">P{{position}}: {{formatedName}}</div>
+        {{#if stats}}
+            {{#with stats}}
+                <ul>
+                    <li name="level">
+                        <img src="/icons/level.gif" alt="level" class="icon" id="setLevel">
+                        <input type="button" class="decBtn" id="decLevel" value="-">
+                        {{level}}
+                        <input type="button" class="incBtn" id="incLevel" value="+">
+                        
+                    </li>
+                    <li name="power">
+                        <img src="/icons/power.png" alt="power" class="icon" id="setPower">
+                        <input type="button" class="decBtn" id="decPower" value="-">
+                        {{power}}
+                        <input type="button" class="incBtn" id="incPower" value="+">
+                    </li>
+                    <li name="gender">
+                        <img src="/icons/gender.png" alt="gender" class="icon" id="changeGender">
+                        {{gender}}
+                    </li>
+                    <li name="cardsCnt">
+                        <img src="/icons/cards.png" alt="cards" class="icon">
+                        {{cardsCnt}}
+                    </li>
+                </ul>
+            {{/with}}
+        {{else}}
+            {{initStats}}
+        {{/if}}
+    </div>
+</template>

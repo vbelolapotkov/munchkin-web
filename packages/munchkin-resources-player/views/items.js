@@ -3,10 +3,10 @@ Template.munchkinPlayerItems.rendered = function () {
 };
 Template.munchkinPlayerItems.helpers({
     playerInGame: function () {
-        return Player.Collections.Players.find({gameId:this._id});
+        return Player.getGamePlayers(this._id);
     },
     currentPlayer: function () {
-        return Player.Collections.Players.findOne({gameId:this._id, userId:Meteor.userId()});
+        return Player.getData(this._id, Meteor.userId());
     },
     isCurrentPlayer: function () {
         return this.userId === Meteor.userId();

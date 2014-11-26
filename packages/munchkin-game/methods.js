@@ -1,15 +1,17 @@
 Game.getGamesOnServer = function () {
-    return Collections.Games.find({},{sort: {created: -1}});
+    return gamesCollection.find({},{sort: {created: -1}});
 };
 
 Game.getGameData = function (id) {
-    return Collections.Games.findOne(id);
-};
-
-Game.getPlayersCnt = function (id) {
-    return Player.Collections.Players.find({gameId:id}).count();
+    return gamesCollection.findOne(id);
 };
 
 Game.createGame = function (options, callback) {
-    Meteor.call('addNewGame', options, callback);
+    Meteor.call('addNewGame', options, function (error, result) {
+        if(!error) {
+            Deck.create(result, [1]);
+            Player.add(result);
+        }
+        callback(error, result);
+    });
 };

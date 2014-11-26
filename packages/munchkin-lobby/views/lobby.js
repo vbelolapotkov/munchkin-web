@@ -3,6 +3,6 @@ Template.munchkinLobby.helpers({
     return Game.getGamesOnServer();
     },
     playersCnt: function () {
-        return Game.getPlayersCnt(this._id);
+        return Player.getCnt(this._id);
     }
 });

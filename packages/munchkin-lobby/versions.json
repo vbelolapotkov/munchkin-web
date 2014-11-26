@@ -189,7 +189,11 @@
       "0.0.1"
     ],
     [
-      "vbelolapotkov:munchkin-game-player",
+      "vbelolapotkov:munchkin-player",
+      "0.0.1"
+    ],
+    [
+      "vbelolapotkov:munchkin-resources-deck",
       "0.0.1"
     ],
     [

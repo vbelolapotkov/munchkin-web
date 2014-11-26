@@ -1,9 +1,10 @@
 <template name="munchkinGamePage">
     <div class="gameArea">
         <div class="itemsArea">
-            {{#if currentPlayer}}
-                {{> munchkinPlayerItems}}
-            {{/if}}
+            {{#unless currentPlayer}}
+                    <input id="addPlayer" type="button" class="joinBtn" value="Присоединиться к игре">
+            {{/unless}}
+            {{> munchkinPlayerItems}}
         </div>
         <div id="sideBarRigth" class="sideBarRight">
             <div id="gameControls">Game controls</div>
@@ -16,8 +17,6 @@
                         {{> currentPlayerStats}}
                         {{> playerHand}}
                     {{/with}}
-                {{else}}
-                    <input id="addPlayer" type="button" class="joinBtn" value="Присоединиться к игре">
                 {{/if}}
             </div>
             <div class="decks">
@@ -31,11 +30,6 @@
                 </div>
                 <div id="dropdoors" class="deck"></div>   
             </div>
-            
-          Page for game: {{name}}       
       </div>
-      <!-- <div id="chat">Chat area</div>  -->
-
-
   </div>
 </template>

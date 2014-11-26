@@ -8,8 +8,8 @@ Template.playerStats.helpers({
         return formatName(this.displayname,25);
     },
     stats: function () {
-        return Player.Collections.Stats.findOne({playerId:this._id});
-    }
+       return Collections.Stats.findOne({playerId:this._id});
+    },
 });
 
 Template.currentPlayerStats.helpers({
@@ -17,7 +17,17 @@ Template.currentPlayerStats.helpers({
         return formatName(this.displayname,25);
     },
     stats: function () {
-        return Player.Collections.Stats.findOne({playerId:this._id});
+        return Collections.Stats.findOne({playerId:this._id});
+    },
+    initStats: function () {
+        Collections.Stats.insert({
+            playerId: this._id,
+            gameId: this.gameId,
+            level: 1,
+            power: 1,
+            gender: 'M',
+            cardsCnt: 0
+        });
     }
 });
 
@@ -26,7 +36,7 @@ Template.currentPlayerStats.events({
         var val = +prompt("Level");
         if (!val) return;
         if (val<1) return;
-        var col = Player.Collections.Stats;
+        var col = Collections.Stats;
         var stat = col.findOne({playerId:this.playerId});
         if(!stat) return;
         col.update(stat._id,{$set: {level: val}}, function (error) {
@@ -36,7 +46,7 @@ Template.currentPlayerStats.events({
         });
     },
     'click #incLevel': function () {
-        var col = Player.Collections.Stats;
+        var col = Collections.Stats;
         var stat = col.findOne({playerId:this.playerId});
         if(!stat) return;
         col.update(stat._id, {$inc: {level: 1, power: 1}}, function (error) {
@@ -46,7 +56,7 @@ Template.currentPlayerStats.events({
         });
     },
     'click #decLevel': function () {
-        var col = Player.Collections.Stats;
+        var col = Collections.Stats;
         var stat = col.findOne({playerId:this.playerId});
         if(!stat || stat.level<2) return;
         col.update(col.findOne({playerId:this.playerId})._id, {$inc: {level: -1, power: -1}}, function (error) {
@@ -59,7 +69,7 @@ Template.currentPlayerStats.events({
         var val = +prompt("Power");
         if (!val) return;
         if (val<1) return;
-        var col = Player.Collections.Stats;
+        var col = Collections.Stats;
         var stat = col.findOne({playerId:this.playerId});
         if(!stat) return;
         col.update(stat._id,{$set: {power: val}}, function (error) {
@@ -69,7 +79,7 @@ Template.currentPlayerStats.events({
         });
     },
     'click #incPower': function () {
-        var col = Player.Collections.Stats;
+        var col = Collections.Stats;
         var stat = col.findOne({playerId:this.playerId});
         if(!stat) return;
         col.update(stat._id, {$inc: {power: 1}}, function (error) {
@@ -79,9 +89,9 @@ Template.currentPlayerStats.events({
         });
     },
     'click #decPower': function () {
-        var col = Player.Collections.Stats;
+        var col = Collections.Stats;
         var stat = col.findOne({playerId:this.playerId});
-        if(!stat || stat.power<2) return;
+        if(!stat || stat.power<stat.level+1) return;
         col.update(stat._id, {$inc: {power: -1}}, function (error) {
             if (error) {
                 throw new Meteor.Error(105, 'Error modifying player stats: decPower');
@@ -89,7 +99,7 @@ Template.currentPlayerStats.events({
         });
     },
     'click #changeGender': function () {
-        var col = Player.Collections.Stats;
+        var col = Collections.Stats;
         var stat = col.findOne({playerId:this.playerId});
         if(!stat) return;
         var newGender = stat.gender === 'M' ? 'F' : 'M';

@@ -8,12 +8,11 @@ Package.onUse(function (api) {
     var both = ['client', 'server'];
 
     api.use('meteor-platform', both);
-    api.use('vbelolapotkov:munchkin-game-player', both);
+    api.use('vbelolapotkov:munchkin-player', both);
+    api.use('vbelolapotkov:munchkin-resources-deck', both);
+    
 
     api.addFiles('namespace.js', both);
-    api.addFiles('views/game_page.css', 'client');
-    api.addFiles('views/game_page.html', 'client');
-    api.addFiles('views/game_page.js', 'client');
     api.addFiles('collections.js', both);
     api.addFiles('server.js', 'server');
     api.addFiles('methods.js', 'client');
