@@ -3,6 +3,9 @@ Meteor.publish('gameDecks', function (gameId) {
     ];
 });
 
+if(Door) Door.remove({});
+if(Tres) Tres.remove({});
+
 Meteor.methods({
     'addCards': function (gameId, sup) {
         //read files for selected

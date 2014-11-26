@@ -1,3 +1,7 @@
+if(Collections.Stats)Collections.Stats.remove({});
+if(Collections.Hand)Collections.Hand.remove({});
+if(Collections.Items)Collections.Items.remove({});
+
 Meteor.publish('gameStats', function(gameId) {
     return Collections.Stats.find({
         gameId: gameId
