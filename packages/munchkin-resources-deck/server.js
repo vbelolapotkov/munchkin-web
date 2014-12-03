@@ -3,6 +3,30 @@ Meteor.publish('gameDecks', function (gameId) {
     ];
 });
 
+Door.allow({
+    insert: function (userId, doc) {
+        return true;
+    },
+    update: function (userId, doc, fields, modifier) {
+        return true;
+    },
+    remove: function (userId, doc) {
+        return true;
+    }
+});
+
+Tres.allow({
+    insert: function (userId, doc) {
+        return true;
+    },
+    update: function (userId, doc, fields, modifier) {
+        return true;
+    },
+    remove: function (userId, doc) {
+        return true;
+    }
+});
+
 if(Door) Door.remove({});
 if(Tres) Tres.remove({});
 

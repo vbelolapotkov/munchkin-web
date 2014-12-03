@@ -19,8 +19,10 @@ Routes.gamePage = {
     waitOn: function() {
         Meteor.subscribe('gameId', this.params._id);
         Meteor.subscribe('playersForGame', this.params._id);
+        Meteor.subscribe('gameTable', this.params._id);
         Meteor.subscribe('gameStats',this.params._id);
         Meteor.subscribe('gameDecks',this.params._id);
+        Meteor.subscribe('gameDrop', this.params._id);
     },
     data: function() {
         return Game.getGameData(this.params._id);

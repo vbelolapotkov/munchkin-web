@@ -1,10 +1,6 @@
 {
     "imgPath": "/img/",
     "doors": [{
-        "name": "cover",
-        "path": "",
-        "file": "door.gif"
-    }, {
         "name": "monster001",
         "path": "doors1/",
         "file": "monster001.gif"
@@ -390,10 +386,6 @@
         "file": "monster095.gif"
     }],
     "treasures": [{
-        "name": "cover",
-        "path": "",
-        "file": "gold.gif"
-    }, {
         "name": "gold001",
         "path": "tres1/",
         "file": "gold001.gif"

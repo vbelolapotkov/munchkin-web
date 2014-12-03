@@ -1,8 +1,12 @@
 <template name="playerHand">
-    <div class="currentPlayer">
+    <div id="currentPlayerArea">
+        {{> currentPlayerStats}}
+        <div class="currentPlayer">
         <div>Рука</div>
         <div class="myHand">
             {{msg}}
         </div>
     </div>
+    </div>
+    
 </template>

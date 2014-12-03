@@ -10,11 +10,10 @@
             <div id="gameControls">Game controls</div>
             <div id="preview">Preview</div>
         </div>
-        <div id="table" class="gameTableContainer">
+        <div id="gameTable" class="gameTableContainer">
             <div class="playersArea">
                 {{#if currentPlayer}}
                     {{#with currentPlayer}}
-                        {{> currentPlayerStats}}
                         {{> playerHand}}
                     {{/with}}
                 {{/if}}
@@ -25,10 +24,10 @@
                 </div>
                 <div id="droptres" class="deck"></div>
                 <br>
-                <div id="deckdoors" class="deck">
-                    <img class="doors" src="/img/door.gif" alt="door">
+                <div id="deckdoor" class="deck">
+                    <img class="door" src="/img/door.gif" alt="door">
                 </div>
-                <div id="dropdoors" class="deck"></div>   
+                <div id="dropdoor" class="deck"></div>   
             </div>
       </div>
   </div>

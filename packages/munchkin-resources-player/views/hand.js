@@ -10,3 +10,14 @@ Template.playerHand.helpers({
         if(x) return x[1];
     }
 });
+
+Template.playerHand.events({
+    'dragover #currentPlayerArea': function (e) {
+        e.preventDefault();
+    },
+    'drop #currentPlayerArea': function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('Droped to hand');
+    }
+});

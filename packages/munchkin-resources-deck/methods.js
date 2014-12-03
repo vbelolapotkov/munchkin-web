@@ -11,3 +11,15 @@ Deck.create = function (gameId, supplements) {
 Deck.shuffle = function (gameId, deck) {
     
 };
+
+Deck.getCard = function (gameId, type) {
+    var card;
+    var deck;
+    if (type === 'door') deck = Door;
+    if (type === 'tres') deck = Tres;
+    if(!deck) return;
+    card = deck.findOne({gameId: gameId},{sort: {index: -1}});
+    card.type = type;
+    if(card._id) deck.remove(card._id);
+    return card;
+};
