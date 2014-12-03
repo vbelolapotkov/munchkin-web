@@ -1,3 +1,56 @@
+Template.munchkinGamePage.rendered = function () {
+    var gameTable = Collections.Table.find({gameId: this.data._id});
+    var gameDrop = Collections.Drop.find({gameId: this.data._id});
+    this.observeTable = gameTable.observe({
+        added: function (doc) {
+            var dropTo = document.getElementById('gameTable');
+            var elem = document.createElement('img');
+            elem.id = doc.card._id;
+            elem.className = doc.card.type;
+            elem.src = doc.card.file;
+            elem.style.top = doc.coords.top + 'px';
+            elem.style.left = doc.coords.left + 'px';
+            elem.setAttribute('draggable', 'true');
+            dropTo.appendChild(elem);
+        }, // Use either added() OR(!) addedBefore()
+        changed: function (newDoc, oldDoc) {
+            var elem = document.getElementById(newDoc.card._id);
+            elem.style.top = newDoc.coords.top + 'px';
+            elem.style.left = newDoc.coords.left + 'px';
+        },
+        removed: function (oldDoc) {
+            var elem = document.getElementById(oldDoc.card._id);
+            var gameTable = document.getElementById('gameTable');
+            gameTable.removeChild(elem);
+        }
+    });
+    this.observeDrop = gameDrop.observe({
+        added: function (doc) {
+            var dropTo = document.getElementById('drop'+doc.card.type);
+            var elem = document.createElement('img');
+            elem.id = doc.card._id;
+            elem.className = doc.card.type;
+            elem.src = doc.card.file;
+            elem.setAttribute('draggable', 'true');
+            dropTo.appendChild(elem);
+        },
+        changed: function (newDoc, oldDoc) {
+            // ...
+        },
+        removed: function (doc) {
+            var elem = document.getElementById(doc.card._id);
+            var drop = document.getElementById('drop'+doc.card.type);
+            drop.removeChild(elem);
+        }
+    });
+
+};
+
+Template.munchkinGamePage.destroyed = function () {
+    if (this.observeTable) this.observeTable.stop();
+    if (this.observeDrop) this.observeDrop.stop();
+};
+
 Template.munchkinGamePage.helpers({
     currentPlayer: function() {
         return Player.getData(this._id, Meteor.userId());
@@ -22,13 +75,9 @@ Template.munchkinGamePage.events({
         var data = JSON.parse(e.dataTransfer.getData("text"));
         var cardElem = data.cardElem;
         var fromElem = data.fromElem;
-        var dropTo = {};
         var targetCoords = getCoords(e.currentTarget);
-        dropTo.elem = e.currentTarget;
-        dropTo.downX = e.originalEvent.pageX - targetCoords.left;
-        dropTo.downY = e.originalEvent.pageY - targetCoords.top;
-        var top = dropTo.downY - cardElem.shiftY;
-        var left = dropTo.downX - cardElem.shiftX;
+        var top = e.originalEvent.pageY - targetCoords.top - cardElem.shiftY;
+        var left = e.originalEvent.pageX - targetCoords.left - cardElem.shiftX;
         var card = {};
         if (!cardElem.id) {
             //get new card from deck
@@ -37,9 +86,6 @@ Template.munchkinGamePage.events({
                 alert('Error: cannot get card from deck: ' + cardElem.type);
                 return;
             }
-            var elem = createCard(card);
-            elem.style.top = top + 'px';
-            elem.style.left = left + 'px';
             Collections.Table.insert({
                 gameId: this._id,
                 card: card,
@@ -49,30 +95,24 @@ Template.munchkinGamePage.events({
                 }
             }, function(error, result) {
                 if (error) alert(error.reason);
-                else dropTo.elem.appendChild(elem);
             });
         } else {
             //the card is known, move it to table
-            cardElem.elem = document.getElementById(cardElem.id);
-            
             switch (fromElem.id) {
                 case 'gameTable':
                     //card moved on table, update db
-                    Collections.Table.update(Collections.Table.findOne({
+                    var cardId = Collections.Table.findOne({
                         gameId: this._id,
                         'card._id': cardElem.id
-                    })._id, {
+                    })._id;
+                    Collections.Table.update(cardId, {
                         $set: {
+                            'card.id': cardElem.id,
                             'coords.top': top,
                             'coords.left': left
                         }
                     }, function(error, result) {
                         if (error) alert(error.reason);
-                        else {
-                            cardElem.elem.style.top = top + 'px';
-                            cardElem.elem.style.left = left + 'px';
-                            dropTo.elem.appendChild(cardElem.elem);
-                        }
                     });
                     break;
                 case 'drop':
@@ -85,9 +125,6 @@ Template.munchkinGamePage.events({
                     Collections.Drop.remove(card._id, function (error, result) {
                         if (error) alert(error.reason);
                         else {
-                            cardElem.elem.style.top = top + 'px';
-                            cardElem.elem.style.left = left + 'px';
-                            dropTo.elem.appendChild(cardElem.elem);
                             Collections.Table.insert({
                                 gameId: card.gameId,
                                 card: card.card,
@@ -116,10 +153,13 @@ Template.munchkinGamePage.events({
         var fromElem = data.fromElem;
         var dropTo = {};
         dropTo.elem = e.currentTarget;
+        //do not drop unknown card
         if (!cardElem.id) return;
+
         cardElem.elem = document.getElementById(cardElem.id);
         //checking if the drop is correct
         if (('drop' + cardElem.type) !== dropTo.elem.id) return;
+
         switch (fromElem.id) {
             case 'gameTable':
                 var cardDoc = Collections.Table.findOne({
@@ -129,8 +169,6 @@ Template.munchkinGamePage.events({
                 Collections.Table.remove(cardDoc._id, function(error, result) {
                     if (error) alert(error.reason);
                     else {
-                        cardElem.elem.removeAttribute('style');
-                        dropTo.elem.appendChild(cardElem.elem);
                         Collections.Drop.insert({
                             gameId: cardDoc.gameId,
                             card: cardDoc.card,
@@ -163,7 +201,6 @@ Template.munchkinGamePage.events({
         var gameId = this._id;
         $('#gameTable > img').each(function () {
             var img = this;
-            var dropTo = document.getElementById('drop'+getType(img));
             var cardDoc = Collections.Table.findOne({
                     gameId: gameId,
                     'card._id': img.id
@@ -171,8 +208,6 @@ Template.munchkinGamePage.events({
                 Collections.Table.remove(cardDoc._id, function(error, result) {
                     if (error) alert(error.reason);
                     else {
-                        img.removeAttribute('style');
-                        dropTo.appendChild(img);
                         Collections.Drop.insert({
                             gameId: cardDoc.gameId,
                             card: cardDoc.card,
