@@ -8,8 +8,6 @@ Package.onUse(function (api) {
     var both = ['client', 'server'];
 
     api.use('iron:router',both);
-    api.use('vbelolapotkov:munchkin-game', both);
-    
 
     api.addFiles('router.js',both);
 

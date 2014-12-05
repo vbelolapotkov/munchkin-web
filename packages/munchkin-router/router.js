@@ -2,7 +2,6 @@ var requireLogin = function() {
     if (!Meteor.user()) {
         if (Meteor.loggingIn()) this.render(this.loadingTemplate);
         else this.render('munchkinAccessDenied');
-        // this.next();
     } else this.next();
 };
 
@@ -19,29 +18,18 @@ Routes.gamePage = {
     waitOn: function() {
         Meteor.subscribe('gameId', this.params._id);
         Meteor.subscribe('playersForGame', this.params._id);
-        Meteor.subscribe('gameTable', this.params._id);
-        Meteor.subscribe('gameStats',this.params._id);
-        Meteor.subscribe('gameDecks',this.params._id);
-        Meteor.subscribe('gameDrop', this.params._id);
     },
     data: function() {
-        return Game.getGameData(this.params._id);
+        if(!this.ready()) return;
+        return {_id: this.params._id};
     },
     onBeforeAction: requireLogin
 };
-// Routes.lobbyNewGame = {
-//     path: '/newgame',
-//     onBeforeAction: requireLogin
-// };
 Router.configure({
     layoutTemplate: 'munchkinLayout',
     loadingTemplate: 'munchkinLoading',
 });
-// Router.onBeforeAction(requireLogin, {
-//     only: ['munchkinGamePage', 'munchkinLobbyNewGame']
-// });
 Router.map(function() {
     this.route('munchkinLobby', Routes.lobby);
     this.route('munchkinGamePage', Routes.gamePage);
-    // this.route('munchkinLobbyNewGame', Routes.lobbyNewGame);
 });

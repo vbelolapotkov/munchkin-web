@@ -1,9 +1,11 @@
 <template name="munchkinGamePage">
     <div class="gameArea">
-        <div class="itemsArea">
-            {{#unless currentPlayer}}
+        {{#unless currentPlayer}}
+                    Партия создана пользователем {{gameOwner}} <br>
                     <input id="addPlayer" type="button" class="joinBtn" value="Присоединиться к игре">
-            {{/unless}}
+        {{else}}   
+        <div class="itemsArea">
+            
             {{> munchkinPlayerItems}}
         </div>
         <div id="sideBarRigth" class="sideBarRight">
@@ -30,5 +32,6 @@
                 <div id="dropdoor" class="deck"></div>   
             </div>
       </div>
+      {{/unless}}
   </div>
 </template>

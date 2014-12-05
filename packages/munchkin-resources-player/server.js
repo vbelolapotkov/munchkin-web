@@ -13,9 +13,9 @@ Meteor.publish('gameItems', function(gameId) {
         gameId: gameId
     });
 });
-Meteor.publish('playerHand', function(gameId, playerId) {
+Meteor.publish('playerHand', function(playerId) {
     var player = Player.getDataById(playerId);
-    if (!player || player.gameId !== gameId || player.userId !== this.userId) return;
+    if (!player || player.userId !== this.userId) return;
     return Collections.Hand.find({
         playerId: playerId
     });
@@ -26,6 +26,18 @@ Collections.Stats.allow({
         return true;
     },
     insert: function (userId, doc) {
+        return true;
+    }
+});
+
+Collections.Hand.allow({
+    insert: function (userId, doc) {
+        return true;
+    },
+    update: function (userId, doc, fields, modifier) {
+        return true;
+    },
+    remove: function (userId, doc) {
         return true;
     }
 });

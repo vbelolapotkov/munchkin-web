@@ -8,9 +8,34 @@ Template.playerStats.helpers({
         return formatName(this.displayname,25);
     },
     stats: function () {
-       return Collections.Stats.findOne({playerId:this._id});
+        return Collections.Stats.findOne({playerId:this._id});
     },
 });
+
+Template.currentPlayerStats.rendered = function () {
+    //check if there is stats for current player
+    //if not create one
+    
+    var self = this;
+    var subscription = Meteor.subscribe('gameStats', self.data.gameId);
+    
+    Tracker.autorun(function () {
+        if(!subscription.ready()) return;
+        console.log('trying to find stats for player '+self.data._id);
+        var myStats = Collections.Stats.findOne({playerId:self.data._id});
+        if (!myStats) {
+        Collections.Stats.insert({
+            playerId: self.data._id,
+            gameId: self.data.gameId,
+            level: 1,
+            power: 1,
+            gender: 'M',
+            cardsCnt: 0
+        });
+    }
+    });
+};
+
 
 Template.currentPlayerStats.helpers({
     formatedName: function () {
@@ -18,16 +43,6 @@ Template.currentPlayerStats.helpers({
     },
     stats: function () {
         return Collections.Stats.findOne({playerId:this._id});
-    },
-    initStats: function () {
-        Collections.Stats.insert({
-            playerId: this._id,
-            gameId: this.gameId,
-            level: 1,
-            power: 1,
-            gender: 'M',
-            cardsCnt: 0
-        });
     }
 });
 

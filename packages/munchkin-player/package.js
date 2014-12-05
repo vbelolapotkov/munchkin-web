@@ -11,7 +11,7 @@ Package.onUse(function (api) {
 
     api.addFiles('collections.js', both);
     api.addFiles('server.js', 'server');
-    api.addFiles('methods.js','client');
+    api.addFiles('methods.js', both);
 
     api.export('Player');
 });

@@ -71,12 +71,12 @@ ul.itemsTabs li.selected
 
 .myHand {
     width: 240px;
-    height: 360px;
+    min-height: 365px;
     margin: 2px;
     border: 1px solid gray;
     border-radius: 10px;
     padding: 5px;
-    overflow: auto;
+    /*overflow: none;*/
 }
 
 .playerName {

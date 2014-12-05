@@ -27,7 +27,6 @@
 <template name="currentPlayerStats">
     <div class="stats currentPlayer">
         <div class="playerName">P{{position}}: {{formatedName}}</div>
-        {{#if stats}}
             {{#with stats}}
                 <ul>
                     <li name="level">
@@ -53,8 +52,5 @@
                     </li>
                 </ul>
             {{/with}}
-        {{else}}
-            {{initStats}}
-        {{/if}}
     </div>
 </template>

@@ -1,12 +1,13 @@
 <template name="playerHand">
-    <div id="currentPlayerArea">
-        {{> currentPlayerStats}}
-        <div class="currentPlayer">
-        <div>Рука</div>
-        <div class="myHand">
-            {{msg}}
+    <!-- {{#if isSubscribed}} -->
+        <div id="currentPlayerArea">
+            {{> currentPlayerStats}}
+            <div class="currentPlayer">
+            <div>Рука</div>
+            <div id="myHand" class="myHand">
+                {{msg}}
+            </div>
         </div>
-    </div>
-    </div>
-    
+        </div>
+    <!-- {{/if}} -->
 </template>

@@ -8,6 +8,7 @@ Package.onUse(function (api) {
     var both = ['client', 'server'];
 
     api.use('meteor-platform', both);
+    api.use('reactive-var', both);
     api.use('vbelolapotkov:munchkin-game', both);
     api.use('vbelolapotkov:munchkin-resources-deck','client');
     api.use('vbelolapotkov:munchkin-player', both);
