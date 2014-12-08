@@ -5,7 +5,9 @@
             <div class="currentPlayer">
             <div>Рука</div>
             <div id="myHand" class="myHand">
-                {{msg}}
+                {{#each cardInHand}}
+                    <img id="{{this.card._id}}" class="{{this.card.type}}" src="{{this.card.file}}" alt="{{this.card.name}}" draggable="true">
+                {{/each}}
             </div>
         </div>
         </div>

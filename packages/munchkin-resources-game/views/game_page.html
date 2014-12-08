@@ -24,13 +24,24 @@
                 <div id="decktres" class="deck">
                     <img class="tres" src="/img/gold.gif" alt="treasure">
                 </div>
-                <div id="droptres" class="deck"></div>
+                <div id="droptres" class="deck">
+                    {{#each cardInDropTres}}
+                        <img id="{{this.card._id}}" class="tres" src="{{this.card.file}}" alt="{{this.card.name}}" draggable="true">
+                    {{/each}}
+                </div>
                 <br>
                 <div id="deckdoor" class="deck">
                     <img class="door" src="/img/door.gif" alt="door">
                 </div>
-                <div id="dropdoor" class="deck"></div>   
+                <div id="dropdoor" class="deck">
+                    {{#each cardInDropDoor}}
+                        <img id="{{this.card._id}}" class="door" src="{{this.card.file}}" alt="{{this.card.name}}" draggable="true">
+                    {{/each}}
+                </div>   
             </div>
+            {{#each cardOnTable}}
+                    <img id="{{this.card._id}}" class="{{this.card.type}}" src="{{this.card.file}}" alt="{{this.card.name}}" draggable="true" style="top: {{this.coords.top}}px; left:{{this.coords.left}}px;">
+            {{/each}}
       </div>
       {{/unless}}
   </div>

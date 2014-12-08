@@ -6,9 +6,6 @@
     /*padding-left: 0.5%;*/
 }
 
-#tab-container
-{
-}
 ul.itemsTabs
 {
     list-style: none;
@@ -70,13 +67,12 @@ ul.itemsTabs li.selected
 }
 
 .myHand {
-    width: 240px;
+    width: 250px;
     min-height: 365px;
     margin: 2px;
     border: 1px solid gray;
     border-radius: 10px;
     padding: 5px;
-    /*overflow: none;*/
 }
 
 .playerName {
@@ -105,9 +101,7 @@ ul.itemsTabs li.selected
     display: inline;
     border:none;
     padding: 0;
-    margin: 0;
-    width: 2em;
-
+    /*width: 2em;*/
 }
 
 .decBtn,.incBtn {

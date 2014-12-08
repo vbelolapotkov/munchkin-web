@@ -21,7 +21,6 @@ Template.currentPlayerStats.rendered = function () {
     
     Tracker.autorun(function () {
         if(!subscription.ready()) return;
-        console.log('trying to find stats for player '+self.data._id);
         var myStats = Collections.Stats.findOne({playerId:self.data._id});
         if (!myStats) {
         Collections.Stats.insert({

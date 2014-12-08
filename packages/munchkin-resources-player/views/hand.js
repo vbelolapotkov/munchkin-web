@@ -1,79 +1,78 @@
-var msg;
-var currentPlayerId = new ReactiveVar(null);
+var currentPlayerId;
 var subscriptions = {};
 subscriptions.init = function(playerId) {
+    listener.start();
     this.hand = Meteor.subscribe('playerHand', playerId);
-    var self = this;
-    this.computation = Tracker.autorun(function() {
-        console.log('waiting for currentPlayer hand');
-        if (!self.hand.ready()) return;
-        observers.start();
-    });
 };
-Tracker.autorun(function() {
-    if (!currentPlayerId.get()) return;
-    var playerId = currentPlayerId.get();
-    console.log('subscribing to player resources:' + playerId);
-    subscriptions.init(playerId);
-});
-var observers = {};
-observers.start = function() {
-    var self = this;
-    console.log('creating new hand observer');
-    var playerId = currentPlayerId.get();
-    var myHand = Collections.Hand.find({
-        playerId: playerId
-    });
-    self.observeHand = myHand.observe({
-        added: function(doc) {
-            var elem = document.createElement('img');
-            elem.id = doc.card._id;
-            elem.className = doc.card.type;
-            elem.src = doc.card.file;
-            elem.setAttribute('draggable', 'true');
-            var hand = document.getElementById('myHand');
-            hand.appendChild(elem);
-        },
-        changed: function(newDoc, oldDoc) {
-            // ...
-        },
-        removed: function(doc) {
-            var elem = document.getElementById(doc.card._id);
-            var hand = document.getElementById('myHand');
-            hand.removeChild(elem);
-        }
-    });
+var listener = {
+    msg: null,
+    computation: null,
+    stop: function() {
+        if (this.computation) this.computation.stop();
+    },
+    start: function() {
+        this.stop();
+        var self = this;
+        var playerId = currentPlayerId;
+        this.computation = Tracker.autorun(function() {
+            listener.msg = Mediator.subscribe('hand');
+            if (!self.msg) return;
+            switch (self.msg.action) {
+                case 'insert':
+                    Collections.Hand.insert({
+                        playerId: playerId,
+                        card: self.msg.card
+                    });
+                    break;
+                case 'remove':
+                    removeFromHandHandler(playerId, self.msg.actor, self.msg.id, self.msg.coords);
+                    break;
+            }
+            Mediator.reset('hand');
+        });
+    }
 };
-observers.stop = function() {
-    if (this.observeHand) this.observeHand.stop();
+var removeFromHandHandler = function(playerId, actor, id, coords) {
+    var cardDoc = Collections.Hand.findOne({
+        playerId: playerId,
+        'card._id': id
+    });
+    if (!cardDoc) return;
+    Collections.Hand.remove(cardDoc._id, function(error) {
+        if (error) alert(error.reason);
+        else Mediator.publish(actor, {
+            action: 'insert',
+            actor: 'hand',
+            card: cardDoc.card,
+            coords: coords
+        });
+    });
 };
 Template.playerHand.rendered = function() {
-    console.log('player hand rendered');
-    console.log(observers);
     if (!this.data) return;
-    currentPlayerId.set(this.data._id);
+    if (currentPlayerId === this.data._id) return;
+    currentPlayerId = this.data._id;
+    subscriptions.init(currentPlayerId);
 };
-Template.munchkinGamePage.destroyed = function() {
-    observers.stop();
-};
+Template.munchkinGamePage.destroyed = function() {};
 Template.playerHand.helpers({
     // isSubscribed: function () {
     //     var subscription = Meteor.subscribe('playerHand',this.gameId, this._id);
     //     return subscription.ready();
     // },
-    msg: function() {
-        var x = Mediator.subscribe('hand');
-        if (x) return x[1];
+    cardInHand: function() {
+        return Collections.Hand.find({
+            playerId: this._id
+        });
     }
 });
 Template.playerHand.events({
-    'dragover #currentPlayerArea': function(e) {
+    'dragover #currentPlayerArea,#myHand': function(e) {
         e.preventDefault();
     },
     'drop #currentPlayerArea': function(e) {
         e.preventDefault();
         e.stopPropagation();
-        console.log('Droped to hand');
         e.dataTransfer = e.originalEvent.dataTransfer;
         var data = JSON.parse(e.dataTransfer.getData("text"));
         var cardElem = data.cardElem;
@@ -92,25 +91,34 @@ Template.playerHand.events({
             Collections.Hand.insert({
                 playerId: this._id,
                 card: card,
-                // coords: {
-                //     top: top,
-                //     left: left
-                // }
             }, function(error, result) {
                 if (error) alert(error.reason);
             });
         } else {
             //the card is known, move it to table
+            var options;
             switch (fromElem.id) {
                 case 'gameTable':
                     //card moved from table
                     //ask game package to remove the card from db
                     //and notify me to put it in hand
+                    options = {
+                        action: 'remove',
+                        actor: 'hand',
+                        id: cardElem.id
+                    };
+                    Mediator.publish('gameTable', options);
                     break;
                 case 'drop':
                     //card moved from drop to hand
                     //ask game package to remove the card from db
                     //and notify me to put it in hand
+                    options = {
+                        action: 'remove',
+                        actor: 'hand',
+                        id: cardElem.id
+                    };
+                    Mediator.publish('drop', options);
                     break;
                 case 'player':
                     //card played by current player
@@ -119,8 +127,39 @@ Template.playerHand.events({
                     break;
             }
         }
+    },
+    'dragstart #myHand': function(e) {
+        initDragStart(e, 'hand');
+        return true;
     }
 });
+var initDragStart = function(e, from) {
+    var draggedCard = getDraggedCard(e);
+    var draggedFrom = {
+        id: from
+    };
+    var data = {
+        cardElem: draggedCard,
+        fromElem: draggedFrom
+    };
+    e.dataTransfer = e.originalEvent.dataTransfer;
+    e.dataTransfer.setData("text", JSON.stringify(data));
+};
+var getDraggedCard = function(e) {
+    var card = {
+        type: getType(e.target),
+        id: e.target.id,
+    };
+    var targetCoords = getCoords(e.target);
+    card.shiftX = e.originalEvent.pageX - targetCoords.left;
+    card.shiftY = e.originalEvent.pageY - targetCoords.top;
+    return card;
+};
+var getType = function(elem) {
+    if (elem.classList.contains('door')) return 'door';
+    if (elem.classList.contains('tres')) return 'tres';
+    return;
+};
 var getCoords = function(elem) {
     var box = elem.getBoundingClientRect();
     var body = document.body;

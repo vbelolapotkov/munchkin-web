@@ -1,89 +1,125 @@
 //not subscribed for collections yet
-var currentGameId = new ReactiveVar(null);
+var currentGameId;
 var subscriptions = {};
 subscriptions.init = function(gameId) {
+    tableListener.start();
+    dropListener.start();
     this.table = Meteor.subscribe('gameTable', gameId);
     this.drop = Meteor.subscribe('gameDrop', gameId);
     this.deck = Meteor.subscribe('gameDecks', gameId);
-    var self = this;
-    this.computation = Tracker.autorun(function() {
-        if (!self.deck.ready() || !self.table.ready() || !self.drop.ready()) return;
-        observers.start();
+};
+var tableListener = {
+    msg: null,
+    computation: null,
+    stop: function() {
+        if (this.computation) this.computation.stop();
+    },
+    start: function() {
+        this.stop();
+        var self = this;
+        var gameId = currentGameId;
+        this.computation = Tracker.autorun(function() {
+            tableListener.msg = Mediator.subscribe('gameTable');
+            if (!self.msg) return;
+            switch (self.msg.action) {
+                case 'insert':
+                    Collections.Table.insert({
+                        gameId: gameId,
+                        card: self.msg.card,
+                        coords: self.msg.coords
+                    });
+                    break;
+                case 'remove':
+                    removeFromTableHandler(gameId, self.msg.actor, self.msg.id);
+                    break;
+            }
+            Mediator.reset('gameTable');
+        });
+    }
+};
+var removeFromTableHandler = function(gameId, actor, id) {
+    var cardDoc = Collections.Table.findOne({
+        gameId: gameId,
+        'card._id': id
+    });
+    if (!cardDoc) return;
+    Collections.Table.remove(cardDoc._id, function(error) {
+        if (error) alert(error.reason);
+        else Mediator.publish(actor, {
+            action: 'insert',
+            actor: 'gameTable',
+            card: cardDoc.card
+        });
     });
 };
-Tracker.autorun(function() {
-    if (!currentGameId.get()) return;
-    var gameId = currentGameId.get();
-    console.log('subscribing to game resources:' + gameId);
-    subscriptions.init(gameId);
-});
-var observers = {};
-observers.start = function() {
-    var self = this;
-    console.log('observers recomputed');
-    var gameId = currentGameId.get();
-    var gameTable = Collections.Table.find({
-        gameId: gameId
-    });
-    var gameDrop = Collections.Drop.find({
-        gameId: gameId
-    });
-    self.observeTable = gameTable.observe({
-        added: function(doc) {
-            var dropTo = document.getElementById('gameTable');
-            var elem = document.createElement('img');
-            elem.id = doc.card._id;
-            elem.className = doc.card.type;
-            elem.src = doc.card.file;
-            elem.style.top = doc.coords.top + 'px';
-            elem.style.left = doc.coords.left + 'px';
-            elem.setAttribute('draggable', 'true');
-            dropTo.appendChild(elem);
-        }, // Use either added() OR(!) addedBefore()
-        changed: function(newDoc, oldDoc) {
-            var elem = document.getElementById(newDoc.card._id);
-            elem.style.top = newDoc.coords.top + 'px';
-            elem.style.left = newDoc.coords.left + 'px';
+var dropListener = {
+    msg: null,
+    computation: null,
+    stop: function() {
+        if (this.computation) this.computation.stop();
+    },
+    start: function() {
+        var self = this;
+        var gameId = currentGameId;
+        this.computation = Tracker.autorun(function() {
+            dropListener.msg = Mediator.subscribe('drop');
+            if (!self.msg) return;
+            switch (self.msg.action) {
+                case 'insert':
+                    var card = self.msg.card;
+                    insertIntoDropHandler(card);
+                    break;
+                case 'remove':
+                    removeFromDropHandler(gameId, self.msg.actor, self.msg.id);
+                    break;
+            }
+            Mediator.reset('drop');
+        });
+    }
+};
+var insertIntoDropHandler = function(card) {
+    var topCard = Collections.Drop.find({
+        gameId: card.gameId,
+        'card.type': card.type
+    }, {
+        sort: {
+            'card.index': -1
         },
-        removed: function(oldDoc) {
-            var elem = document.getElementById(oldDoc.card._id);
-            var gameTable = document.getElementById('gameTable');
-            gameTable.removeChild(elem);
-        }
-    });
-    self.observeDrop = gameDrop.observe({
-        added: function(doc) {
-            var dropTo = document.getElementById('drop' + doc.card.type);
-            var elem = document.createElement('img');
-            elem.id = doc.card._id;
-            elem.className = doc.card.type;
-            elem.src = doc.card.file;
-            elem.setAttribute('draggable', 'true');
-            dropTo.appendChild(elem);
-        },
-        changed: function(newDoc, oldDoc) {
-            // ...
-        },
-        removed: function(doc) {
-            var elem = document.getElementById(doc.card._id);
-            var drop = document.getElementById('drop' + doc.card.type);
-            drop.removeChild(elem);
-        }
+        limit: 1,
+        reactive: false
+    }).fetch();
+    var topIndex = topCard[0] ? topCard[0].card.index : 0;
+    card.index = topIndex+1;
+    Collections.Drop.insert({
+        gameId: card.gameId,
+        card: card,
     });
 };
-observers.stop = function() {
-    if (this.observeDrop) this.observeDrop.stop();
-    if (this.observeTable) this.observerTable.stop();
+var removeFromDropHandler = function(gameId, actor, id) {
+    var cardDoc = Collections.Drop.findOne({
+        gameId: gameId,
+        'card._id': id
+    });
+    if (!cardDoc) return;
+    Collections.Drop.remove(cardDoc._id, function(error) {
+        if (error) alert(error.reason);
+        else Mediator.publish(actor, {
+            action: 'insert',
+            actor: 'drop',
+            card: cardDoc.card
+        });
+    });
 };
 Template.munchkinGamePage.rendered = function() {
-    console.log('game page rendered');
-    console.log(subscriptions);
     if (!this.data) return;
-    currentGameId.set(this.data._id);
+    if (currentGameId === this.data._id) return;
+    currentGameId = this.data._id;
+    subscriptions.init(currentGameId);
 };
 Template.munchkinGamePage.destroyed = function() {
     console.log('destroying gamePage');
-    observers.stop();
+    tableListener.stop();
+    dropListener.stop();
 };
 Template.munchkinGamePage.helpers({
     currentPlayer: function() {
@@ -92,6 +128,33 @@ Template.munchkinGamePage.helpers({
     gameOwner: function() {
         var gameData = Game.getGameData(this._id);
         if (gameData) return gameData.owner;
+    },
+    cardOnTable: function() {
+        return Collections.Table.find({
+            gameId: this._id
+        });
+    },
+    cardInDropTres: function() {
+        return Collections.Drop.find({
+            gameId: this._id,
+            'card.type': 'tres'
+        }, {
+            sort: {
+                'card.index': -1
+            },
+            limit: 1
+        });
+    },
+    cardInDropDoor: function() {
+        return Collections.Drop.find({
+            gameId: this._id,
+            'card.type': 'door'
+        }, {
+            sort: {
+                'card.index': -1
+            },
+            limit: 1
+        });
     }
 });
 Template.munchkinGamePage.events({
@@ -174,10 +237,20 @@ Template.munchkinGamePage.events({
                         }
                     });
                     break;
-                case 'player':
+                case 'hand':
                     //card played by current player
                     //ask player package to remove the card from db
                     //and notify me to put it on table
+                    var options = {
+                        action: 'remove',
+                        actor: 'gameTable',
+                        id: cardElem.id,
+                        coords: {
+                            top: top,
+                            left: left
+                        }
+                    };
+                    Mediator.publish('hand', options);
                     break;
             }
         }
@@ -205,17 +278,20 @@ Template.munchkinGamePage.events({
                 Collections.Table.remove(cardDoc._id, function(error, result) {
                     if (error) alert(error.reason);
                     else {
-                        Collections.Drop.insert({
-                            gameId: cardDoc.gameId,
-                            card: cardDoc.card,
-                        });
+                        insertIntoDropHandler(cardDoc.card);
                     }
                 });
                 break;
-            case 'player':
+            case 'hand':
                 //card played by current player
                 //ask player package to remove the card from db
                 //and notify me to put it on table
+                var options = {
+                    action: 'remove',
+                    actor: 'drop',
+                    id: cardElem.id,
+                };
+                Mediator.publish('hand', options);
                 break;
         }
     },
@@ -232,6 +308,7 @@ Template.munchkinGamePage.events({
         initDragStart(e, 'drop');
     },
     'dblclick #gameTable': function(e) {
+        e.preventDefault();
         e.stopPropagation();
         if (e.target.id !== 'gameTable') return false;
         var gameId = this._id;
@@ -244,10 +321,7 @@ Template.munchkinGamePage.events({
             Collections.Table.remove(cardDoc._id, function(error, result) {
                 if (error) alert(error.reason);
                 else {
-                    Collections.Drop.insert({
-                        gameId: cardDoc.gameId,
-                        card: cardDoc.card,
-                    });
+                    insertIntoDropHandler(cardDoc.card);
                 }
             });
         });
