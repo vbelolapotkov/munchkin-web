@@ -8,7 +8,7 @@
        </div>
        <div id="playerItemsArea" class="playerItemsArea">
            {{#each selectedPlayerItems}}
-              <img id="{{this.card._id}}" class="{{this.card.type}}" src="{{this.card.file}}" alt="{{this.card.name}}" draggable="{{isDraggable}}" style="top: {{this.coords.top}}px; left:{{this.coords.left}}px;">
+              <img id="{{this.card._id}}" class="{{this.card.type}} {{inBag}}" src="{{this.card.file}}" alt="{{this.card.name}}" draggable="{{isDraggable}}" style="top: {{this.coords.top}}px; left:{{this.coords.left}}px;">
            {{/each}}
        </div>
     </div>

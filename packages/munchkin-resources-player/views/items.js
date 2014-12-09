@@ -91,6 +91,9 @@ Template.munchkinPlayerItems.helpers({
     },
     isDraggable: function () {
         return checkPlayer().toString();
+    },
+    inBag: function () {
+        return this.isInBag ? 'inBag' : '';
     }
 });
 Template.munchkinPlayerItems.events({
@@ -207,15 +210,34 @@ Template.munchkinPlayerItems.events({
                             coords: {
                                 top: top,
                                 left: left
-                            }
+                            },
+                            isInBag: cardDoc.isInBag
                         });
                     });
                 break;
         }
+    },
+    'dblclick #playerItemsArea > img': function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        if(!checkPlayer())return;
+        toggleItem(e.target.id);
     }
 });
 var checkPlayer = function() {
     return selectedPlayer.get() === currentPlayerId;
+};
+
+var toggleItem = function (id) {
+    var cardDoc = Collections.Items.findOne({
+        playerId: currentPlayerId,
+        'card._id': id
+    });
+    if(!cardDoc) return;
+    var val = cardDoc.isInBag ? false : true;
+    Collections.Items.update(cardDoc._id, {$set: {isInBag: val}}, function (error) {
+        if(error) console.error(error.reason);
+    });
 };
 
 var initDragStart = function(e, from) {

@@ -55,6 +55,11 @@ ul.itemsTabs li.selected
     position: absolute;
 }
 
+.playerItemsArea > img.inBag {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
 
 /*.tabs,.playerItemsArea {
     display: inline-block;
