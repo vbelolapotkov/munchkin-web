@@ -19,10 +19,7 @@ var listener = {
             if (!self.msg) return;
             switch (self.msg.action) {
                 case 'insert':
-                    Collections.Hand.insert({
-                        playerId: playerId,
-                        card: self.msg.card
-                    });
+                    insertIntoHandHandler(playerId, self.msg.card);
                     break;
                 case 'remove':
                     removeFromHandHandler(playerId, self.msg.actor, self.msg.id, self.msg.coords);
@@ -32,22 +29,6 @@ var listener = {
         });
     }
 };
-var removeFromHandHandler = function(playerId, actor, id, coords) {
-    var cardDoc = Collections.Hand.findOne({
-        playerId: playerId,
-        'card._id': id
-    });
-    if (!cardDoc) return;
-    Collections.Hand.remove(cardDoc._id, function(error) {
-        if (error) alert(error.reason);
-        else Mediator.publish(actor, {
-            action: 'insert',
-            actor: 'hand',
-            card: cardDoc.card,
-            coords: coords
-        });
-    });
-};
 Template.playerHand.rendered = function() {
     if (!this.data) return;
     if (currentPlayerId === this.data._id) return;
@@ -56,10 +37,6 @@ Template.playerHand.rendered = function() {
 };
 Template.munchkinGamePage.destroyed = function() {};
 Template.playerHand.helpers({
-    // isSubscribed: function () {
-    //     var subscription = Meteor.subscribe('playerHand',this.gameId, this._id);
-    //     return subscription.ready();
-    // },
     cardInHand: function() {
         return Collections.Hand.find({
             playerId: this._id
@@ -88,12 +65,7 @@ Template.playerHand.events({
                 alert('Error: cannot get card from deck: ' + cardElem.type);
                 return;
             }
-            Collections.Hand.insert({
-                playerId: this._id,
-                card: card,
-            }, function(error, result) {
-                if (error) alert(error.reason);
-            });
+            insertIntoHandHandler(this._id, card);
         } else {
             //the card is known, move it to table
             var options;
@@ -133,6 +105,41 @@ Template.playerHand.events({
         return true;
     }
 });
+var removeFromHandHandler = function(playerId, actor, id, coords) {
+    var cardDoc = Collections.Hand.findOne({
+        playerId: playerId,
+        'card._id': id
+    });
+    if (!cardDoc) return;
+    Collections.Hand.remove(cardDoc._id, function(error) {
+        if (error) alert(error.reason);
+        else Mediator.publish(actor, {
+            action: 'insert',
+            actor: 'hand',
+            card: cardDoc.card,
+            coords: coords
+        });
+    });
+};
+var insertIntoHandHandler = function(playerId, card) {
+    var topCard = Collections.Hand.find({
+        playerId: playerId,
+    }, {
+        sort: {
+            'card.index': -1
+        },
+        limit: 1,
+        reactive: false
+    }).fetch();
+    var topIndex = topCard[0] ? topCard[0].card.index : 0;
+    card.index = topIndex + 1;
+    Collections.Hand.insert({
+        playerId: playerId,
+        card: card
+    }, function(error, result) {
+        if (error) alert(error.reason);
+    });
+};
 var initDragStart = function(e, from) {
     var draggedCard = getDraggedCard(e);
     var draggedFrom = {
