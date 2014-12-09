@@ -6,8 +6,10 @@
                <li class="{{selected}}"><span>Мои шмотки</span></li>{{/with}}{{#each playerInGame}}{{#unless isCurrentPlayer}}<li class="{{selected}}">{{> playerStats}}</li>{{/unless}}{{/each}}
             </ul>
        </div>
-       <div class="playerItemsArea">
-           
+       <div id="playerItemsArea" class="playerItemsArea">
+           {{#each selectedPlayerItems}}
+              <img id="{{this.card._id}}" class="{{this.card.type}}" src="{{this.card.file}}" alt="{{this.card.name}}" draggable="{{isDraggable}}" style="top: {{this.coords.top}}px; left:{{this.coords.left}}px;">
+           {{/each}}
        </div>
     </div>
 </template>

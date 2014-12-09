@@ -33,6 +33,10 @@ ul.itemsTabs > li > span {
     vertical-align: -0.5em;
 }
 
+ul.itemsTabs .closeBtn {
+    float: right;
+}
+
 ul.itemsTabs li.selected
 {
    border-bottom: 1px solid #ffd484;
@@ -40,11 +44,17 @@ ul.itemsTabs li.selected
 }
 
 .playerItemsArea {
+    position: relative;
     min-height: 250px;
     background-color: #ffd484;
     border: 1px solid #666;
     border-top: none;
 }
+
+.playerItemsArea > img {
+    position: absolute;
+}
+
 
 /*.tabs,.playerItemsArea {
     display: inline-block;

@@ -30,14 +30,14 @@ var tableListener = {
                     });
                     break;
                 case 'remove':
-                    removeFromTableHandler(gameId, self.msg.actor, self.msg.id);
+                    removeFromTableHandler(gameId, self.msg.actor, self.msg.id, self.msg.coords);
                     break;
             }
             Mediator.reset('gameTable');
         });
     }
 };
-var removeFromTableHandler = function(gameId, actor, id) {
+var removeFromTableHandler = function(gameId, actor, id, coords) {
     var cardDoc = Collections.Table.findOne({
         gameId: gameId,
         'card._id': id
@@ -48,7 +48,8 @@ var removeFromTableHandler = function(gameId, actor, id) {
         else Mediator.publish(actor, {
             action: 'insert',
             actor: 'gameTable',
-            card: cardDoc.card
+            card: cardDoc.card,
+            coords: coords
         });
     });
 };
@@ -70,7 +71,7 @@ var dropListener = {
                     insertIntoDropHandler(card);
                     break;
                 case 'remove':
-                    removeFromDropHandler(gameId, self.msg.actor, self.msg.id);
+                    removeFromDropHandler(gameId, self.msg.actor, self.msg.id, self.msg.coords);
                     break;
             }
             Mediator.reset('drop');
@@ -95,7 +96,7 @@ var insertIntoDropHandler = function(card) {
         card: card,
     });
 };
-var removeFromDropHandler = function(gameId, actor, id) {
+var removeFromDropHandler = function(gameId, actor, id, coords) {
     var cardDoc = Collections.Drop.findOne({
         gameId: gameId,
         'card._id': id
@@ -106,7 +107,8 @@ var removeFromDropHandler = function(gameId, actor, id) {
         else Mediator.publish(actor, {
             action: 'insert',
             actor: 'drop',
-            card: cardDoc.card
+            card: cardDoc.card,
+            coords: coords
         });
     });
 };
@@ -199,6 +201,7 @@ Template.munchkinGamePage.events({
             });
         } else {
             //the card is known, move it to table
+            var options;
             switch (fromElem.id) {
                 case 'gameTable':
                     //card moved on table, update db
@@ -208,7 +211,7 @@ Template.munchkinGamePage.events({
                     })._id;
                     Collections.Table.update(cardId, {
                         $set: {
-                            'card.id': cardElem.id,
+                            // 'card.id': cardElem.id,
                             'coords.top': top,
                             'coords.left': left
                         }
@@ -241,7 +244,7 @@ Template.munchkinGamePage.events({
                     //card played by current player
                     //ask player package to remove the card from db
                     //and notify me to put it on table
-                    var options = {
+                    options = {
                         action: 'remove',
                         actor: 'gameTable',
                         id: cardElem.id,
@@ -251,6 +254,18 @@ Template.munchkinGamePage.events({
                         }
                     };
                     Mediator.publish('hand', options);
+                    break;
+                case 'items':
+                    options = {
+                        action: 'remove',
+                        actor: 'gameTable',
+                        id: cardElem.id,
+                        coords: {
+                            top: top,
+                            left: left
+                        }
+                    };
+                    Mediator.publish('items', options);
                     break;
             }
         }
@@ -293,6 +308,14 @@ Template.munchkinGamePage.events({
                 };
                 Mediator.publish('hand', options);
                 break;
+            case 'items':
+                    options = {
+                        action: 'remove',
+                        actor: 'drop',
+                        id: cardElem.id,
+                    };
+                    Mediator.publish('items', options);
+                    break;
         }
     },
     'dragstart #gameTable > .door,#gameTable > .tres': function(e) {

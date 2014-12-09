@@ -16,8 +16,9 @@ var currentPlayer = {};
 var subscriptions = {};
 subscriptions.init = function() {
     var statsSubscription = Meteor.subscribe('gameStats', currentPlayer.gameId);
+    var handSubscription = Meteor.subscribe('playerHand', currentPlayer._id);
     Tracker.autorun(function(computation) {
-        if (!statsSubscription.ready()) return;
+        if (!statsSubscription.ready() || !handSubscription.ready()) return;
         var myStats = Collections.Stats.findOne({
             playerId: currentPlayer._id
         });
@@ -29,11 +30,11 @@ subscriptions.init = function() {
                 power: 1,
                 gender: 'M',
                 cardsCnt: 0
-            }, function(error, statId) {
+            }, function(error, id) {
                 if (error) console.error(error.reason);
-                else cardCounter.start(currentPlayer._id, statId);
+                else cardCounter.start(currentPlayer._id, id);
             });
-        }
+        } else cardCounter.start(currentPlayer._id, myStats._id);
         computation.stop();
     });
 };
@@ -44,17 +45,16 @@ var cardCounter = {
     },
     start: function(playerId, statId) {
         var self = this;
-        self.stop();
-        self.counter = Tracker.autorun(function() {
+        // self.stop();
+        console.log('starting new counter for player: '+playerId);
+        console.log('statid: '+statId);
+        this.counter = Tracker.autorun(function() {
             var count = Collections.Hand.find({
                 playerId: playerId
             }).count();
-            console.log('count changed');
-            console.log(count);
             Collections.Stats.update(statId, {
                 $set: {
-                    cardsCnt: count
-                }
+                    cardsCnt: count                }
             }, function(error) {
                 if (error) console.error(error.reason);
             });

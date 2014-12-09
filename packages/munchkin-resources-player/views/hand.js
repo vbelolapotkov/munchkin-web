@@ -97,6 +97,22 @@ Template.playerHand.events({
                     //ask player package to remove the card from db
                     //and notify me to put it on table
                     break;
+                case 'items':
+                    var cardDoc = Collections.Items.findOne({
+                        playerId: currentPlayerId,
+                        'card._id': cardElem.id
+                    });
+                    Collections.Items.remove(cardDoc._id, function (error) {
+                        if(error) alert (error.reason);
+                        else {
+                            Collections.Hand.insert(
+                            {
+                                playerId: currentPlayerId,
+                                card: cardDoc.card,
+                            });
+                        }
+                    });
+                    break;
             }
         }
     },
