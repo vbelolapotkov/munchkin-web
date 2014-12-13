@@ -9,7 +9,15 @@ Deck.create = function (gameId, supplements) {
 };
 
 Deck.shuffle = function (gameId, deck) {
-    
+    var deckCol;
+    if (deck === 'door') deckCol = Door;
+    if (deck === 'tres') deckCol = Tres;
+    var cursor = deckCol.find({gameId:gameId});
+    var cnt = cursor.count();
+    var shuffledIndex = _.shuffle(_.range(cnt));
+    cursor.map(function (card, index) {
+        deckCol.update(card._id, {$set: {index: shuffledIndex[index]}});
+    }, shuffledIndex);
 };
 
 Deck.getCard = function (gameId, type) {
@@ -22,4 +30,14 @@ Deck.getCard = function (gameId, type) {
     card.type = type;
     if(card._id) deck.remove(card._id);
     return card;
+};
+
+var shuffleArray = function (d) {
+    for (var c = d.length - 1; c > 0; c--) {
+        var b = Math.floor(Math.random() * (c + 1));
+        var a = d[c];
+        d[c] = d[b];
+        d[b] = a;
+    }
+    return d;
 };

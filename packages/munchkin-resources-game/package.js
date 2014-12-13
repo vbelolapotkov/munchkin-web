@@ -13,10 +13,15 @@ Package.onUse(function (api) {
     api.use('vbelolapotkov:munchkin-resources-deck','client');
     api.use('vbelolapotkov:munchkin-player', both);
     api.use('vbelolapotkov:munchkin-resources-mediator','client');
+    api.use('vbelolapotkov:munchkin-resources-preview', 'client');
 
     api.addFiles('collections.js', both);
     api.addFiles('server.js', 'server');
+    api.addFiles('views/dice.html', 'client');
+    api.addFiles('views/dice.css', 'client');
+    api.addFiles('views/dice.js', 'client');
     api.addFiles('views/game_page.css', 'client');
     api.addFiles('views/game_page.html', 'client');
     api.addFiles('views/game_page.js', 'client');
+
 });

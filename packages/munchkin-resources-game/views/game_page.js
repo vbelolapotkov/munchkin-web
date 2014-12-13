@@ -7,6 +7,7 @@ subscriptions.init = function(gameId) {
     this.table = Meteor.subscribe('gameTable', gameId);
     this.drop = Meteor.subscribe('gameDrop', gameId);
     this.deck = Meteor.subscribe('gameDecks', gameId);
+    this.dice = Meteor.subscribe('gameDice', gameId);
 };
 var tableListener = {
     msg: null,
@@ -90,7 +91,7 @@ var insertIntoDropHandler = function(card) {
         reactive: false
     }).fetch();
     var topIndex = topCard[0] ? topCard[0].card.index : 0;
-    card.index = topIndex+1;
+    card.index = topIndex + 1;
     Collections.Drop.insert({
         gameId: card.gameId,
         card: card,
@@ -170,6 +171,10 @@ Template.munchkinGamePage.events({
     },
     'dragover #gameTable,#dropdoor,#droptres': function(e) {
         e.preventDefault();
+    },
+    'drop #sideBarRight': function(e) {
+        e.preventDefault();
+        e.stopPropagation();
     },
     'drop #gameTable': function(e) {
         e.preventDefault();
@@ -309,13 +314,13 @@ Template.munchkinGamePage.events({
                 Mediator.publish('hand', options);
                 break;
             case 'items':
-                    options = {
-                        action: 'remove',
-                        actor: 'drop',
-                        id: cardElem.id,
-                    };
-                    Mediator.publish('items', options);
-                    break;
+                options = {
+                    action: 'remove',
+                    actor: 'drop',
+                    id: cardElem.id,
+                };
+                Mediator.publish('items', options);
+                break;
         }
     },
     'dragstart #gameTable > .door,#gameTable > .tres': function(e) {
@@ -348,6 +353,38 @@ Template.munchkinGamePage.events({
                 }
             });
         });
+    },
+    'contextmenu #gameTable > img': function(e) {
+        e.preventDefault();
+        var elem = e.target;
+        if (elem && elem.src) Preview.viewCard(elem.src);
+    },
+    'contextmenu #dropdoor > img,#droptres > img': function(e) {
+        e.preventDefault();
+        var elem = e.target;
+        if (!elem || !elem.src) return;
+        var dropType = getType(elem);
+        var cursor = Collections.Drop.find({
+            gameId: currentGameId,
+            'card.type': dropType
+        }, {
+            sort: {
+                'card.index': -1
+            }
+        });
+        if(!cursor) return;
+        Preview.viewDrop(cursor);
+    },
+    'click #rollDice': function() {
+        var player = Player.getData(this._id, Meteor.userId());
+        if (!player) return;
+        Dice.roll(this._id, player.displayname);
+    },
+    'click #shuffleDoor': function() {
+        Deck.shuffle(this._id, 'door');
+    },
+    'click #shuffleTres': function() {
+        Deck.shuffle(this._id, 'tres');
     }
 });
 var initDragStart = function(e, from) {

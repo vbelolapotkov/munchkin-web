@@ -1,0 +1,27 @@
+.diceContainer {
+    width: 20%;
+    float: right;
+    margin-right: 0.5%
+}
+
+.diceRollContainer {
+    background-color: #66CC99;
+    margin-bottom: 1%;
+    border: 1px solid gray;
+    padding: 1px;
+    /*border-radius: 5px;*/
+}
+
+.diceClose {
+    float: right;
+}
+
+.diceRollContainer .diceCloseBtn {
+    border: 0 solid;
+    color: white;
+    background-color: red;
+}
+
+.diceRollContainer .diceMsg {
+    font-family: "Courier New", sans;
+}

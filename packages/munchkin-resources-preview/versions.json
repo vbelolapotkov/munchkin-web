@@ -185,11 +185,7 @@
       "1.0.2"
     ],
     [
-      "vbelolapotkov:munchkin-player",
-      "0.0.1"
-    ],
-    [
-      "vbelolapotkov:munchkin-resources-deck",
+      "vbelolapotkov:munchkin-resources-mediator",
       "0.0.1"
     ],
     [

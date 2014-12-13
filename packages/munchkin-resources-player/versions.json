@@ -38,7 +38,7 @@
     ],
     [
       "ddp",
-      "1.0.11"
+      "1.0.12"
     ],
     [
       "deps",
@@ -118,7 +118,7 @@
     ],
     [
       "mongo",
-      "1.0.8"
+      "1.0.9"
     ],
     [
       "observe-sequence",
@@ -201,6 +201,10 @@
       "0.0.1"
     ],
     [
+      "vbelolapotkov:munchkin-resources-preview",
+      "0.0.1"
+    ],
+    [
       "webapp",
       "1.1.4"
     ],
@@ -210,6 +214,6 @@
     ]
   ],
   "pluginDependencies": [],
-  "toolVersion": "meteor-tool@1.0.35",
+  "toolVersion": "meteor-tool@1.0.36",
   "format": "1.0"
 }

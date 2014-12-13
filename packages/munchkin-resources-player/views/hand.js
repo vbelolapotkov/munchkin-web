@@ -119,6 +119,12 @@ Template.playerHand.events({
     'dragstart #myHand': function(e) {
         initDragStart(e, 'hand');
         return true;
+    },
+    'contextmenu #myHand > img': function (e) {
+         e.preventDefault();
+         var elem = e.target;
+         if(elem && elem.src)
+            Preview.viewCard(elem.src);
     }
 });
 var removeFromHandHandler = function(playerId, actor, id, coords) {

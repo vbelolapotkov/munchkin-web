@@ -7,7 +7,6 @@ subscriptions.init = function() {
     var itemsSubscription = Meteor.subscribe('gameItems', currentGameId);
     Tracker.autorun(function(computation) {
         if (!itemsSubscription.ready()) return;
-        console.log('all items info loaded');
         computation.stop();
     });
 };
@@ -222,7 +221,14 @@ Template.munchkinPlayerItems.events({
         e.stopPropagation();
         if(!checkPlayer())return;
         toggleItem(e.target.id);
+    },
+    'contextmenu #playerItemsArea > img': function (e) {
+         e.preventDefault();
+         var elem = e.target;
+         if(elem && elem.src)
+            Preview.viewCard(elem.src);
     }
+
 });
 var checkPlayer = function() {
     return selectedPlayer.get() === currentPlayerId;

@@ -1,0 +1,24 @@
+.cardPreviewArea {
+    /*min-height: 320px;*/
+    padding: 1%;
+    text-align: center;
+}
+
+.cardPreviewArea > img {
+    height: 300px;
+    width: 200px;
+    border-radius: 25px;
+}
+
+.cardPreviewControls {
+    padding: 1%;
+}
+
+.cardPreviewControls ul {
+    display: table;
+    width: 100%;
+}
+.cardPreviewControls li {
+    display: table-cell;
+    text-align: center;
+}

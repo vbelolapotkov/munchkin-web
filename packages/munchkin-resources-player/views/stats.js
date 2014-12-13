@@ -45,9 +45,6 @@ var cardCounter = {
     },
     start: function(playerId, statId) {
         var self = this;
-        // self.stop();
-        console.log('starting new counter for player: '+playerId);
-        console.log('statid: '+statId);
         this.counter = Tracker.autorun(function() {
             var count = Collections.Hand.find({
                 playerId: playerId

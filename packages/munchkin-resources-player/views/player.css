@@ -49,6 +49,7 @@ ul.itemsTabs li.selected
     background-color: #ffd484;
     border: 1px solid #666;
     border-top: none;
+    overflow: auto;
 }
 
 .playerItemsArea > img {
@@ -82,12 +83,13 @@ ul.itemsTabs li.selected
 }
 
 .myHand {
-    width: 250px;
-    min-height: 365px;
+    width: 260px;
+    min-height: 370px;
     margin: 2px;
     border: 1px solid gray;
     border-radius: 10px;
     padding: 5px;
+    /*overflow: auto;*/
 }
 
 .playerName {

@@ -1,23 +1,36 @@
 <template name="munchkinGamePage">
     <div class="gameArea">
         {{#unless currentPlayer}}
-                    Партия создана пользователем {{gameOwner}} <br>
-                    <input id="addPlayer" type="button" class="joinBtn" value="Присоединиться к игре">
+        Партия создана пользователем {{gameOwner}} <br>
+        <input id="addPlayer" type="button" class="joinBtn" value="Присоединиться к игре">
         {{else}}   
         <div class="itemsArea">
-            
+
             {{> munchkinPlayerItems}}
         </div>
-        <div id="sideBarRigth" class="sideBarRight">
-            <div id="gameControls">Game controls</div>
-            <div id="preview">Preview</div>
-        </div>
+        
         <div id="gameTable" class="gameTableContainer">
+            <div id="sideBarRight" class="sideBarRight">
+                <div id="gameControlsContainer">
+                    <ul class="gameControls">
+                        <li>
+                            <button id="rollDice"><img src="/icons/dice.gif" alt="кубик"></button>
+                        </li>
+                        <li><button id="shuffleDoor">Перемешать Двери</button></li>
+                        <li><button id="shuffleTres">Перемешать Сокр.</button></li>
+                        <li><button>Чат</button></li>
+                        <li><button>Лог</button></li>
+                        <li><button>Выход</button></li>
+                    </ul>
+                </div>
+                <div id="previewContainer">{{> cardPreview}}</div>
+            </div>
+            {{> gameDice}}
             <div class="playersArea">
                 {{#if currentPlayer}}
-                    {{#with currentPlayer}}
-                        {{> playerHand}}
-                    {{/with}}
+                {{#with currentPlayer}}
+                {{> playerHand}}
+                {{/with}}
                 {{/if}}
             </div>
             <div class="decks">
@@ -26,7 +39,7 @@
                 </div>
                 <div id="droptres" class="deck">
                     {{#each cardInDropTres}}
-                        <img id="{{this.card._id}}" class="tres" src="{{this.card.file}}" alt="{{this.card.name}}" draggable="true">
+                    <img id="{{this.card._id}}" class="tres" src="{{this.card.file}}" alt="{{this.card.name}}">
                     {{/each}}
                 </div>
                 <br>
@@ -35,14 +48,15 @@
                 </div>
                 <div id="dropdoor" class="deck">
                     {{#each cardInDropDoor}}
-                        <img id="{{this.card._id}}" class="door" src="{{this.card.file}}" alt="{{this.card.name}}" draggable="true">
+                    <img id="{{this.card._id}}" class="door" src="{{this.card.file}}" alt="{{this.card.name}}">
                     {{/each}}
                 </div>   
             </div>
             {{#each cardOnTable}}
-                    <img id="{{this.card._id}}" class="{{this.card.type}}" src="{{this.card.file}}" alt="{{this.card.name}}" draggable="true" style="top: {{this.coords.top}}px; left:{{this.coords.left}}px;">
+            <img id="{{this.card._id}}" class="{{this.card.type}}" src="{{this.card.file}}" alt="{{this.card.name}}" style="top: {{this.coords.top}}px; left:{{this.coords.left}}px;">
             {{/each}}
-      </div>
-      {{/unless}}
-  </div>
+
+        </div>
+        {{/unless}}
+    </div>
 </template>

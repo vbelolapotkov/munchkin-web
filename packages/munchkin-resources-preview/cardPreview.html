@@ -1,0 +1,14 @@
+<template name="cardPreview">
+    <div class="cardPreviewArea">
+        <img src="{{cardFile}}" alt="" draggable="false">
+    </div>
+    {{#if isViewDrop}}
+        <div class="cardPreviewControls">
+            <ul>
+                <li><button id="viewPrev">&#8592;</button></li>
+                <li><button id="moveToHand">В руку</button></li>
+                <li><button id="viewNext" disabled>&#8594;</button></li>
+            </ul>
+        </div>
+    {{/if}}
+</template>
