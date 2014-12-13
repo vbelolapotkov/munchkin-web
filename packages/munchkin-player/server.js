@@ -23,7 +23,9 @@ Meteor.publish('playersForGame', function(gameId) {
 });
 
 Meteor.methods({
-
+    'removePlayers': function (gameId) {
+        playersCollection.remove({gameId: gameId});
+    }
 });
 
 if(playersCollection) playersCollection.remove({});

@@ -28,7 +28,7 @@ subscriptions.init = function() {
                 gameId: currentPlayer.gameId,
                 level: 1,
                 power: 1,
-                gender: 'M',
+                gender: 'М',
                 cardsCnt: 0
             }, function(error, id) {
                 if (error) console.error(error.reason);
@@ -188,7 +188,7 @@ Template.currentPlayerStats.events({
             playerId: this.playerId
         });
         if (!stat) return;
-        var newGender = stat.gender === 'M' ? 'F' : 'M';
+        var newGender = stat.gender === 'М' ? 'Ж' : 'М';
         col.update(stat._id, {
             $set: {
                 gender: newGender

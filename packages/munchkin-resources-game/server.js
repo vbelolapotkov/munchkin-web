@@ -53,3 +53,11 @@ Dice.allow({
         return true;
     }
 });
+
+Meteor.methods({
+    'removeGameResources': function (gameId) {
+        Collections.Dice.remove({gameId: gameId});
+        Collections.Drop.remove({gameId: gameId});
+        Collections.Table.remove({gameId: gameId});
+    }
+});

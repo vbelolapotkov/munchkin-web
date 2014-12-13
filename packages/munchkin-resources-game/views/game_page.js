@@ -132,6 +132,10 @@ Template.munchkinGamePage.helpers({
         var gameData = Game.getGameData(this._id);
         if (gameData) return gameData.owner;
     },
+    isOwner: function () {
+        var gameData = Game.getGameData(this._id);
+        return gameData && gameData.ownerId === Meteor.userId();
+    },
     cardOnTable: function() {
         return Collections.Table.find({
             gameId: this._id
@@ -385,6 +389,13 @@ Template.munchkinGamePage.events({
     },
     'click #shuffleTres': function() {
         Deck.shuffle(this._id, 'tres');
+    },
+    'click #gameEnd': function () {
+        if (!confirm('Завершить игру?')) return false;
+        Meteor.call('endGame', this._id, function (error, result) {
+            if(error) console.error(error.reason);
+            Router.go('/');
+        });
     }
 });
 var initDragStart = function(e, from) {

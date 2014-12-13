@@ -53,3 +53,12 @@ Collections.Items.allow({
         return true;
     }
 });
+
+Meteor.methods({
+    'removePlayerResources': function (gameId) {
+        console.log('removing player resources, actor: '+this.userId);
+        Collections.Items.remove({gameId: gameId});
+        Collections.Hand.remove({'card.gameId': gameId});
+        Collections.Stats.remove({gameId: gameId});
+    }
+});

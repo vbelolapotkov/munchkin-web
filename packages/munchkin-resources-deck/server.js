@@ -66,5 +66,9 @@ Meteor.methods({
                 }
             } else throw new Meteor.Error("failed","failed to parse: "+fname);
         } else throw new Meteor.Error("failed", "Failed to read cards description file: "+fname);
+    },
+    'removeDecks': function (gameId) {
+        Door.remove({gameId:gameId});
+        Tres.remove({gameId:gameId});
     }
 });

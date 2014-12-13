@@ -18,9 +18,11 @@
                         </li>
                         <li><button id="shuffleDoor">Перемешать Двери</button></li>
                         <li><button id="shuffleTres">Перемешать Сокр.</button></li>
-                        <li><button>Чат</button></li>
-                        <li><button>Лог</button></li>
-                        <li><button>Выход</button></li>
+                        <!-- <li><button>Чат</button></li> -->
+                        <!-- <li><button>Лог</button></li> -->
+                        {{#if isOwner}}
+                            <li><button id="gameEnd">Выход</button></li>
+                        {{/if}}
                     </ul>
                 </div>
                 <div id="previewContainer">{{> cardPreview}}</div>
