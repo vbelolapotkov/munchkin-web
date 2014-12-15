@@ -27,5 +27,3 @@ Meteor.methods({
         playersCollection.remove({gameId: gameId});
     }
 });
-
-if(playersCollection) playersCollection.remove({});

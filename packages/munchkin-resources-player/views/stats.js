@@ -15,10 +15,11 @@ Template.playerStats.helpers({
 var currentPlayer = {};
 var subscriptions = {};
 subscriptions.init = function() {
-    var statsSubscription = Meteor.subscribe('gameStats', currentPlayer.gameId);
-    var handSubscription = Meteor.subscribe('playerHand', currentPlayer._id);
-    Tracker.autorun(function(computation) {
-        if (!statsSubscription.ready() || !handSubscription.ready()) return;
+    this.statsSubscription = Meteor.subscribe('gameStats', currentPlayer.gameId);
+    this.handSubscription = Meteor.subscribe('playerHand', currentPlayer._id);
+    var self = this;
+    this.computation = Tracker.autorun(function() {
+        if (!self.statsSubscription.ready() || !self.handSubscription.ready()) return;
         var myStats = Collections.Stats.findOne({
             playerId: currentPlayer._id
         });
@@ -32,20 +33,26 @@ subscriptions.init = function() {
                 cardsCnt: 0
             }, function(error, id) {
                 if (error) console.error(error.reason);
-                else cardCounter.start(currentPlayer._id, id);
             });
-        } else cardCounter.start(currentPlayer._id, myStats._id);
-        computation.stop();
+        } else self.computation.stop();
     });
+    cardCounter.start(currentPlayer._id);
 };
 var cardCounter = {
     counter: null,
     stop: function() {
-        if (this.couner) counter.stop();
+        if (this.counter) this.counter.stop();
     },
-    start: function(playerId, statId) {
+    start: function(playerId) {
         var self = this;
+        var subs = subscriptions;
         this.counter = Tracker.autorun(function() {
+            if (!subs.statsSubscription.ready() || !subs.handSubscription.ready()) return;
+            var myStats = Collections.Stats.findOne({
+                playerId: currentPlayer._id
+            });
+            if(!myStats) return;
+            var statId = myStats._id;
             var count = Collections.Hand.find({
                 playerId: playerId
             }).count();

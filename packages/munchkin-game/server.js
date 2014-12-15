@@ -47,6 +47,3 @@ Meteor.methods({
         gamesCollection.remove(gameId);
     }
 });
-if (gamesCollection) {
-    gamesCollection.remove({});
-}

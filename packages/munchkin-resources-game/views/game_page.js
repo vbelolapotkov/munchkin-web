@@ -130,7 +130,9 @@ Template.munchkinGamePage.helpers({
     },
     gameOwner: function() {
         var gameData = Game.getGameData(this._id);
+        console.log(gameData);
         if (gameData) return gameData.owner;
+        Router.go('/');
     },
     isOwner: function () {
         var gameData = Game.getGameData(this._id);

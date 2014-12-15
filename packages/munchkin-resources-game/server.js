@@ -2,10 +2,6 @@ var Table = Collections.Table;
 var Drop = Collections.Drop;
 var Dice = Collections.Dice;
 
-if(Table) Table.remove({});
-if(Drop) Drop.remove({});
-if(Dice) Dice.remove({});
-
 Meteor.publish('gameTable', function (gameId) {
     return Table.find({gameId:gameId});
 });
