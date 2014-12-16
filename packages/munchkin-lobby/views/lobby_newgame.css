@@ -13,3 +13,9 @@ input[type='submit'] {
     font-weight: bold;
     color: #fed19a;
 }
+
+.newGameForm fieldset {
+    border: 1px solid #7a4300;
+    display: inline;
+    padding: 5px;
+}

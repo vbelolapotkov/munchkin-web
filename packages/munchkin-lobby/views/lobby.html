@@ -1,6 +1,7 @@
 <template name="munchkinLobby">
     <div id="gameLobby" class="lobby">
         <div class="main">
+            {{#if isGamesOnServer}}
             <h1>Игры на сервере</h1>
             <table class="gamesOnServer">
                 <tr>
@@ -24,6 +25,7 @@
             </tr>
             {{/each}}
             </table>
+            {{/if}}
             {{#if currentUser}}
                 {{> munchkinLobbyNewGame}}
             {{else}}

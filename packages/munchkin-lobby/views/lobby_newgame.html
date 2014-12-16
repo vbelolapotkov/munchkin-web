@@ -1,8 +1,22 @@
 <template name="munchkinLobbyNewGame">
-    <div>
+    <div class="newGameForm">
         <form action="">
-            <input type="text" name="gameName" value="" placeholder="Имя игры">
-            <input type="submit" value="Создать">    
+            <fieldset>
+            <legend>Создать новую игру</legend>
+            <input type="text" name="gameName" value="" placeholder="Имя игры"><br>
+            <!-- <fieldset> -->
+                <legend>Дополнения</legend>
+                <label>1 <input type="checkbox" name="supplement" value="1" checked></label>
+                <label>2 <input type="checkbox" name="supplement" value="2"></label>
+                <label>3 <input type="checkbox" name="supplement" value="3"></label>
+                <label>4 <input type="checkbox" name="supplement" value="4"></label>
+                <label>5 <input type="checkbox" name="supplement" value="5"></label>
+                <label>7 <input type="checkbox" name="supplement" value="7"></label>
+                <label>8 <input type="checkbox" name="supplement" value="8"></label>
+            <!-- </fieldset> -->
+            <br>
+            <input type="submit" value="Создать"> 
+            </fieldset>
         </form>
     </div>
 </template>

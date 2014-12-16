@@ -1,15 +1,23 @@
 Template.munchkinLobbyNewGame.events({
     'submit form': function (e) {
         e.preventDefault();
-        console.log('add new game');
         var game = {
             name: $(e.target).find('[name=gameName]').val(),
+            supplements: []
         };
 
-        // game._id = Game.Collections.Games.insert(game);
+        $(e.target).find('[name=supplement]').each(function () {
+            if(!this.checked) return;
+            game.supplements.push(+this.value);
+        });
+
         if(!game.name) {
           alert("введите имя игры");
           return;
+        }
+        if(game.supplements.length<1) {
+            alert("выберите хотя бы одно дополнение");
+            return;
         }
         Game.createGame(game, function (error, id) {
             if(error) {
