@@ -2,7 +2,7 @@ Player.getCnt = function (gameId) {
     return playersCollection.find({gameId:gameId}).count();
 };
 
-Player.add = function (gameId) {
+Player.add = function (gameId, isOwner) {
     if(!gameId) return;
     var pos = playersCollection.find({gameId: gameId}).count() + 1;
     var user = Meteor.user();
@@ -10,7 +10,8 @@ Player.add = function (gameId) {
         userId:user._id,
         gameId:gameId,
         displayname: user.username,
-        position: pos
+        position: pos,
+        isOwner: isOwner || false
     };
     var id = playersCollection.insert(newPlayer);
     return id;

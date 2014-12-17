@@ -5,7 +5,6 @@
             <input id="addPlayer" type="button" class="joinBtn" value="Присоединиться к игре">
         {{else}}   
         <div class="itemsArea">
-
             {{> munchkinPlayerItems}}
         </div>
         
@@ -21,8 +20,11 @@
                         <!-- <li><button>Чат</button></li> -->
                         <!-- <li><button>Лог</button></li> -->
                         {{#if isOwner}}
-                            <li><button id="gameEnd">Выход</button></li>
+                            <li><button id="gameEnd">Завершить игру</button></li>
+                        {{else}}
+                            <li><button id="leaveGame">Выйти</button></li>
                         {{/if}}
+
                     </ul>
                 </div>
                 <div id="previewContainer">{{> cardPreview}}</div>

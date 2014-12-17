@@ -22,6 +22,7 @@ var listener = {
                     insertIntoHandHandler(playerId, self.msg.card);
                     break;
                 case 'remove':
+                    console.log('remove received');
                     removeFromHandHandler(playerId, self.msg.actor, self.msg.id, self.msg.coords);
                     break;
             }
@@ -102,11 +103,10 @@ Template.playerHand.events({
                         playerId: currentPlayerId,
                         'card._id': cardElem.id
                     });
-                    Collections.Items.remove(cardDoc._id, function (error) {
-                        if(error) alert (error.reason);
+                    Collections.Items.remove(cardDoc._id, function(error) {
+                        if (error) alert(error.reason);
                         else {
-                            Collections.Hand.insert(
-                            {
+                            Collections.Hand.insert({
                                 playerId: currentPlayerId,
                                 card: cardDoc.card,
                             });
@@ -120,11 +120,10 @@ Template.playerHand.events({
         initDragStart(e, 'hand');
         return true;
     },
-    'contextmenu #myHand > img': function (e) {
-         e.preventDefault();
-         var elem = e.target;
-         if(elem && elem.src)
-            Preview.viewCard(elem.src);
+    'contextmenu #myHand > img': function(e) {
+        e.preventDefault();
+        var elem = e.target;
+        if (elem && elem.src) Preview.viewCard(elem.src);
     }
 });
 var removeFromHandHandler = function(playerId, actor, id, coords) {

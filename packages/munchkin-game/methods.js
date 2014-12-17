@@ -10,7 +10,7 @@ Game.createGame = function (options, callback) {
     Meteor.call('addNewGame', options, function (error, result) {
         if(!error) {
             Deck.create(result, options.supplements);
-            Player.add(result);
+            Player.add(result,true);
         }
         callback(error, result);
     });

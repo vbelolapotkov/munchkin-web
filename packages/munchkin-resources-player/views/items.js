@@ -57,6 +57,7 @@ var removeFromItemsHandler = function(playerId, actor, id, coords) {
         });
     });
 };
+
 Template.munchkinPlayerItems.rendered = function() {
     if (!this.data) return;
     if (currentGameId === this.data._id) return;
@@ -93,6 +94,10 @@ Template.munchkinPlayerItems.helpers({
     },
     inBag: function () {
         return this.isInBag ? 'inBag' : '';
+    },
+    isGameOwner: function () {
+        var game = Game.getGameData(this.gameId);
+        return game && game.ownerId === Meteor.userId();
     }
 });
 Template.munchkinPlayerItems.events({
@@ -138,7 +143,6 @@ Template.munchkinPlayerItems.events({
                 break;
             case 'drop':
                 if (!checkPlayer()) return false;
-                console.log('card moved from drop');
                 //card moved from drop
                 //ask drop to remove card
                 //and notify me when card removed
@@ -227,8 +231,12 @@ Template.munchkinPlayerItems.events({
          var elem = e.target;
          if(elem && elem.src)
             Preview.viewCard(elem.src);
+    },
+    'click .kickPlayerBtn': function (e) {
+        e.stopPropagation();
+        if (!confirm('Вы хотите удалить игрока?')) return false;
+        Meteor.call('kickPlayer',e.target.id);
     }
-
 });
 var checkPlayer = function() {
     return selectedPlayer.get() === currentPlayerId;

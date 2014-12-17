@@ -25,6 +25,20 @@ ul.itemsTabs > li
     vertical-align: top;
 }
 
+.kickPlayerBtn {
+    padding: 2px;
+    margin: 0;
+    float: right;
+    border: 0 solid;
+    background-color: transparent;
+    font-size: 0.8em;
+    color:gray;
+}
+
+.kickPlayerBtn:hover {
+    color:black;
+}
+
 ul.itemsTabs > li:hover {
     background-color: #ff9933;
 }

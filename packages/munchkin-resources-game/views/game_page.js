@@ -97,6 +97,7 @@ var insertIntoDropHandler = function(card) {
         card: card,
     });
 };
+
 var removeFromDropHandler = function(gameId, actor, id, coords) {
     var cardDoc = Collections.Drop.findOne({
         gameId: gameId,
@@ -130,7 +131,6 @@ Template.munchkinGamePage.helpers({
     },
     gameOwner: function() {
         var gameData = Game.getGameData(this._id);
-        console.log(gameData);
         if (gameData) return gameData.owner;
         Router.go('/');
     },
@@ -395,6 +395,13 @@ Template.munchkinGamePage.events({
     'click #gameEnd': function () {
         if (!confirm('Завершить игру?')) return false;
         Meteor.call('endGame', this._id, function (error, result) {
+            if(error) console.error(error.reason);
+            Router.go('/');
+        });
+    },
+    'click #leaveGame': function () {
+        if (!confirm('При выходе из игры все ваши карты уйдут в сброс. Выйти?')) return false;
+        Meteor.call('playerExit', this._id, Meteor.userId(), function (error, result) {
             if(error) console.error(error.reason);
             Router.go('/');
         });

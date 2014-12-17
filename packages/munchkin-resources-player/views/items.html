@@ -3,7 +3,8 @@
        <div id="tab-container">
             <ul class="itemsTabs">
               {{#with currentPlayer}}
-               <li class="{{selected}}"><span>Мои шмотки</span></li>{{/with}}{{#each playerInGame}}{{#unless isCurrentPlayer}}<li class="{{selected}}">{{> playerStats}}</li>{{/unless}}{{/each}}
+               <li class="{{selected}}"><span>Мои шмотки</span></li>{{/with}}{{#each playerInGame}}{{#unless isCurrentPlayer}}<li class="{{selected}}">{{#if isGameOwner}}
+               <button type="button" id="{{_id}}" class="kickPlayerBtn">x</button>{{/if}}{{> playerStats}}</li>{{/unless}}{{/each}}
             </ul>
        </div>
        <div id="playerItemsArea" class="playerItemsArea">

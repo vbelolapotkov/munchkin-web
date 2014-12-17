@@ -45,5 +45,12 @@ Meteor.methods({
             console.log('players removed');
         });
         gamesCollection.remove(gameId);
-    }
+    },
+    // 'kickPlayer':function (playerId) {
+    //     var player = Player.getDataById(playerId);
+    //     if(!player) return;
+    //     var game = gamesCollection.findOne(player.gameId);
+    //     if(!game || game.ownerId !== this.userId) return;
+    //     console.log('removing player: '+playerId);
+    // }
 });
