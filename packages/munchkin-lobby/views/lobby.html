@@ -5,31 +5,36 @@
             <h1>Игры на сервере</h1>
             <table class="gamesOnServer">
                 <tr>
-                    <th>Название</th>
-                    <th>Создатель</th>
+                    <th>Имя игры</th>
+                    <th>Админ</th>
                     <th>Дата создания</th>
                     <th>Игроки</th>
+                    <!-- <th></th> -->
                 </tr>
             {{#each gamesOnServer}}
             <tr>
-                <td>
-                    <a href="{{pathFor 'munchkinGamePage'}}" name="">{{name}}</a>   
+                <td class="left">
+                    {{name}}
+                    <!-- <a href="{{pathFor 'munchkinGamePage'}}" name="">{{name}}</a> -->   
                 </td>
                 <td>
                     {{owner}}
                 </td>
                 <td>
-                    {{createdStr}}
+                    {{timeStr}}
                 </td>
                 <td>{{playersCnt}}</td>
+                {{#if currentUser}}
+                <td class="last"><button type="button" class="enterGameBtn">В бой!</button></td>
+                {{/if}}
             </tr>
             {{/each}}
-            </table>
+            </table><hr>
             {{/if}}
             {{#if currentUser}}
                 {{> munchkinLobbyNewGame}}
             {{else}}
-                <h2>Только авторизованные пользователи могут создавать игры</h2>
+                {{> munchkinAccessDenied}}
             {{/if}}    
         </div>
     </div>

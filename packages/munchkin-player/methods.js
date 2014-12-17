@@ -18,7 +18,7 @@ Player.add = function (gameId, isOwner) {
 };
 
 Player.isInGame = function (gameId) {
-    return false || playersCollection.find({gameId:gameId, userId: Meteor.userId()});
+    return false || playersCollection.findOne({gameId:gameId, userId: Meteor.userId()});
 };
 
 Player.getData = function (gameId, userId) {

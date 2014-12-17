@@ -22,18 +22,20 @@
 .main {
     background-color: #fed19a;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 20px;
     width: 66.66666667%;
     min-height: 200px;
 }
 
-table.gamesOnServer {
+.gamesOnServer {
     width: 100%;
+    border-collapse: separate;
+    border-spacing: 1px;
+    text-align: center;
 }
 
 .gamesOnServer th {
     padding: 0 2%;
-    text-align: left;
     background-color: #7a4300;
     font-weight: bold;
     color: #fed19a;
@@ -42,8 +44,24 @@ table.gamesOnServer {
 .gamesOnServer td {
     padding: 0 2%;
 }
+.gamesOnServer td.left {
+    text-align: left;
+}
+.gamesOnServer td.last{
+    text-align: right;
+    padding: 0;
+}
 
-table.gamesOnServer,.gamesOnServer th,.gamesOnServer td{
-    border: 1px solid #7a4300;
-    border-collapse: collapse;
+hr {
+    border-top:1px solid #7a4300;
+    border-bottom: 0;
+}
+
+.enterGameBtn {
+    padding: 4px 10px;
+    border: 2px solid #7a4300;
+    background-color: #7a4300;
+    font-family: "Courier New", sans;
+    font-weight: bold;
+    color: #fed19a;
 }
