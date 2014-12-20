@@ -19,7 +19,7 @@ var listener = {
             if (!self.msg) return;
             switch (self.msg.action) {
                 case 'insert':
-                    insertIntoHandHandler(playerId, self.msg.card);
+                    insertIntoHandHandler(playerId, self.msg.card, self.msg.actor);
                     break;
                 case 'remove':
                     console.log('remove received');
@@ -66,7 +66,7 @@ Template.playerHand.events({
                 alert('Error: cannot get card from deck: ' + cardElem.type);
                 return;
             }
-            insertIntoHandHandler(this._id, card);
+            insertIntoHandHandler(this._id, card, 'deck');
         } else {
             //the card is known, move it to table
             var options;
@@ -103,12 +103,24 @@ Template.playerHand.events({
                         playerId: currentPlayerId,
                         'card._id': cardElem.id
                     });
+                    var player = Player.getDataById(currentPlayerId);
                     Collections.Items.remove(cardDoc._id, function(error) {
                         if (error) alert(error.reason);
                         else {
                             Collections.Hand.insert({
                                 playerId: currentPlayerId,
                                 card: cardDoc.card,
+                            }, function(error, result) {
+                                if (error) alert(error.reason);
+                                else {
+                                    GameEvents.cardEvent(player.gameId, {
+                                        actor: player.displayname,
+                                        action: 'move',
+                                        cardName: cardDoc.card.name,
+                                        from: 'items',
+                                        to: 'hand'
+                                    });
+                                }
                             });
                         }
                     });
@@ -142,7 +154,8 @@ var removeFromHandHandler = function(playerId, actor, id, coords) {
         });
     });
 };
-var insertIntoHandHandler = function(playerId, card) {
+var insertIntoHandHandler = function(playerId, card, from) {
+    var player = Player.getData(card.gameId, Meteor.userId());
     var topCard = Collections.Hand.find({
         playerId: playerId,
     }, {
@@ -159,6 +172,15 @@ var insertIntoHandHandler = function(playerId, card) {
         card: card
     }, function(error, result) {
         if (error) alert(error.reason);
+        else {
+            GameEvents.cardEvent(player.gameId, {
+                actor: player.displayname,
+                action: 'move',
+                cardName: from !== 'deck' ? card.name : card.type,
+                from: from,
+                to: 'hand'
+            });
+        }
     });
 };
 var initDragStart = function(e, from) {

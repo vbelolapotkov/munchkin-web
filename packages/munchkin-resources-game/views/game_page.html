@@ -15,10 +15,10 @@
                         <li>
                             <button id="rollDice"><img src="/icons/dice.gif" alt="кубик"></button>
                         </li>
-                        <li><button id="shuffleDoor">Перемешать Двери</button></li>
-                        <li><button id="shuffleTres">Перемешать Сокр.</button></li>
+                        <li><button type="button" id="shuffleDoor">Перемешать Двери</button></li>
+                        <li><button type="button" id="shuffleTres">Перемешать Сокр.</button></li>
                         <!-- <li><button>Чат</button></li> -->
-                        <!-- <li><button>Лог</button></li> -->
+                        <li><button type="button" id="showLogBtn">Журнал</button></li>
                         {{#if isOwner}}
                             <li><button id="gameEnd">Завершить игру</button></li>
                         {{else}}
@@ -59,8 +59,12 @@
             {{#each cardOnTable}}
             <img id="{{this.card._id}}" class="{{this.card.type}}" src="{{this.card.file}}" alt="{{this.card.name}}" style="top: {{this.coords.top}}px; left:{{this.coords.left}}px;">
             {{/each}}
-
         </div>
+        {{#if showLog}}
+            <div class="gameEventsContainer">
+                {{> gameEvents}}
+            </div>
+        {{/if}}
         {{/unless}}
     </div>
 </template>

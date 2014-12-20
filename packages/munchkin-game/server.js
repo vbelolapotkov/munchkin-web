@@ -44,13 +44,10 @@ Meteor.methods({
             if (error) throw error;
             console.log('players removed');
         });
+        Meteor.call('removeEvents', gameId, function (error, result) {
+            if (error) throw error;
+            console.log('gameEvents removed');
+        });
         gamesCollection.remove(gameId);
-    },
-    // 'kickPlayer':function (playerId) {
-    //     var player = Player.getDataById(playerId);
-    //     if(!player) return;
-    //     var game = gamesCollection.findOne(player.gameId);
-    //     if(!game || game.ownerId !== this.userId) return;
-    //     console.log('removing player: '+playerId);
-    // }
+    }
 });

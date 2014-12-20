@@ -1,5 +1,6 @@
 //not subscribed for collections yet
 var currentGameId;
+var isShowingLog = new ReactiveVar(false);
 var subscriptions = {};
 subscriptions.init = function(gameId) {
     tableListener.start();
@@ -8,6 +9,7 @@ subscriptions.init = function(gameId) {
     this.drop = Meteor.subscribe('gameDrop', gameId);
     this.deck = Meteor.subscribe('gameDecks', gameId);
     this.dice = Meteor.subscribe('gameDice', gameId);
+    this.events = Meteor.subscribe('gameEvents', gameId);
 };
 var tableListener = {
     msg: null,
@@ -24,10 +26,22 @@ var tableListener = {
             if (!self.msg) return;
             switch (self.msg.action) {
                 case 'insert':
+                    var player = Player.getData(gameId, Meteor.userId());
                     Collections.Table.insert({
                         gameId: gameId,
                         card: self.msg.card,
                         coords: self.msg.coords
+                    }, function(error, result) {
+                        if (error) alert(error.reason);
+                        else {
+                            GameEvents.cardEvent(player.gameId, {
+                                actor: player.displayname,
+                                action: 'move',
+                                cardName: self.msg.card.name,
+                                from: self.msg.actor,
+                                to: 'gameTable'
+                            });
+                        }
                     });
                     break;
                 case 'remove':
@@ -69,7 +83,7 @@ var dropListener = {
             switch (self.msg.action) {
                 case 'insert':
                     var card = self.msg.card;
-                    insertIntoDropHandler(card);
+                    insertIntoDropHandler(card, self.msg.actor);
                     break;
                 case 'remove':
                     removeFromDropHandler(gameId, self.msg.actor, self.msg.id, self.msg.coords);
@@ -79,7 +93,8 @@ var dropListener = {
         });
     }
 };
-var insertIntoDropHandler = function(card) {
+var insertIntoDropHandler = function(card, from) {
+    var player = Player.getData(card.gameId, Meteor.userId());
     var topCard = Collections.Drop.find({
         gameId: card.gameId,
         'card.type': card.type
@@ -95,9 +110,19 @@ var insertIntoDropHandler = function(card) {
     Collections.Drop.insert({
         gameId: card.gameId,
         card: card,
+    }, function(error, result) {
+        if (error) alert(error.reason);
+        else {
+            GameEvents.cardEvent(player.gameId, {
+                actor: player.displayname,
+                action: 'move',
+                cardName: card.name,
+                from: from,
+                to: 'drop'
+            });
+        }
     });
 };
-
 var removeFromDropHandler = function(gameId, actor, id, coords) {
     var cardDoc = Collections.Drop.findOne({
         gameId: gameId,
@@ -134,7 +159,7 @@ Template.munchkinGamePage.helpers({
         if (gameData) return gameData.owner;
         Router.go('/');
     },
-    isOwner: function () {
+    isOwner: function() {
         var gameData = Game.getGameData(this._id);
         return gameData && gameData.ownerId === Meteor.userId();
     },
@@ -164,6 +189,9 @@ Template.munchkinGamePage.helpers({
             },
             limit: 1
         });
+    },
+    showLog: function () {
+        return isShowingLog.get();
     }
 });
 Template.munchkinGamePage.events({
@@ -193,6 +221,7 @@ Template.munchkinGamePage.events({
         var top = e.originalEvent.pageY - targetCoords.top - cardElem.shiftY;
         var left = e.originalEvent.pageX - targetCoords.left - cardElem.shiftX;
         var card = {};
+        var player = Player.getData(this._id, Meteor.userId());
         if (!cardElem.id) {
             //get new card from deck
             card = Deck.getCard(this._id, cardElem.type);
@@ -209,6 +238,15 @@ Template.munchkinGamePage.events({
                 }
             }, function(error, result) {
                 if (error) alert(error.reason);
+                else {
+                    GameEvents.cardEvent(player.gameId, {
+                        actor: player.displayname,
+                        action: 'move',
+                        cardName: card.name,
+                        from: 'deck',
+                        to: 'gameTable'
+                    });
+                }
             });
         } else {
             //the card is known, move it to table
@@ -246,6 +284,17 @@ Template.munchkinGamePage.events({
                                 coords: {
                                     top: top,
                                     left: left
+                                }
+                            }, function(error, result) {
+                                if (error) alert(error.reason);
+                                else {
+                                    GameEvents.cardEvent(player.gameId, {
+                                        actor: player.displayname,
+                                        action: 'move',
+                                        cardName: card.card.name,
+                                        from: 'drop',
+                                        to: 'gameTable'
+                                    });
                                 }
                             });
                         }
@@ -304,7 +353,7 @@ Template.munchkinGamePage.events({
                 Collections.Table.remove(cardDoc._id, function(error, result) {
                     if (error) alert(error.reason);
                     else {
-                        insertIntoDropHandler(cardDoc.card);
+                        insertIntoDropHandler(cardDoc.card, 'gameTable');
                     }
                 });
                 break;
@@ -355,7 +404,7 @@ Template.munchkinGamePage.events({
             Collections.Table.remove(cardDoc._id, function(error, result) {
                 if (error) alert(error.reason);
                 else {
-                    insertIntoDropHandler(cardDoc.card);
+                    insertIntoDropHandler(cardDoc.card, 'gameTable');
                 }
             });
         });
@@ -378,33 +427,54 @@ Template.munchkinGamePage.events({
                 'card.index': -1
             }
         });
-        if(!cursor) return;
+        if (!cursor) return;
         Preview.viewDrop(cursor);
     },
     'click #rollDice': function() {
         var player = Player.getData(this._id, Meteor.userId());
         if (!player) return;
-        Dice.roll(this._id, player.displayname);
+        Dice.roll(this._id, player);
     },
     'click #shuffleDoor': function() {
         Deck.shuffle(this._id, 'door');
+        var player = Player.getData(this._id, Meteor.userId());
+        GameEvents.commonEvent(this._id,{
+            actor: player.displayname,
+            action: 'shuffle',
+            result: 'deckdoor'
+        });
     },
     'click #shuffleTres': function() {
         Deck.shuffle(this._id, 'tres');
+        var player = Player.getData(this._id, Meteor.userId());
+        GameEvents.commonEvent(this._id,{
+            actor: player.displayname,
+            action: 'shuffle',
+            result: 'decktres'
+        });
     },
-    'click #gameEnd': function () {
-        if (!confirm('Завершить игру?')) return false;
-        Meteor.call('endGame', this._id, function (error, result) {
-            if(error) console.error(error.reason);
+    'click #gameEnd': function() {
+        if (!confirm('End game?')) return false;
+        Meteor.call('endGame', this._id, function(error, result) {
+            if (error) console.error(error.reason);
             Router.go('/');
         });
     },
-    'click #leaveGame': function () {
-        if (!confirm('При выходе из игры все ваши карты уйдут в сброс. Выйти?')) return false;
-        Meteor.call('playerExit', this._id, Meteor.userId(), function (error, result) {
-            if(error) console.error(error.reason);
+    'click #leaveGame': function() {
+        if (!confirm('All cards will be moved to drop. Still want to leave the game?')) return false;
+        var gameId = this._id;
+        var player = Player.getData(gameId, Meteor.userId());
+        Meteor.call('playerExit', this._id, Meteor.userId(), function(error, result) {
+            if (error) console.error(error.reason);
+            GameEvents.commonEvent(gameId, {
+                actor: player.displayname,
+                action: 'leave'
+            });
             Router.go('/');
         });
+    },
+    'click #showLogBtn': function () {
+        isShowingLog.set(!isShowingLog.get());
     }
 });
 var initDragStart = function(e, from) {

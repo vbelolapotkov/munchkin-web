@@ -197,6 +197,10 @@
       "0.0.1"
     ],
     [
+      "vbelolapotkov:munchkin-resources-events",
+      "1.0.0"
+    ],
+    [
       "vbelolapotkov:munchkin-resources-mediator",
       "0.0.1"
     ],

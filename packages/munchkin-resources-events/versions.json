@@ -185,22 +185,6 @@
       "1.0.2"
     ],
     [
-      "vbelolapotkov:munchkin-game",
-      "0.0.1"
-    ],
-    [
-      "vbelolapotkov:munchkin-player",
-      "0.0.1"
-    ],
-    [
-      "vbelolapotkov:munchkin-resources-deck",
-      "0.0.1"
-    ],
-    [
-      "vbelolapotkov:munchkin-resources-events",
-      "1.0.0"
-    ],
-    [
       "webapp",
       "1.1.4"
     ],

@@ -1,448 +1,440 @@
 {
     "imgPath": "/img/",
     "doors": [{
-        "name": "M2monster001",
+        "name": "Воин",
         "path": "doors2/",
         "file": "M2monster001.gif"
     }, {
-        "name": "M2monster002",
+        "name": "Проклятие! Некрофобия",
         "path": "doors2/",
         "file": "M2monster002.gif"
     }, {
-        "name": "M2monster003",
+        "name": "Уровень 5. Плюшевый мишка",
         "path": "doors2/",
         "file": "M2monster003.gif"
     }, {
-        "name": "M2monster004",
+        "name": "Уровень 9. Санта",
         "path": "doors2/",
         "file": "M2monster004.gif"
     }, {
-        "name": "M2monster005",
+        "name": "Уровень 15. Щупальцовый демон",
         "path": "doors2/",
         "file": "M2monster005.gif"
     }, {
-        "name": "M2monster006",
+        "name": "Полукровка",
         "path": "doors2/",
         "file": "M2monster006.gif"
     }, {
-        "name": "M2monster007",
+        "name": "Орк",
         "path": "doors2/",
         "file": "M2monster007.gif"
     }, {
-        "name": "M2monster008",
+        "name": "Проклятие! Золото дураков",
         "path": "doors2/",
         "file": "M2monster008.gif"
     }, {
-        "name": "M2monster009",
+        "name": "Уровень 3. Пиньята",
         "path": "doors2/",
         "file": "M2monster009.gif"
     }, {
-        "name": "M2monster010",
+        "name": "Уровень 7. Травяной Гнолль",
         "path": "doors2/",
         "file": "M2monster010.gif"
     }, {
-        "name": "M2monster011",
+        "name": "Уровень 13. Элементаль соплей",
         "path": "doors2/",
         "file": "M2monster011.gif"
     }, {
-        "name": "M2monster012",
+        "name": "Мертвый монстр не сражается",
         "path": "doors2/",
         "file": "M2monster012.gif"
     }, {
-        "name": "M2monster013",
+        "name": "Орк",
         "path": "doors2/",
         "file": "M2monster013.gif"
     }, {
-        "name": "M2monster014",
+        "name": "Проклятие! Щедрость",
         "path": "doors2/",
         "file": "M2monster014.gif"
     }, {
-        "name": "M2monster015",
+        "name": "Уровень 3. Чокнутая белка",
         "path": "doors2/",
         "file": "M2monster015.gif"
     }, {
-        "name": "M2monster016",
+        "name": "Уровень 7. Тараканище",
         "path": "doors2/",
         "file": "M2monster016.gif"
     }, {
-        "name": "M2monster017",
+        "name": "Уровень 15. Гидрантей",
         "path": "doors2/",
         "file": "M2monster017.gif"
     }, {
-        "name": "M2monster018",
+        "name": "Колода слишком много чего",
         "path": "doors2/",
         "file": "M2monster018.gif"
     }, {
-        "name": "M2monster019",
+        "name": "Орк",
         "path": "doors2/",
         "file": "M2monster019.gif"
     }, {
-        "name": "M2monster020",
+        "name": "Проклятие! Большая потеря",
         "path": "doors2/",
         "file": "M2monster020.gif"
     }, {
-        "name": "M2monster021",
+        "name": "Уровень 3. Могучий микроб",
         "path": "doors2/",
         "file": "M2monster021.gif"
     }, {
-        "name": "M2monster021",
-        "path": "doors2/",
-        "file": "M2monster021.gif"
-    }, {
-        "name": "M2monster022",
+        "name": "Уровень 9. Кошечка",
         "path": "doors2/",
         "file": "M2monster022.gif"
     }, {
-        "name": "M2monster023",
+        "name": "Уровень 13. Тварь с таким длинным именем, что на карте не хватило места для картинки",
         "path": "doors2/",
         "file": "M2monster023.gif"
     }, {
-        "name": "M2monster024",
+        "name": "Найди карту",
         "path": "doors2/",
         "file": "M2monster024.gif"
     }, {
-        "name": "M2monster025",
+        "name": "Вор",
         "path": "doors2/",
         "file": "M2monster025.gif"
     }, {
-        "name": "M2monster026",
+        "name": "Проклятие! Невелика потеря",
         "path": "doors2/",
         "file": "M2monster026.gif"
     }, {
-        "name": "M2monster027",
+        "name": "Уровень 3. Черепах-оборотень",
         "path": "doors2/",
         "file": "M2monster027.gif"
     }, {
-        "name": "M2monster028",
+        "name": "Уровень 9. Скунсище",
         "path": "doors2/",
         "file": "M2monster028.gif"
     }, {
-        "name": "M2monster029",
+        "name": "Уровень 15. Снеговечище",
         "path": "doors2/",
         "file": "M2monster029.gif"
     }, {
-        "name": "M2monster030",
+        "name": "Дружелюбный",
         "path": "doors2/",
         "file": "M2monster030.gif"
     }, {
-        "name": "M2monster031",
+        "name": "Халфлинг",
         "path": "doors2/",
         "file": "M2monster031.gif"
     }, {
-        "name": "M2monster032",
+        "name": "Проклятие! Проклятая штука",
         "path": "doors2/",
         "file": "M2monster032.gif"
     }, {
-        "name": "M2monster033",
+        "name": "Спящий. -5 к монстру",
         "path": "doors2/",
         "file": "M2monster033.gif"
     }, {
-        "name": "M2monster034",
+        "name": "Уровень 7.Ягодивицы",
         "path": "doors2/",
         "file": "M2monster034.gif"
     }, {
-        "name": "M2monster035",
+        "name": "Уровень 11. Птеродактиль",
         "path": "doors2/",
         "file": "M2monster035.gif"
     }, {
-        "name": "M2monster036",
+        "name": "Чит!",
         "path": "doors2/",
         "file": "M2monster036.gif"
     }, {
-        "name": "M2monster037",
+        "name": "Бродячая тварь",
         "path": "doors2/",
         "file": "M2monster037.gif"
     }, {
-        "name": "M2monster038",
+        "name": "Орк",
         "path": "doors2/",
         "file": "M2monster038.gif"
     }, {
-        "name": "M2monster039",
+        "name": "Проклятие! Проклятая штука",
         "path": "doors2/",
         "file": "M2monster039.gif"
     }, {
-        "name": "M2monster040",
+        "name": "Андед. +5 к монстру",
         "path": "doors2/",
         "file": "M2monster040.gif"
     }, {
-        "name": "M2monster041",
+        "name": "Уровень 7. Монстр, придуманный лично мастером",
         "path": "doors2/",
         "file": "M2monster041.gif"
     }, {
-        "name": "M2monster042",
+        "name": "Уровень 13. Похотливый монстр",
         "path": "doors2/",
         "file": "M2monster042.gif"
     }, {
-        "name": "M2monster042",
+        "name": "Банкрот",
         "path": "doors2/",
-        "file": "M2monster042.gif"
+        "file": "M2monster043.gif"
     }, {
-        "name": "M2monster044",
+        "name": "Клирик",
         "path": "doors2/",
         "file": "M2monster044.gif"
     }, {
-        "name": "M2monster045",
+        "name": "Волшебник",
         "path": "doors2/",
         "file": "M2monster045.gif"
     }, {
-        "name": "M2monster046",
+        "name": "Проклятие! Новая редакция правил",
         "path": "doors2/",
         "file": "M2monster046.gif"
     }, {
-        "name": "M2monster047",
+        "name": "Уровень 5. Чумные крысы",
         "path": "doors2/",
         "file": "M2monster047.gif"
     }, {
-        "name": "M2monster048",
+        "name": "Уровень 9. Стремный клоуны (Андед)",
         "path": "doors2/",
         "file": "M2monster048.gif"
     }, {
-        "name": "M2monster049",
+        "name": "Уровень 17. Судья Фред",
         "path": "doors2/",
         "file": "M2monster049.gif"
     }, {
-        "name": "M2monster050",
+        "name": "Мамаша",
         "path": "doors2/",
         "file": "M2monster050.gif"
     }, {
-        "name": "M2monster051",
+        "name": "Дварф",
         "path": "doors2/",
         "file": "M2monster051.gif"
     }, {
-        "name": "M2monster052",
+        "name": "Проклятие! Запах пота",
         "path": "doors2/",
         "file": "M2monster052.gif"
     }, {
-        "name": "M2monster053",
+        "name": "Проклятие! Крохотные ручки",
         "path": "doors2/",
         "file": "M2monster053.gif"
     }, {
-        "name": "M2monster054",
+        "name": "Уровень 5. Грыб",
         "path": "doors2/",
         "file": "M2monster054.gif"
     }, {
-        "name": "M2monster055",
+        "name": "Уровень 11. П.У. Стоместин (Андед)",
         "path": "doors2/",
         "file": "M2monster055.gif"
     }, {
-        "name": "M2monster056",
+        "name": "Уровень 17. Бармаглот",
         "path": "doors2/",
         "file": "M2monster056.gif"
     }, {
-        "name": "M2monster057",
+        "name": "Суперманчкин",
         "path": "doors2/",
         "file": "M2monster057.gif"
     }, {
-        "name": "M2monster058",
+        "name": "Эльф",
         "path": "doors2/",
         "file": "M2monster058.gif"
     }, {
-        "name": "M2monster059",
+        "name": "Проклятие! Большелапость",
         "path": "doors2/",
         "file": "M2monster059.gif"
     }, {
-        "name": "M2monster060",
+        "name": "Выводок. +10 к монстру",
         "path": "doors2/",
         "file": "M2monster060.gif"
     }, {
-        "name": "M2monster061",
+        "name": "Уровень 5. Ползучая рука (Андед)",
         "path": "doors2/",
         "file": "M2monster061.gif"
     }, {
-        "name": "M2monster062",
+        "name": "Уровень 11. Теневой нос (Андед)",
         "path": "doors2/",
         "file": "M2monster062.gif"
     }, {
-        "name": "M2monster063",
+        "name": "Аннигиляция",
         "path": "doors2/",
         "file": "M2monster063.gif"
     }, {
-        "name": "M2monster064",
+        "name": "Бродячая тварь",
         "path": "doors2/",
         "file": "M2monster064.gif"
     }],
     "treasures": [{
-        "name": "M2gold001",
+        "name": "Шлем заднего обзора",
         "path": "tres2/",
         "file": "M2gold001.gif"
     }, {
-        "name": "M2gold002",
+        "name": "Созерцай свой пупок. Получи уровень",
         "path": "tres2/",
         "file": "M2gold002.gif"
     }, {
-        "name": "M2gold003",
+        "name": "Лемминад",
         "path": "tres2/",
         "file": "M2gold003.gif"
     }, {
-        "name": "M2gold004",
+        "name": "Накладная борода",
         "path": "tres2/",
         "file": "M2gold004.gif"
     }, {
-        "name": "M2gold005",
+        "name": "Распродажа",
         "path": "tres2/",
         "file": "M2gold005.gif"
     }, {
-        "name": "M2gold006",
+        "name": "Рока",
         "path": "tres2/",
         "file": "M2gold006.gif"
     }, {
-        "name": "M2gold007",
+        "name": "Укатайка",
         "path": "tres2/",
         "file": "M2gold007.gif"
     }, {
-        "name": "M2gold008",
+        "name": "Вымой машину мастера. Получи уровень",
         "path": "tres2/",
         "file": "M2gold008.gif"
     }, {
-        "name": "M2gold009",
+        "name": "Хотельное кольцо",
         "path": "tres2/",
         "file": "M2gold009.gif"
     }, {
-        "name": "M2gold010",
+        "name": "Дождевик",
         "path": "tres2/",
         "file": "M2gold010.gif"
     }, {
-        "name": "M2gold011",
+        "name": "Бум-дага",
         "path": "tres2/",
         "file": "M2gold011.gif"
     }, {
-        "name": "M2gold012",
+        "name": "Слизнемет",
         "path": "tres2/",
         "file": "M2gold012.gif"
     }, {
-        "name": "M2gold013",
+        "name": "Детская смесь",
         "path": "tres2/",
         "file": "M2gold013.gif"
     }, {
-        "name": "M2gold014",
+        "name": "У тебя шнурок развязался!",
         "path": "tres2/",
         "file": "M2gold014.gif"
     }, {
-        "name": "M2gold015",
+        "name": "Фольговая шляпа",
         "path": "tres2/",
         "file": "M2gold015.gif"
     }, {
-        "name": "M2gold016",
+        "name": "Черепной шлем",
         "path": "tres2/",
         "file": "M2gold016.gif"
     }, {
-        "name": "M2gold017",
+        "name": "Осадная машина",
         "path": "tres2/",
         "file": "M2gold017.gif"
     }, {
-        "name": "M2gold018",
+        "name": "Друидский фреш",
         "path": "tres2/",
         "file": "M2gold018.gif"
     }, {
-        "name": "M2gold019",
+        "name": "Мешок шипов",
         "path": "tres2/",
         "file": "M2gold019.gif"
     }, {
-        "name": "M2gold020",
+        "name": "Троянский конь",
         "path": "tres2/",
         "file": "M2gold020.gif"
     }, {
-        "name": "M2gold021",
+        "name": "Свет рыцарства",
         "path": "tres2/",
         "file": "M2gold021.gif"
     }, {
-        "name": "M2gold021",
-        "path": "tres2/",
-        "file": "M2gold021.gif"
-    }, {
-        "name": "M2gold022",
+        "name": "Благословенный молот Св. Иииэээххха",
         "path": "tres2/",
         "file": "M2gold022.gif"
     }, {
-        "name": "M2gold023",
+        "name": "Чесоточный порошок",
         "path": "tres2/",
         "file": "M2gold023.gif"
     }, {
-        "name": "M2gold024",
+        "name": "ПароРук",
         "path": "tres2/",
         "file": "M2gold024.gif"
     }, {
-        "name": "M2gold025",
+        "name": "Очень святая книга",
         "path": "tres2/",
         "file": "M2gold025.gif"
     }, {
-        "name": "M2gold026",
+        "name": "Вилка-кормилка",
         "path": "tres2/",
         "file": "M2gold026.gif"
     }, {
-        "name": "M2gold027",
+        "name": "Подмени табличку персонажа. Получи уровень",
         "path": "tres2/",
         "file": "M2gold027.gif"
     }, {
-        "name": "M2gold028",
+        "name": "Зелье неверия",
         "path": "tres2/",
         "file": "M2gold028.gif"
     }, {
-        "name": "M2gold029",
+        "name": "Фамильяр",
         "path": "tres2/",
         "file": "M2gold029.gif"
     }, {
-        "name": "M2gold030",
+        "name": "Дикий топор",
         "path": "tres2/",
         "file": "M2gold030.gif"
     }, {
-        "name": "M2gold031",
+        "name": "Необоснованная грубость. Получи уровень.",
         "path": "tres2/",
         "file": "M2gold031.gif"
     }, {
-        "name": "M2gold032",
+        "name": "Зелье полета",
         "path": "tres2/",
         "file": "M2gold032.gif"
     }, {
-        "name": "M2gold033",
+        "name": "Ширинка на шипах",
         "path": "tres2/",
         "file": "M2gold033.gif"
     }, {
-        "name": "M2gold034",
+        "name": "Меч разящий все и вся кроме кальмаров",
         "path": "tres2/",
         "file": "M2gold034.gif"
     }, {
-        "name": "M2gold035",
+        "name": "Мять, равть и протыкать. Получи уровень",
         "path": "tres2/",
         "file": "M2gold035.gif"
     }, {
-        "name": "M2gold036",
+        "name": "Читерский кубик",
         "path": "tres2/",
         "file": "M2gold036.gif"
     }, {
-        "name": "M2gold037",
+        "name": "Милый наплечный дракон",
         "path": "tres2/",
         "file": "M2gold037.gif"
     }, {
-        "name": "M2gold038",
+        "name": "Меч забавного вида",
         "path": "tres2/",
         "file": "M2gold038.gif"
     }, {
-        "name": "M2gold039",
+        "name": "Заплати за пищу. Получи уровень",
         "path": "tres2/",
         "file": "M2gold039.gif"
     }, {
-        "name": "M2gold040",
+        "name": "Читерский кубик",
         "path": "tres2/",
         "file": "M2gold040.gif"
     }, {
-        "name": "M2gold041",
+        "name": "Жуткая вставная челюсть",
         "path": "tres2/",
         "file": "M2gold041.gif"
     }, {
-        "name": "M2gold042",
+        "name": "Пинцет ужаса",
         "path": "tres2/",
         "file": "M2gold042.gif"
     }, {
-        "name": "M2gold042",
+        "name": "Обещай мастеру прекратить рассказывать о своем персонаже. Получи уровень",
         "path": "tres2/",
-        "file": "M2gold042.gif"
+        "file": "M2gold043.gif"
     }, {
-        "name": "M2gold044",
+        "name": "Зелье трусости",
         "path": "tres2/",
         "file": "M2gold044.gif"
     }, {
-        "name": "M2gold045",
+        "name": "Жестяная шапка",
         "path": "tres2/",
         "file": "M2gold045.gif"
     }]

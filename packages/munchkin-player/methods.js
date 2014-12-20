@@ -13,7 +13,13 @@ Player.add = function (gameId, isOwner) {
         position: pos,
         isOwner: isOwner || false
     };
-    var id = playersCollection.insert(newPlayer);
+    var id = playersCollection.insert(newPlayer, function (error, result) {
+        if(!error)
+            GameEvents.commonEvent(gameId, {
+                actor: newPlayer.displayname,
+                action: 'enter'
+            });
+    });
     return id;
 };
 

@@ -8,6 +8,7 @@ Package.onUse(function (api) {
     var both = ['client', 'server'];
 
     api.use('meteor-platform', both);
+    api.use('vbelolapotkov:munchkin-resources-events', both);
 
     api.addFiles('collections.js', both);
     api.addFiles('server.js', 'server');

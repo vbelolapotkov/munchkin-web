@@ -26,11 +26,23 @@ var itemsListener = {
             if (!self.msg) return;
             switch (self.msg.action) {
                 case 'insert':
+                    var player = Player.getDataById(playerId);
                     Collections.Items.insert({
                         playerId: playerId,
                         gameId: gameId,
                         card: self.msg.card,
                         coords: self.msg.coords
+                    }, function (error, result) {
+                        if(error) alert(error.reason);
+                        else {
+                            GameEvents.cardEvent(player.gameId, {
+                                actor: player.displayname,
+                                action: 'move',
+                                cardName: self.msg.card.name,
+                                from: self.msg.actor,
+                                to: 'items'
+                            });
+                        }
                     });
                     break;
                 case 'remove':
@@ -159,7 +171,9 @@ Template.munchkinPlayerItems.events({
                 break;
             case 'hand':
                 //move card from hand to items
+                var player = Player.getDataById(currentPlayerId);
                 if (checkPlayer()) {
+                    //moving card to my items
                     cardDoc = Collections.Hand.findOne({
                         playerId: currentPlayerId,
                         'card._id': cardElem.id
@@ -176,15 +190,28 @@ Template.munchkinPlayerItems.events({
                                     top: top,
                                     left: left
                                 }
+                            }, function (error, result) {
+                                if (error) alert(error.reason);
+                                else {
+                                    GameEvents.cardEvent(player.gameId, {
+                                        actor: player.displayname,
+                                        action: 'move',
+                                        cardName: cardDoc.card.name,
+                                        from: 'hand',
+                                        to: 'items'
+                                    });
+                                }
                             });
                         }
                     });
                 } else {
+                    //moving card to other player
                     cardDoc = Collections.Hand.findOne({
                         playerId: currentPlayerId,
                         'card._id': cardElem.id
                     });
                     var newPlayerId = selectedPlayer.get();
+                    var newPlayer = Player.getDataById(newPlayerId);
                     Collections.Hand.remove(cardDoc._id, function (error) {
                         if(error) alert (error.reason);
                         else {
@@ -192,6 +219,17 @@ Template.munchkinPlayerItems.events({
                             {
                                 playerId: newPlayerId,
                                 card: cardDoc.card,
+                            }, function (error, result) {
+                                if (error) alert(error.reason);
+                                else {
+                                    GameEvents.cardEvent(player.gameId, {
+                                        actor: player.displayname,
+                                        action: 'give',
+                                        cardName: cardDoc.card.type,
+                                        from: 'hand',
+                                        to: newPlayer.displayname
+                                    });
+                                }
                             });
                         }
                     });

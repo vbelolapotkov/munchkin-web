@@ -18,6 +18,7 @@ Deck.shuffle = function (gameId, deck) {
     cursor.map(function (card, index) {
         deckCol.update(card._id, {$set: {index: shuffledIndex[index]}});
     }, shuffledIndex);
+    
 };
 
 Deck.getCard = function (gameId, type) {

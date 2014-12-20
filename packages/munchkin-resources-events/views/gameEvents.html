@@ -1,0 +1,17 @@
+<template name="gameEvents">
+    <div id="msgContainer" class="msgContainer">
+        {{#each gameEventMsg}}
+            <p class="gameEventMsg">
+                <span class="msgTime">({{formattedTime}}):</span>
+                Игрок<span class="msgActor"> {{actor}}</span>
+                {{localizedAction}}
+                {{#if cardEvent}}
+                    <span class="msgCard">{{cardDescription}}</span>
+                    {{localizedFrom}} {{localizedTo}}.
+                {{else}}
+                    {{localizedResult}}
+                {{/if}}
+            </p>
+        {{/each}}
+    </div>
+</template>

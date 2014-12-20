@@ -1,0 +1,28 @@
+.msgContainer {
+    margin: 0.5%;
+    padding: 0.5%;
+    background-color: #ffd484;
+    border: 1px solid gray;
+    height: 8em;
+    overflow: auto;
+}
+
+.gameEventMsg {
+    font-family: "Courier New", sans;
+    font-size: 0.8em;
+    color: gray;
+}
+
+.msgTime {
+    font-style: italic;
+}
+
+.msgActor {
+    font-weight: bold;
+    color: darkcyan;
+}
+
+.msgCard {
+    color: cornflowerblue;
+    font-weight: bold;
+}
