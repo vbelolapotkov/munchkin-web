@@ -9,6 +9,19 @@ function publishGames() {
         return gamesCollection.find(gameId);
     });
 }
+
+gamesCollection.allow({
+    insert: function (userId, doc) {
+        return false;
+    },
+    update: function (userId, doc, fields, modifier) {
+        return userId === doc.ownerId;
+    },
+    remove: function (userId, doc) {
+        return false;
+    }
+});
+
 Meteor.methods({
     'addNewGame': function(gameArgs) {
         var user = Meteor.user();

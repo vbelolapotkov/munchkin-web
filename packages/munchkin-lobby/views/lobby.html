@@ -24,8 +24,12 @@
                     {{timeStr}}
                 </td>
                 <td>{{playersCnt}}</td>
-                {{#if currentUser}}
-                <td class="last"><button type="button" class="enterGameBtn">В бой!</button></td>
+                {{#if isLocked}}
+                    {{#if currentUser}}
+                        <td class="last"><button type="button" class="enterGameBtn">В бой!</button></td>
+                    {{/if}}
+                {{else}}
+                        <td class="last">Заблокировано</td>
                 {{/if}}
             </tr>
             {{/each}}

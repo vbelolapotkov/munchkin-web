@@ -1,460 +1,452 @@
 {
     "imgPath": "/img/",
     "doors": [{
-        "name": "M8monster001",
+        "name": "Кентавр",
         "path": "doors8/",
         "file": "M8monster001.gif"
     }, {
-        "name": "M8monster002",
+        "name": "Ящер",
         "path": "doors8/",
         "file": "M8monster002.gif"
     }, {
-        "name": "M8monster003",
+        "name": "Легендарный",
         "path": "doors8/",
         "file": "M8monster003.gif"
     }, {
-        "name": "M8monster004",
+        "name": "Уровень 4. Саламандрик",
         "path": "doors8/",
         "file": "M8monster004.gif"
     }, {
-        "name": "M8monster005",
+        "name": "Уровень 12. Гламуроящеры",
         "path": "doors8/",
         "file": "M8monster005.gif"
     }, {
-        "name": "M8monster006",
+        "name": "Компульсивный. +5 к монстру",
         "path": "doors8/",
         "file": "M8monster006.gif"
     }, {
-        "name": "M8monster007",
+        "name": "Проклятие! Гендерный сдвиг",
         "path": "doors8/",
         "file": "M8monster007.gif"
     }, {
-        "name": "M8monster008",
+        "name": "Наемник экстрасенс",
         "path": "doors8/",
         "file": "M8monster008.gif"
     }, {
-        "name": "M8monster009",
+        "name": "Кентавр",
         "path": "doors8/",
         "file": "M8monster009.gif"
     }, {
-        "name": "M8monster010",
+        "name": "Ящер",
         "path": "doors8/",
         "file": "M8monster010.gif"
     }, {
-        "name": "M8monster011",
+        "name": "Легендарный",
         "path": "doors8/",
         "file": "M8monster011.gif"
     }, {
-        "name": "M8monster012",
+        "name": "Уровень 6. Гекко на телике",
         "path": "doors8/",
         "file": "M8monster012.gif"
     }, {
-        "name": "M8monster013",
+        "name": "Уровень 10. Кроксультанты",
         "path": "doors8/",
         "file": "M8monster013.gif"
     }, {
-        "name": "M8monster014",
+        "name": "Варварский. +10 к монстру",
         "path": "doors8/",
         "file": "M8monster014.gif"
     }, {
-        "name": "M8monster015",
+        "name": "Проклятие! Половое безличие",
         "path": "doors8/",
         "file": "M8monster015.gif"
     }, {
-        "name": "M8monster016",
+        "name": "Наемник Ящер",
         "path": "doors8/",
         "file": "M8monster016.gif"
     }, {
-        "name": "M8monster017",
+        "name": "Кентавр",
         "path": "doors8/",
         "file": "M8monster017.gif"
     }, {
-        "name": "M8monster018",
+        "name": "Ящер",
         "path": "doors8/",
         "file": "M8monster018.gif"
     }, {
-        "name": "M8monster019",
+        "name": "Легендарный",
         "path": "doors8/",
         "file": "M8monster019.gif"
     }, {
-        "name": "M8monster020",
+        "name": "Уровень 4. Рок звезда",
         "path": "doors8/",
         "file": "M8monster020.gif"
     }, {
-        "name": "M8monster021",
+        "name": "Уровень 12. Лорд ктобудет втеннис",
         "path": "doors8/",
         "file": "M8monster021.gif"
     }, {
-        "name": "M8monster021",
-        "path": "doors8/",
-        "file": "M8monster021.gif"
-    }, {
-        "name": "M8monster022",
+        "name": "Капризный. +10 к монстру",
         "path": "doors8/",
         "file": "M8monster022.gif"
     }, {
-        "name": "M8monster023",
+        "name": "Проклятие! Нависший рок",
         "path": "doors8/",
         "file": "M8monster023.gif"
     }, {
-        "name": "M8monster024",
+        "name": "Козел отпущения",
         "path": "doors8/",
         "file": "M8monster024.gif"
     }, {
-        "name": "M8monster025",
+        "name": "Кентавр",
         "path": "doors8/",
         "file": "M8monster025.gif"
     }, {
-        "name": "M8monster026",
+        "name": "Ящер",
         "path": "doors8/",
         "file": "M8monster026.gif"
     }, {
-        "name": "M8monster027",
+        "name": "Чит!",
         "path": "doors8/",
         "file": "M8monster027.gif"
     }, {
-        "name": "M8monster028",
+        "name": "Уровень 6. Жокей",
         "path": "doors8/",
         "file": "M8monster028.gif"
     }, {
-        "name": "M8monster029",
+        "name": "Уровень 14. Змеиный рейс",
         "path": "doors8/",
         "file": "M8monster029.gif"
     }, {
-        "name": "M8monster030",
+        "name": "Обессивный. +5 к монстру",
         "path": "doors8/",
         "file": "M8monster030.gif"
     }, {
-        "name": "M8monster031",
+        "name": "Проклятие! Дилетанство",
         "path": "doors8/",
         "file": "M8monster031.gif"
     }, {
-        "name": "M8monster032",
+        "name": "Ездовой феникс",
         "path": "doors8/",
         "file": "M8monster032.gif"
     }, {
-        "name": "M8monster033",
+        "name": "Кентавр",
         "path": "doors8/",
         "file": "M8monster033.gif"
     }, {
-        "name": "M8monster034",
+        "name": "Древний",
         "path": "doors8/",
         "file": "M8monster034.gif"
     }, {
-        "name": "M8monster035",
+        "name": "Полукровка",
         "path": "doors8/",
         "file": "M8monster035.gif"
     }, {
-        "name": "M8monster036",
+        "name": "Уровень 4. Шоколадный заяц",
         "path": "doors8/",
         "file": "M8monster036.gif"
     }, {
-        "name": "M8monster037",
+        "name": "Уровень 14. Безбашенный викинг (Андед)",
         "path": "doors8/",
         "file": "M8monster037.gif"
     }, {
-        "name": "M8monster038",
+        "name": "Проклятие! Плохое скакучуствие",
         "path": "doors8/",
         "file": "M8monster038.gif"
     }, {
-        "name": "M8monster039",
+        "name": "Проклятие! Броня улитучилась",
         "path": "doors8/",
         "file": "M8monster039.gif"
     }, {
-        "name": "M8monster040",
+        "name": "Конь-кобежец",
         "path": "doors8/",
         "file": "M8monster040.gif"
     }, {
-        "name": "M8monster041",
+        "name": "Кентавр",
         "path": "doors8/",
         "file": "M8monster041.gif"
     }, {
-        "name": "M8monster042",
+        "name": "Древний",
         "path": "doors8/",
         "file": "M8monster042.gif"
     }, {
-        "name": "M8monster042",
+        "name": "Суперманчкин",
         "path": "doors8/",
-        "file": "M8monster042.gif"
+        "file": "M8monster043.gif"
     }, {
-        "name": "M8monster044",
+        "name": "Уровень 4. Няшный ангел",
         "path": "doors8/",
         "file": "M8monster044.gif"
     }, {
-        "name": "M8monster045",
+        "name": "Тикбаланг",
         "path": "doors8/",
         "file": "M8monster045.gif"
     }, {
-        "name": "M8monster046",
+        "name": "Проклятие! Пальцем в масло",
         "path": "doors8/",
         "file": "M8monster046.gif"
     }, {
-        "name": "M8monster047",
+        "name": "Проклятие! Полный носок пчел",
         "path": "doors8/",
         "file": "M8monster047.gif"
     }, {
-        "name": "M8monster048",
+        "name": "Ездовой единорог",
         "path": "doors8/",
         "file": "M8monster048.gif"
     }, {
-        "name": "M8monster049",
+        "name": "Ящер",
         "path": "doors8/",
         "file": "M8monster049.gif"
     }, {
-        "name": "M8monster050",
+        "name": "Элитный",
         "path": "doors8/",
         "file": "M8monster050.gif"
     }, {
-        "name": "M8monster051",
+        "name": "Уровень 2. Пинбольный ящер",
         "path": "doors8/",
         "file": "M8monster051.gif"
     }, {
-        "name": "M8monster052",
+        "name": "Уровень 8. Удильщик",
         "path": "doors8/",
         "file": "M8monster052.gif"
     }, {
-        "name": "M8monster053",
+        "name": "Уровень 18. Элмер",
         "path": "doors8/",
         "file": "M8monster053.gif"
     }, {
-        "name": "M8monster054",
+        "name": "Проклятие! Зов природы",
         "path": "doors8/",
         "file": "M8monster054.gif"
     }, {
-        "name": "M8monster055",
+        "name": "Проклятие! Раскупорка сосудов",
         "path": "doors8/",
         "file": "M8monster055.gif"
     }, {
-        "name": "M8monster056",
+        "name": "Ящер",
         "path": "doors8/",
         "file": "M8monster056.gif"
     }, {
-        "name": "M8monster057",
+        "name": "Элитный",
         "path": "doors8/",
         "file": "M8monster057.gif"
     }, {
-        "name": "M8monster058",
+        "name": "Уровень 2. Заколдованный тритон",
         "path": "doors8/",
         "file": "M8monster058.gif"
     }, {
-        "name": "M8monster059",
+        "name": "Уровень 9. Угольный ангел",
         "path": "doors8/",
         "file": "M8monster059.gif"
     }, {
-        "name": "M8monster060",
+        "name": "Уровень 19. Мировой змей",
         "path": "doors8/",
         "file": "M8monster060.gif"
     }, {
-        "name": "M8monster061",
+        "name": "Проклятие! Колченогость",
         "path": "doors8/",
         "file": "M8monster061.gif"
     }, {
-        "name": "M8monster062",
+        "name": "Проклятие! Не такой уж ты особенный",
         "path": "doors8/",
         "file": "M8monster062.gif"
     }, {
-        "name": "M8monster063",
+        "name": "Ящер",
         "path": "doors8/",
         "file": "M8monster063.gif"
     }, {
-        "name": "M8monster064",
+        "name": "Элитный",
         "path": "doors8/",
         "file": "M8monster064.gif"
     }, {
-        "name": "M8monster065",
+        "name": "Уровень 2. Сороконяшка",
         "path": "doors8/",
         "file": "M8monster065.gif"
     }, {
-        "name": "M8monster066",
+        "name": "Уровень 10. Скитандерталец",
         "path": "doors8/",
         "file": "M8monster066.gif"
     }, {
-        "name": "M8monster067",
+        "name": "Уровень 20. Коньшмара",
         "path": "doors8/",
         "file": "M8monster067.gif"
     }, {
-        "name": "M8monster068",
+        "name": "Проклятие! Головняк с плеч",
         "path": "doors8/",
         "file": "M8monster068.gif"
     }, {
-        "name": "M8monster069",
+        "name": "Наемник Кентавр",
         "path": "doors8/",
         "file": "M8monster069.gif"
     }, {
-        "name": "M8monster070",
+        "name": "Кентавр",
         "path": "doors8/",
         "file": "M8monster070.gif"
     }, {
-        "name": "M8monster071",
+        "name": "Древний",
         "path": "doors8/",
         "file": "M8monster071.gif"
     }, {
-        "name": "M8monster072",
+        "name": "Полукровка",
         "path": "doors8/",
         "file": "M8monster072.gif"
     }, {
-        "name": "M8monster073",
+        "name": "Уровень 6. Принц-лягух",
         "path": "doors8/",
         "file": "M8monster073.gif"
     }, {
-        "name": "M8monster074",
+        "name": "Уровень 14. Ангел-тупитель",
         "path": "doors8/",
         "file": "M8monster074.gif"
     }, {
-        "name": "M8monster075",
+        "name": "Кайфующий. -5 к монстру",
         "path": "doors8/",
         "file": "M8monster075.gif"
     }, {
-        "name": "M8monster076",
+        "name": "Проклятие! Вырождение расы",
         "path": "doors8/",
         "file": "M8monster076.gif"
     }, {
-        "name": "M8monster077",
+        "name": "Ездовой баран",
         "path": "doors8/",
         "file": "M8monster077.gif"
     }],
     "treasures": [{
-        "name": "M8gold001",
+        "name": "Есть полуконь, готов путешествовать. Получи уровень",
         "path": "tres8/",
         "file": "M8gold001.gif"
     }, {
-        "name": "M8gold002",
+        "name": "Лошадиный манок",
         "path": "tres8/",
         "file": "M8gold002.gif"
     }, {
-        "name": "M8gold003",
+        "name": "Копье и магический шлем",
         "path": "tres8/",
         "file": "M8gold003.gif"
     }, {
-        "name": "M8gold004",
+        "name": "Попоная-невидимка",
         "path": "tres8/",
         "file": "M8gold004.gif"
     }, {
-        "name": "M8gold005",
+        "name": "Новые миньки мастера. Получи уровень",
         "path": "tres8/",
         "file": "M8gold005.gif"
     }, {
-        "name": "M8gold006",
+        "name": "Чвятая круглая шипастая штука",
         "path": "tres8/",
         "file": "M8gold006.gif"
     }, {
-        "name": "M8gold007",
+        "name": "Очешуенный броник",
         "path": "tres8/",
         "file": "M8gold007.gif"
     }, {
-        "name": "M8gold008",
+        "name": "Бардовое седло",
         "path": "tres8/",
         "file": "M8gold008.gif"
     }, {
-        "name": "M8gold009",
+        "name": "Приди на игротеку пораньше. Получи уровень",
         "path": "tres8/",
         "file": "M8gold009.gif"
     }, {
-        "name": "M8gold010",
+        "name": "Не по коню пальто",
         "path": "tres8/",
         "file": "M8gold010.gif"
     }, {
-        "name": "M8gold011",
+        "name": "Аватара",
         "path": "tres8/",
         "file": "M8gold011.gif"
     }, {
-        "name": "M8gold012",
+        "name": "Шоры",
         "path": "tres8/",
         "file": "M8gold012.gif"
     }, {
-        "name": "M8gold013",
+        "name": "Кому-то гадость, кому-то радость. Получи уровень",
         "path": "tres8/",
         "file": "M8gold013.gif"
     }, {
-        "name": "M8gold014",
+        "name": "Крабовые подковы",
         "path": "tres8/",
         "file": "M8gold014.gif"
     }, {
-        "name": "M8gold015",
+        "name": "Хотельное кольцо",
         "path": "tres8/",
         "file": "M8gold015.gif"
     }, {
-        "name": "M8gold016",
+        "name": "Рождественский свитер",
         "path": "tres8/",
         "file": "M8gold016.gif"
     }, {
-        "name": "M8gold017",
+        "name": "Подставь команду. Получи уровень",
         "path": "tres8/",
         "file": "M8gold017.gif"
     }, {
-        "name": "M8gold018",
+        "name": "Теплокровные сапоги",
         "path": "tres8/",
         "file": "M8gold018.gif"
     }, {
-        "name": "M8gold019",
+        "name": "Мипловый сироп",
         "path": "tres8/",
         "file": "M8gold019.gif"
     }, {
-        "name": "M8gold020",
+        "name": "Кадило наставлений",
         "path": "tres8/",
         "file": "M8gold020.gif"
     }, {
-        "name": "M8gold021",
+        "name": "Полный комплект снаряжения",
         "path": "tres8/",
         "file": "M8gold021.gif"
     }, {
-        "name": "M8gold021",
-        "path": "tres8/",
-        "file": "M8gold021.gif"
-    }, {
-        "name": "M8gold022",
+        "name": "Продово-ядовый сироп",
         "path": "tres8/",
         "file": "M8gold022.gif"
     }, {
-        "name": "M8gold023",
+        "name": "Туговарящий котелок",
         "path": "tres8/",
         "file": "M8gold023.gif"
     }, {
-        "name": "M8gold024",
+        "name": "Утреннее звездило",
         "path": "tres8/",
         "file": "M8gold024.gif"
     }, {
-        "name": "M8gold025",
+        "name": "Перечитерский кубик",
         "path": "tres8/",
         "file": "M8gold025.gif"
     }, {
-        "name": "M8gold026",
+        "name": "Охладитель пыла",
         "path": "tres8/",
         "file": "M8gold026.gif"
     }, {
-        "name": "M8gold027",
+        "name": "Ночное темнило",
         "path": "tres8/",
         "file": "M8gold027.gif"
     }, {
-        "name": "M8gold028",
+        "name": "Хотельное кольцо",
         "path": "tres8/",
         "file": "M8gold028.gif"
     }, {
-        "name": "M8gold029",
+        "name": "Нимб",
         "path": "tres8/",
         "file": "M8gold029.gif"
     }, {
-        "name": "M8gold030",
+        "name": "Туалетный змеенок",
         "path": "tres8/",
         "file": "M8gold030.gif"
     }, {
-        "name": "M8gold031",
+        "name": "Двигатель внешнего сгорания",
         "path": "tres8/",
         "file": "M8gold031.gif"
     }, {
-        "name": "M8gold032",
+        "name": "Насмотрелись японских монстрофильмов. Получи уровень",
         "path": "tres8/",
         "file": "M8gold032.gif"
     }, {
-        "name": "M8gold033",
+        "name": "Конут",
         "path": "tres8/",
         "file": "M8gold033.gif"
     }, {
-        "name": "M8gold034",
+        "name": "Читерский кубик",
         "path": "tres8/",
         "file": "M8gold034.gif"
     }, {
-        "name": "M8gold035",
+        "name": "Седлогуд",
         "path": "tres8/",
         "file": "M8gold035.gif"
     }]

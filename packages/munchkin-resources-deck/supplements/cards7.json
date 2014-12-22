@@ -1,752 +1,744 @@
 {
     "imgPath": "/img/",
     "doors": [{
-        "name": "M7monster001",
+        "name": "Узколобый",
         "path": "doors7/",
         "file": "M7monster001.gif"
     }, {
-        "name": "M7monster002",
+        "name": "Невидимый. +10 к монстру",
         "path": "doors7/",
         "file": "M7monster002.gif"
     }, {
-        "name": "M7monster003",
+        "name": "Немного круче",
         "path": "doors7/",
         "file": "M7monster003.gif"
     }, {
-        "name": "M7monster004",
+        "name": "Отвратительно. +5 или -5 к монстру",
         "path": "doors7/",
         "file": "M7monster004.gif"
     }, {
-        "name": "M7monster005",
+        "name": "Невероятно +10 или -10 к монстру",
         "path": "doors7/",
         "file": "M7monster005.gif"
     }, {
-        "name": "M7monster006",
+        "name": "Уровень 1. Зеленые солдатики",
         "path": "doors7/",
         "file": "M7monster006.gif"
     }, {
-        "name": "M7monster007",
+        "name": "Чит!",
         "path": "doors7/",
         "file": "M7monster007.gif"
     }, {
-        "name": "M7monster008",
+        "name": "Эпический малыш",
         "path": "doors7/",
         "file": "M7monster008.gif"
     }, {
-        "name": "M7monster009",
+        "name": "Супер-пупер манчкин",
         "path": "doors7/",
         "file": "M7monster009.gif"
     }, {
-        "name": "M7monster010",
+        "name": "Бродячая тварь",
         "path": "doors7/",
         "file": "M7monster010.gif"
     }, {
-        "name": "M7monster011",
+        "name": "Темный",
         "path": "doors7/",
         "file": "M7monster011.gif"
     }, {
-        "name": "M7monster012",
+        "name": "Невыразимо. +5 или -5 к монстру",
         "path": "doors7/",
         "file": "M7monster012.gif"
     }, {
-        "name": "M7monster013",
+        "name": "Замененыш",
         "path": "doors7/",
         "file": "M7monster013.gif"
     }, {
-        "name": "M7monster014",
+        "name": "Проклятие! Не называй меня Ширли",
         "path": "doors7/",
         "file": "M7monster014.gif"
     }, {
-        "name": "M7monster015",
+        "name": "Пьяный. -5 к Монстру",
         "path": "doors7/",
         "file": "M7monster015.gif"
     }, {
-        "name": "M7monster016",
+        "name": "Андед. +5 к монстру",
         "path": "doors7/",
         "file": "M7monster016.gif"
     }, {
-        "name": "M7monster017",
+        "name": "Уровень 1. Смайлик",
         "path": "doors7/",
         "file": "M7monster017.gif"
     }, {
-        "name": "M7monster018",
+        "name": "Чит!",
         "path": "doors7/",
         "file": "M7monster018.gif"
     }, {
-        "name": "M7monster019",
+        "name": "Эпический малыш",
         "path": "doors7/",
         "file": "M7monster019.gif"
     }, {
-        "name": "M7monster020",
+        "name": "Суперманчкин",
         "path": "doors7/",
         "file": "M7monster020.gif"
     }, {
-        "name": "M7monster021",
+        "name": "Темный",
         "path": "doors7/",
         "file": "M7monster021.gif"
     }, {
-        "name": "M7monster021",
-        "path": "doors7/",
-        "file": "M7monster021.gif"
-    }, {
-        "name": "M7monster022",
+        "name": "Очень, очень. +10 или -10 к монстру",
         "path": "doors7/",
         "file": "M7monster022.gif"
     }, {
-        "name": "M7monster023",
+        "name": "... И его маленькие друзья",
         "path": "doors7/",
         "file": "M7monster023.gif"
     }, {
-        "name": "M7monster024",
+        "name": "Проклятие! Мастер ужесточил правила",
         "path": "doors7/",
         "file": "M7monster024.gif"
     }, {
-        "name": "M7monster025",
+        "name": "Взрывающийся. +10 к монстру",
         "path": "doors7/",
         "file": "M7monster025.gif"
     }, {
-        "name": "M7monster026",
+        "name": "Андед. +5 к монстру",
         "path": "doors7/",
         "file": "M7monster026.gif"
     }, {
-        "name": "M7monster027",
+        "name": "Уровень 1. Кукла из носка",
         "path": "doors7/",
         "file": "M7monster027.gif"
     }, {
-        "name": "M7monster028",
+        "name": "Чит!",
         "path": "doors7/",
         "file": "M7monster028.gif"
     }, {
-        "name": "M7monster029",
+        "name": "Полукровка",
         "path": "doors7/",
         "file": "M7monster029.gif"
     }, {
-        "name": "M7monster030",
+        "name": "Суперманчкин",
         "path": "doors7/",
         "file": "M7monster030.gif"
     }, {
-        "name": "M7monster031",
+        "name": "Темный",
         "path": "doors7/",
         "file": "M7monster031.gif"
     }, {
-        "name": "M7monster032",
+        "name": "Типичный. +5 к монстру",
         "path": "doors7/",
         "file": "M7monster032.gif"
     }, {
-        "name": "M7monster033",
+        "name": "... И его маленькие друзья",
         "path": "doors7/",
         "file": "M7monster033.gif"
     }, {
-        "name": "M7monster034",
+        "name": "... С излишком сыра. +5 к монстру",
         "path": "doors7/",
         "file": "M7monster034.gif"
     }, {
-        "name": "M7monster035",
+        "name": "Чрезвычайно. +5 или -5 к монстру",
         "path": "doors7/",
         "file": "M7monster035.gif"
     }, {
-        "name": "M7monster036",
+        "name": "Андед. +5 к монстру",
         "path": "doors7/",
         "file": "M7monster036.gif"
     }, {
-        "name": "M7monster037",
+        "name": "Уровень 1. Дурилка картонная",
         "path": "doors7/",
         "file": "M7monster037.gif"
     }, {
-        "name": "M7monster038",
+        "name": "Чит!",
         "path": "doors7/",
         "file": "M7monster038.gif"
     }, {
-        "name": "M7monster039",
+        "name": "Полукровка",
         "path": "doors7/",
         "file": "M7monster039.gif"
     }, {
-        "name": "M7monster040",
+        "name": "Суперманчкин",
         "path": "doors7/",
         "file": "M7monster040.gif"
     }, {
-        "name": "M7monster041",
+        "name": "Высший",
         "path": "doors7/",
         "file": "M7monster041.gif"
     }, {
-        "name": "M7monster042",
+        "name": "Истощающий. +5 к монстру",
         "path": "doors7/",
         "file": "M7monster042.gif"
     }, {
-        "name": "M7monster042",
+        "name": "Проклятие! Свинцовая краска",
         "path": "doors7/",
-        "file": "M7monster042.gif"
+        "file": "M7monster043.gif"
     }, {
-        "name": "M7monster044",
+        "name": "Удивительно. +5 или -5 к монстру",
         "path": "doors7/",
         "file": "M7monster044.gif"
     }, {
-        "name": "M7monster045",
+        "name": "Волосатый. +5 к монстру",
         "path": "doors7/",
         "file": "M7monster045.gif"
     }, {
-        "name": "M7monster046",
+        "name": "Уровень 1. Вонища",
         "path": "doors7/",
         "file": "M7monster046.gif"
     }, {
-        "name": "M7monster047",
+        "name": "Уровень 10. Телевизор",
         "path": "doors7/",
         "file": "M7monster047.gif"
     }, {
-        "name": "M7monster048",
+        "name": "Чит!",
         "path": "doors7/",
         "file": "M7monster048.gif"
     }, {
-        "name": "M7monster049",
+        "name": "Полукровка",
         "path": "doors7/",
         "file": "M7monster049.gif"
     }, {
-        "name": "M7monster050",
+        "name": "Ультра манчкин",
         "path": "doors7/",
         "file": "M7monster050.gif"
     }, {
-        "name": "M7monster051",
+        "name": "Высший",
         "path": "doors7/",
         "file": "M7monster051.gif"
     }, {
-        "name": "M7monster052",
+        "name": "Голливудский. +5 к монстру",
         "path": "doors7/",
         "file": "M7monster052.gif"
     }, {
-        "name": "M7monster053",
+        "name": "Проклятие! Гарантия истекла",
         "path": "doors7/",
         "file": "M7monster053.gif"
     }, {
-        "name": "M7monster054",
+        "name": "Бронированный. +10 к монстру",
         "path": "doors7/",
         "file": "M7monster054.gif"
     }, {
-        "name": "M7monster055",
+        "name": "Особо крупных размеров. +5 к монстру",
         "path": "doors7/",
         "file": "M7monster055.gif"
     }, {
-        "name": "M7monster056",
+        "name": "Уровень 1. Грязное белье (Андед)",
         "path": "doors7/",
         "file": "M7monster056.gif"
     }, {
-        "name": "M7monster057",
+        "name": "Влюбленный",
         "path": "doors7/",
         "file": "M7monster057.gif"
     }, {
-        "name": "M7monster058",
+        "name": "Химера",
         "path": "doors7/",
         "file": "M7monster058.gif"
     }, {
-        "name": "M7monster059",
+        "name": "Крутой замес",
         "path": "doors7/",
         "file": "M7monster059.gif"
     }, {
-        "name": "M7monster060",
+        "name": "Ультра манчкин",
         "path": "doors7/",
         "file": "M7monster060.gif"
     }, {
-        "name": "M7monster061",
+        "name": "Высший",
         "path": "doors7/",
         "file": "M7monster061.gif"
     }, {
-        "name": "M7monster062",
+        "name": "Обольстительный. +5 к монстру",
         "path": "doors7/",
         "file": "M7monster062.gif"
     }, {
-        "name": "M7monster063",
+        "name": "Прихвостень",
         "path": "doors7/",
         "file": "M7monster063.gif"
     }, {
-        "name": "M7monster064",
+        "name": "Поразительно. +10 или -10 к монстру",
         "path": "doors7/",
         "file": "M7monster064.gif"
     }, {
-        "name": "M7monster065",
+        "name": "Ошеломляюще. +10 или -10 к монстру",
         "path": "doors7/",
         "file": "M7monster065.gif"
     }, {
-        "name": "M7monster066",
+        "name": "Уровень 1. Следы",
         "path": "doors7/",
         "file": "M7monster066.gif"
     }, {
-        "name": "M7monster067",
+        "name": "Три в одном",
         "path": "doors7/",
         "file": "M7monster067.gif"
     }, {
-        "name": "M7monster068",
+        "name": "Сразу же в сиквел",
         "path": "doors7/",
         "file": "M7monster068.gif"
     }, {
-        "name": "M7monster069",
+        "name": "Крутой замес",
         "path": "doors7/",
         "file": "M7monster069.gif"
     }, {
-        "name": "M7monster070",
+        "name": "Ультра манчкин",
         "path": "doors7/",
         "file": "M7monster070.gif"
     }, {
-        "name": "M7monster071",
+        "name": "Мастер",
         "path": "doors7/",
         "file": "M7monster071.gif"
     }, {
-        "name": "M7monster072",
+        "name": "Разъяренный. +10 к монстру",
         "path": "doors7/",
         "file": "M7monster072.gif"
     }, {
-        "name": "M7monster073",
+        "name": "Грабани лавочника",
         "path": "doors7/",
         "file": "M7monster073.gif"
     }, {
-        "name": "M7monster074",
+        "name": "Прикованный к постели. -5 к монстру",
         "path": "doors7/",
         "file": "M7monster074.gif"
     }, {
-        "name": "M7monster075",
+        "name": "Коварный. +10 к монстру",
         "path": "doors7/",
         "file": "M7monster075.gif"
     }, {
-        "name": "M7monster076",
+        "name": "Уровень 10. Картошка фри",
         "path": "doors7/",
         "file": "M7monster076.gif"
     }, {
-        "name": "M7monster077",
+        "name": "Три в одном",
         "path": "doors7/",
         "file": "M7monster077.gif"
     }, {
-        "name": "M7monster078",
+        "name": "Куча мала",
         "path": "doors7/",
         "file": "M7monster078.gif"
     }, {
-        "name": "M7monster079",
+        "name": "Старая редакция",
         "path": "doors7/",
         "file": "M7monster079.gif"
     }, {
-        "name": "M7monster080",
+        "name": "Бродячая тварь",
         "path": "doors7/",
         "file": "M7monster080.gif"
     }, {
-        "name": "M7monster081",
+        "name": "Мастер",
         "path": "doors7/",
         "file": "M7monster081.gif"
     }, {
-        "name": "M7monster082",
+        "name": "Офигенный. +10 к монстру",
         "path": "doors7/",
         "file": "M7monster082.gif"
     }, {
-        "name": "M7monster083",
+        "name": "Уровень 15. Спящий клаус",
         "path": "doors7/",
         "file": "M7monster083.gif"
     }, {
-        "name": "M7monster084",
+        "name": "Набафаный. +5 к монстру",
         "path": "doors7/",
         "file": "M7monster084.gif"
     }, {
-        "name": "M7monster085",
+        "name": "Беззубый. -5 к монстру",
         "path": "doors7/",
         "file": "M7monster085.gif"
     }, {
-        "name": "M7monster086",
+        "name": "Уровень 10. Продавец игр",
         "path": "doors7/",
         "file": "M7monster086.gif"
     }, {
-        "name": "M7monster087",
+        "name": "Три в одном",
         "path": "doors7/",
         "file": "M7monster087.gif"
     }, {
-        "name": "M7monster088",
+        "name": "Куча мала",
         "path": "doors7/",
         "file": "M7monster088.gif"
     }, {
-        "name": "M7monster089",
+        "name": "Старая редакция",
         "path": "doors7/",
         "file": "M7monster089.gif"
     }, {
-        "name": "M7monster090",
+        "name": "Бродячая тварь",
         "path": "doors7/",
         "file": "M7monster090.gif"
     }, {
-        "name": "M7monster091",
+        "name": "Езовой пегас",
         "path": "doors7/",
         "file": "M7monster091.gif"
     }, {
-        "name": "M7monster092",
+        "name": "Мастер",
         "path": "doors7/",
         "file": "M7monster092.gif"
     }, {
-        "name": "M7monster093",
+        "name": "Смертоносный. +10 к монстру",
         "path": "doors7/",
         "file": "M7monster093.gif"
     }, {
-        "name": "M7monster094",
+        "name": "Подтасованная колода",
         "path": "doors7/",
         "file": "M7monster094.gif"
     }, {
-        "name": "M7monster095",
+        "name": "Ужасный. +5 к монстру",
         "path": "doors7/",
         "file": "M7monster095.gif"
     }, {
-        "name": "M7monster096",
+        "name": "Очень редкий. +10 к монстру",
         "path": "doors7/",
         "file": "M7monster096.gif"
     }, {
-        "name": "M7monster097",
+        "name": "Уровень 1. Граффити",
         "path": "doors7/",
         "file": "M7monster097.gif"
     }, {
-        "name": "M7monster098",
+        "name": "Чит!",
         "path": "doors7/",
         "file": "M7monster098.gif"
     }, {
-        "name": "M7monster099",
+        "name": "Эпический малыш",
         "path": "doors7/",
         "file": "M7monster099.gif"
     }, {
-        "name": "M7monster100",
+        "name": "Старая редакция",
         "path": "doors7/",
         "file": "M7monster100.gif"
     }, {
-        "name": "M7monster101",
+        "name": "Бродячая тварь",
         "path": "doors7/",
         "file": "M7monster101.gif"
     }, {
-        "name": "M7monster102",
+        "name": "Уровень 13. Гипножаба",
         "path": "doors7/",
         "file": "M7monster102.gif"
     }, {
-        "name": "M7monster103",
+        "name": "Паровой конь",
         "path": "doors7/",
         "file": "M7monster103.gif"
     }, {
-        "name": "M7monster104",
+        "name": "Выбран главой гильдии",
         "path": "doors7/",
         "file": "M7monster104.gif"
     }, {
-        "name": "M7monster105",
+        "name": "Уровень 20. Кевинатор",
         "path": "doors7/",
         "file": "M7monster105.gif"
     }, {
-        "name": "M7monster106",
+        "name": "Уровень 8. Жуткая зеленая тварь",
         "path": "doors7/",
         "file": "M7monster106.gif"
     }, {
-        "name": "M7monster107",
+        "name": "Отсоединение разъема",
         "path": "doors7/",
         "file": "M7monster107.gif"
     }, {
-        "name": "M7monster108",
+        "name": "Предсмертная ухмылка",
         "path": "doors7/",
         "file": "M7monster108.gif"
     }, {
-        "name": "M7monster109",
+        "name": "Накачанный. +10 к монстру",
         "path": "doors7/",
         "file": "M7monster109.gif"
     }, {
-        "name": "M7monster110",
+        "name": "Уровень 15. Мама Забу",
         "path": "doors7/",
         "file": "M7monster110.gif"
     }, {
-        "name": "M7monster111",
+        "name": "Маленький герой-наемник",
         "path": "doors7/",
         "file": "M7monster111.gif"
     }, {
-        "name": "M7monster112",
+        "name": "Ты мой!",
         "path": "doors7/",
         "file": "M7monster112.gif"
     }, {
-        "name": "M7monster113",
+        "name": "Наемник Следопыт",
         "path": "doors7/",
         "file": "M7monster113.gif"
     }, {
-        "name": "M7monster114",
+        "name": "Харлей",
         "path": "doors7/",
         "file": "M7monster114.gif"
     }, {
-        "name": "M7monster115",
+        "name": "Пожни бурю",
         "path": "doors7/",
         "file": "M7monster115.gif"
     }, {
-        "name": "M7monster116",
+        "name": "Вскрыл сокровищницу",
         "path": "doors7/",
         "file": "M7monster116.gif"
     }, {
-        "name": "M7monster117",
+        "name": "Проклятие! Зомбификация",
         "path": "doors7/",
         "file": "M7monster117.gif"
     }, {
-        "name": "M7monster118",
+        "name": "Проклятие! Теряешь 1 уровень",
         "path": "doors7/",
         "file": "M7monster118.gif"
     }, {
-        "name": "M7monster119",
+        "name": "Правила для неудачников",
         "path": "doors7/",
         "file": "M7monster119.gif"
     }, {
-        "name": "M7monster120",
+        "name": "Проклятие! Зашколен! Теряешь классы",
         "path": "doors7/",
         "file": "M7monster120.gif"
     }, {
-        "name": "M7monster121",
+        "name": "Уровень 10. Высокая клевая телка",
         "path": "doors7/",
         "file": "M7monster121.gif"
     }],
     "treasures": [{
-        "name": "M7gold001",
+        "name": "Со стальными носами",
         "path": "tres7/",
         "file": "M7gold001.gif"
     }, {
-        "name": "M7gold002",
+        "name": "Читерский кубик",
         "path": "tres7/",
         "file": "M7gold002.gif"
     }, {
-        "name": "M7gold003",
+        "name": "Чит с двух рук",
         "path": "tres7/",
         "file": "M7gold003.gif"
     }, {
-        "name": "M7gold004",
+        "name": "Вы отберете мои штучки только вырвав их из моих мертвых холодных рук",
         "path": "tres7/",
         "file": "M7gold004.gif"
     }, {
-        "name": "M7gold005",
+        "name": "Вентилируемый",
         "path": "tres7/",
         "file": "M7gold005.gif"
     }, {
-        "name": "M7gold006",
+        "name": "С тефлоновым покрытием",
         "path": "tres7/",
         "file": "M7gold006.gif"
     }, {
-        "name": "M7gold007",
+        "name": "Счастливая монетка",
         "path": "tres7/",
         "file": "M7gold007.gif"
     }, {
-        "name": "M7gold008",
+        "name": "Чит с двух рук",
         "path": "tres7/",
         "file": "M7gold008.gif"
     }, {
-        "name": "M7gold009",
+        "name": "Бронебойное",
         "path": "tres7/",
         "file": "M7gold009.gif"
     }, {
-        "name": "M7gold010",
+        "name": "Музыкальная тема",
         "path": "tres7/",
         "file": "M7gold010.gif"
     }, {
-        "name": "M7gold011",
+        "name": "Талисман удачи",
         "path": "tres7/",
         "file": "M7gold011.gif"
     }, {
-        "name": "M7gold012",
+        "name": "Чит с двух рук",
         "path": "tres7/",
         "file": "M7gold012.gif"
     }, {
-        "name": "M7gold013",
+        "name": "Сверхшумное",
         "path": "tres7/",
         "file": "M7gold013.gif"
     }, {
-        "name": "M7gold014",
+        "name": "С шипами",
         "path": "tres7/",
         "file": "M7gold014.gif"
     }, {
-        "name": "M7gold015",
+        "name": "Талисман удачи",
         "path": "tres7/",
         "file": "M7gold015.gif"
     }, {
-        "name": "M7gold016",
+        "name": "Ловкость ног",
         "path": "tres7/",
         "file": "M7gold016.gif"
     }, {
-        "name": "M7gold017",
+        "name": "Золоченое",
         "path": "tres7/",
         "file": "M7gold017.gif"
     }, {
-        "name": "M7gold018",
+        "name": "Подгони мастеру клевый кубик. Получи уровень",
         "path": "tres7/",
         "file": "M7gold018.gif"
     }, {
-        "name": "M7gold019",
+        "name": "Талисман удачи",
         "path": "tres7/",
         "file": "M7gold019.gif"
     }, {
-        "name": "M7gold020",
+        "name": "Даешь 11!",
         "path": "tres7/",
         "file": "M7gold020.gif"
     }, {
-        "name": "M7gold021",
+        "name": "Укрепленный",
         "path": "tres7/",
         "file": "M7gold021.gif"
     }, {
-        "name": "M7gold021",
-        "path": "tres7/",
-        "file": "M7gold021.gif"
-    }, {
-        "name": "M7gold022",
+        "name": "Вынеси мозг мастеру. Получи уровень",
         "path": "tres7/",
         "file": "M7gold022.gif"
     }, {
-        "name": "M7gold023",
+        "name": "Талисман удачи",
         "path": "tres7/",
         "file": "M7gold023.gif"
     }, {
-        "name": "M7gold024",
+        "name": "Карманная дыра",
         "path": "tres7/",
         "file": "M7gold024.gif"
     }, {
-        "name": "M7gold025",
+        "name": "Разоблачающий костюм",
         "path": "tres7/",
         "file": "M7gold025.gif"
     }, {
-        "name": "M7gold026",
+        "name": "Подсмотри сценарий. Получи уровень",
         "path": "tres7/",
         "file": "M7gold026.gif"
     }, {
-        "name": "M7gold027",
+        "name": "Магически освященное ДНК-зелье",
         "path": "tres7/",
         "file": "M7gold027.gif"
     }, {
-        "name": "M7gold028",
+        "name": "Продай родную мать",
         "path": "tres7/",
         "file": "M7gold028.gif"
     }, {
-        "name": "M7gold029",
+        "name": "Перезарядка! Получи уровень",
         "path": "tres7/",
         "file": "M7gold029.gif"
     }, {
-        "name": "M7gold030",
+        "name": "Самоочищающееся",
         "path": "tres7/",
         "file": "M7gold030.gif"
     }, {
-        "name": "M7gold031",
+        "name": "Прижизненная реинкарнация. Получи уровень",
         "path": "tres7/",
         "file": "M7gold031.gif"
     }, {
-        "name": "M7gold032",
+        "name": "Могучий фолиант умений",
         "path": "tres7/",
         "file": "M7gold032.gif"
     }, {
-        "name": "M7gold033",
+        "name": "Подарочный купон",
         "path": "tres7/",
         "file": "M7gold033.gif"
     }, {
-        "name": "M7gold034",
+        "name": "На острых шпильках",
         "path": "tres7/",
         "file": "M7gold034.gif"
     }, {
-        "name": "M7gold035",
+        "name": "Чит как будто завтра не наступит",
         "path": "tres7/",
         "file": "M7gold035.gif"
     }, {
-        "name": "M7gold036",
+        "name": "Зелье усмельчения размера",
         "path": "tres7/",
         "file": "M7gold036.gif"
     }, {
-        "name": "M7gold037",
+        "name": "Вы отберете мои штучки только вырвав их из моих мертвых холодных рук",
         "path": "tres7/",
         "file": "M7gold037.gif"
     }, {
-        "name": "M7gold038",
+        "name": "На пружинах",
         "path": "tres7/",
         "file": "M7gold038.gif"
     }, {
-        "name": "M7gold039",
+        "name": "Надувной манчкин",
         "path": "tres7/",
         "file": "M7gold039.gif"
     }, {
-        "name": "M7gold040",
+        "name": "Зелье дебафанизации",
         "path": "tres7/",
         "file": "M7gold040.gif"
     }, {
-        "name": "M7gold041",
+        "name": "Вы отберете мои штучки только вырвав их из моих мертвых холодных рук",
         "path": "tres7/",
         "file": "M7gold041.gif"
     }, {
-        "name": "M7gold042",
+        "name": "Смертельный камнепад",
         "path": "tres7/",
         "file": "M7gold042.gif"
     }, {
-        "name": "M7gold042",
+        "name": "Перечитерский кубик",
         "path": "tres7/",
-        "file": "M7gold042.gif"
+        "file": "M7gold043.gif"
     }, {
-        "name": "M7gold044",
+        "name": "Перечитерский кубик",
         "path": "tres7/",
         "file": "M7gold044.gif"
     }, {
-        "name": "M7gold045",
+        "name": "Перечитерский кубик",
         "path": "tres7/",
         "file": "M7gold045.gif"
     }, {
-        "name": "M7gold046",
+        "name": "Перечитерский кубик",
         "path": "tres7/",
         "file": "M7gold046.gif"
     }, {
-        "name": "M7gold047",
+        "name": "Внеигровые достоинства",
         "path": "tres7/",
         "file": "M7gold047.gif"
     }, {
-        "name": "M7gold048",
+        "name": "Манчкинский броник",
         "path": "tres7/",
         "file": "M7gold048.gif"
     }, {
-        "name": "M7gold049",
+        "name": "Принудительный пересчет",
         "path": "tres7/",
         "file": "M7gold049.gif"
     }, {
-        "name": "M7gold050",
+        "name": "манчкинское безумие заполночь",
         "path": "tres7/",
         "file": "M7gold050.gif"
     }, {
-        "name": "M7gold051",
+        "name": "Товарообмен",
         "path": "tres7/",
         "file": "M7gold051.gif"
     }, {
-        "name": "M7gold052",
+        "name": "+5 к сексозности",
         "path": "tres7/",
         "file": "M7gold052.gif"
     }, {
-        "name": "M7gold053",
+        "name": "Ободряющая беседа со своим аватаром. Получи уровень",
         "path": "tres7/",
         "file": "M7gold053.gif"
     }, {
-        "name": "M7gold054",
+        "name": "Пободаемся",
         "path": "tres7/",
         "file": "M7gold054.gif"
     }, {
-        "name": "M7gold055",
+        "name": "Продажа игровых футболок",
         "path": "tres7/",
         "file": "M7gold055.gif"
     }, {
-        "name": "M7gold056",
+        "name": "Картографический сундук",
         "path": "tres7/",
         "file": "M7gold056.gif"
     }, {
-        "name": "M7gold057",
+        "name": "Соври своей собственной вебкамере. Получи уровень",
         "path": "tres7/",
         "file": "M7gold057.gif"
     }, {
-        "name": "M7gold058",
+        "name": "Кровавый мещ могущества",
         "path": "tres7/",
         "file": "M7gold058.gif"
     }, {
-        "name": "M7gold059",
+        "name": "Джин в тонике",
         "path": "tres7/",
         "file": "M7gold059.gif"
     }, {
-        "name": "M7gold060",
+        "name": "Свиток обнаружения секретных дверей",
         "path": "tres7/",
         "file": "M7gold060.gif"
     }, {
-        "name": "M7gold061",
+        "name": "Кайпиринья",
         "path": "tres7/",
         "file": "M7gold061.gif"
     }, {
-        "name": "M7gold062",
+        "name": "Сундук",
         "path": "tres7/",
         "file": "M7gold062.gif"
     }, {
-        "name": "M7gold063",
+        "name": "Джин-тоник",
         "path": "tres7/",
         "file": "M7gold063.gif"
     }, {
-        "name": "M7gold064",
+        "name": "Король",
         "path": "tres7/",
         "file": "M7gold064.gif"
     }]

@@ -1,532 +1,524 @@
 {
     "imgPath": "/img/",
     "doors": [{
-        "name": "M5monster001",
+        "name": "Орк",
         "path": "doors5/",
         "file": "M5monster001.gif"
     }, {
-        "name": "M5monster002",
+        "name": "Проклятие! Потерял счастливый кубик. Теряешь 1 уровень",
         "path": "doors5/",
         "file": "M5monster002.gif"
     }, {
-        "name": "M5monster003",
+        "name": "Уровень 10. Василиск",
         "path": "doors5/",
         "file": "M5monster003.gif"
     }, {
-        "name": "M5monster004",
+        "name": "Уровень 2. Подкроватный монстр",
         "path": "doors5/",
         "file": "M5monster004.gif"
     }, {
-        "name": "M5monster005",
+        "name": "Уровень 13. Три манчкитера",
         "path": "doors5/",
         "file": "M5monster005.gif"
     }, {
-        "name": "M5monster006",
+        "name": "Бродячая тварь",
         "path": "doors5/",
         "file": "M5monster006.gif"
     }, {
-        "name": "M5monster007",
+        "name": "Проклятие! Помеченный смертью",
         "path": "doors5/",
         "file": "M5monster007.gif"
     }, {
-        "name": "M5monster008",
+        "name": "Халфлинг",
         "path": "doors5/",
         "file": "M5monster008.gif"
     }, {
-        "name": "M5monster009",
+        "name": "Проклятие! А у меня камень",
         "path": "doors5/",
         "file": "M5monster009.gif"
     }, {
-        "name": "M5monster010",
+        "name": "Уровень 1. Жлобгоблин",
         "path": "doors5/",
         "file": "M5monster010.gif"
     }, {
-        "name": "M5monster011",
+        "name": "Уровень 1. Мелкий бог",
         "path": "doors5/",
         "file": "M5monster011.gif"
     }, {
-        "name": "M5monster012",
+        "name": "Уровень 12. Шнурфы",
         "path": "doors5/",
         "file": "M5monster012.gif"
     }, {
-        "name": "M5monster013",
+        "name": "Двуглавый",
         "path": "doors5/",
         "file": "M5monster013.gif"
     }, {
-        "name": "M5monster014",
+        "name": "Чит!",
         "path": "doors5/",
         "file": "M5monster014.gif"
     }, {
-        "name": "M5monster015",
+        "name": "Гном",
         "path": "doors5/",
         "file": "M5monster015.gif"
     }, {
-        "name": "M5monster016",
+        "name": "Проклятие! Содержимый мешок",
         "path": "doors5/",
         "file": "M5monster016.gif"
     }, {
-        "name": "M5monster017",
+        "name": "Уровень 20. Анубис (Андед)",
         "path": "doors5/",
         "file": "M5monster017.gif"
     }, {
-        "name": "M5monster018",
+        "name": "Уровень 17. Молнячок",
         "path": "doors5/",
         "file": "M5monster018.gif"
     }, {
-        "name": "M5monster019",
+        "name": "Уровень 18. Рука судьбы",
         "path": "doors5/",
         "file": "M5monster019.gif"
     }, {
-        "name": "M5monster020",
+        "name": "Суперманчкин",
         "path": "doors5/",
         "file": "M5monster020.gif"
     }, {
-        "name": "M5monster021",
+        "name": "Воин",
         "path": "doors5/",
         "file": "M5monster021.gif"
     }, {
-        "name": "M5monster021",
-        "path": "doors5/",
-        "file": "M5monster021.gif"
-    }, {
-        "name": "M5monster022",
+        "name": "Эльф",
         "path": "doors5/",
         "file": "M5monster022.gif"
     }, {
-        "name": "M5monster023",
+        "name": "Проклятие! Произвольный игровой балланс",
         "path": "doors5/",
         "file": "M5monster023.gif"
     }, {
-        "name": "M5monster024",
+        "name": "Надувной. -5 к монстру",
         "path": "doors5/",
         "file": "M5monster024.gif"
     }, {
-        "name": "M5monster025",
+        "name": "Уровень 6. Соварный рыцарь",
         "path": "doors5/",
         "file": "M5monster025.gif"
     }, {
-        "name": "M5monster026",
+        "name": "Уровень 2. Братья Гримм",
         "path": "doors5/",
         "file": "M5monster026.gif"
     }, {
-        "name": "M5monster027",
+        "name": "Политкоректность",
         "path": "doors5/",
         "file": "M5monster027.gif"
     }, {
-        "name": "M5monster028",
+        "name": "Эльф",
         "path": "doors5/",
         "file": "M5monster028.gif"
     }, {
-        "name": "M5monster029",
+        "name": "Дварф",
         "path": "doors5/",
         "file": "M5monster029.gif"
     }, {
-        "name": "M5monster030",
+        "name": "Следопыт",
         "path": "doors5/",
         "file": "M5monster030.gif"
     }, {
-        "name": "M5monster031",
+        "name": "Скалящийся. +5 к монстру",
         "path": "doors5/",
         "file": "M5monster031.gif"
     }, {
-        "name": "M5monster032",
+        "name": "Уровень 4. Бывшая девушка мастера",
         "path": "doors5/",
         "file": "M5monster032.gif"
     }, {
-        "name": "M5monster033",
+        "name": "Уровень 4. Телеторгаш",
         "path": "doors5/",
         "file": "M5monster033.gif"
     }, {
-        "name": "M5monster034",
+        "name": "Полукровка",
         "path": "doors5/",
         "file": "M5monster034.gif"
     }, {
-        "name": "M5monster035",
+        "name": "Миниатюрный. -5 к монстру",
         "path": "doors5/",
         "file": "M5monster035.gif"
     }, {
-        "name": "M5monster036",
+        "name": "Следопыт",
         "path": "doors5/",
         "file": "M5monster036.gif"
     }, {
-        "name": "M5monster037",
+        "name": "Проклятие! Волшебная лажа. Теряешь надетую обувку",
         "path": "doors5/",
         "file": "M5monster037.gif"
     }, {
-        "name": "M5monster038",
+        "name": "Уровень 19. Циклоп",
         "path": "doors5/",
         "file": "M5monster038.gif"
     }, {
-        "name": "M5monster039",
+        "name": "Уровень 3. Борчиха в грязи",
         "path": "doors5/",
         "file": "M5monster039.gif"
     }, {
-        "name": "M5monster040",
+        "name": "Уровень 10. Дух Хана (Андед)",
         "path": "doors5/",
         "file": "M5monster040.gif"
     }, {
-        "name": "M5monster041",
+        "name": "Бродячая тварь",
         "path": "doors5/",
         "file": "M5monster041.gif"
     }, {
-        "name": "M5monster042",
+        "name": "Уровень 2. Жанна д'Орк",
         "path": "doors5/",
         "file": "M5monster042.gif"
     }, {
-        "name": "M5monster042",
+        "name": "Следопыт",
         "path": "doors5/",
-        "file": "M5monster042.gif"
+        "file": "M5monster043.gif"
     }, {
-        "name": "M5monster044",
+        "name": "Проклятие! Волшебная лампа. Теряешь надетый головняк",
         "path": "doors5/",
         "file": "M5monster044.gif"
     }, {
-        "name": "M5monster045",
+        "name": "Уровень 2. Костяные вошки",
         "path": "doors5/",
         "file": "M5monster045.gif"
     }, {
-        "name": "M5monster046",
+        "name": "Уровень 9. Ветхозаветный порок",
         "path": "doors5/",
         "file": "M5monster046.gif"
     }, {
-        "name": "M5monster047",
+        "name": "Уровень 5. Зубной фей",
         "path": "doors5/",
         "file": "M5monster047.gif"
     }, {
-        "name": "M5monster048",
+        "name": "Бюджетный скакун",
         "path": "doors5/",
         "file": "M5monster048.gif"
     }, {
-        "name": "M5monster049",
+        "name": "Уровень 2. Бычок",
         "path": "doors5/",
         "file": "M5monster049.gif"
     }, {
-        "name": "M5monster050",
+        "name": "Следопыт",
         "path": "doors5/",
         "file": "M5monster050.gif"
     }, {
-        "name": "M5monster051",
+        "name": "Проклятие! Ласковый дождь. Теряешь класс",
         "path": "doors5/",
         "file": "M5monster051.gif"
     }, {
-        "name": "M5monster052",
+        "name": "Уровень 14. Друид",
         "path": "doors5/",
         "file": "M5monster052.gif"
     }, {
-        "name": "M5monster053",
+        "name": "Уровень 15. Абыкто",
         "path": "doors5/",
         "file": "M5monster053.gif"
     }, {
-        "name": "M5monster054",
+        "name": "Уровень 16. Клоандеды (Андед)",
         "path": "doors5/",
         "file": "M5monster054.gif"
     }, {
-        "name": "M5monster055",
+        "name": "Ковер-самолет",
         "path": "doors5/",
         "file": "M5monster055.gif"
     }, {
-        "name": "M5monster056",
+        "name": "Бешенный. +5 к монстру",
         "path": "doors5/",
         "file": "M5monster056.gif"
     }, {
-        "name": "M5monster057",
+        "name": "Следопыт",
         "path": "doors5/",
         "file": "M5monster057.gif"
     }, {
-        "name": "M5monster058",
+        "name": "Проклятие! Заложник типажа",
         "path": "doors5/",
         "file": "M5monster058.gif"
     }, {
-        "name": "M5monster059",
+        "name": "Уровень 5. Призрак в панцире (Андед)",
         "path": "doors5/",
         "file": "M5monster059.gif"
     }, {
-        "name": "M5monster060",
+        "name": "Уровень 1. Птизрак (Андед)",
         "path": "doors5/",
         "file": "M5monster060.gif"
     }, {
-        "name": "M5monster061",
+        "name": "Уровень 4. Торговец подержанными скакунами",
         "path": "doors5/",
         "file": "M5monster061.gif"
     }, {
-        "name": "M5monster062",
+        "name": "Ездовой паук",
         "path": "doors5/",
         "file": "M5monster062.gif"
     }, {
-        "name": "M5monster063",
+        "name": "Уровень 6. Мыльный голем",
         "path": "doors5/",
         "file": "M5monster063.gif"
     }, {
-        "name": "M5monster064",
+        "name": "Следопыт",
         "path": "doors5/",
         "file": "M5monster064.gif"
     }, {
-        "name": "M5monster065",
+        "name": "Проклятие! Кукла вуду. Теряешь 1 уровень",
         "path": "doors5/",
         "file": "M5monster065.gif"
     }, {
-        "name": "M5monster066",
+        "name": "Уровень 7. Стекляная челюсть",
         "path": "doors5/",
         "file": "M5monster066.gif"
     }, {
-        "name": "M5monster067",
+        "name": "Уровень 8. Салат",
         "path": "doors5/",
         "file": "M5monster067.gif"
     }, {
-        "name": "M5monster068",
+        "name": "Чит!",
         "path": "doors5/",
         "file": "M5monster068.gif"
     }, {
-        "name": "M5monster069",
+        "name": "Факлоносец",
         "path": "doors5/",
         "file": "M5monster069.gif"
     }, {
-        "name": "M5monster070",
+        "name": "Уровень 10. Крипер",
         "path": "doors5/",
         "file": "M5monster070.gif"
     }],
     "treasures": [{
-        "name": "M5gold001",
+        "name": "Надрай экипировку. Получи уровень",
         "path": "tres5/",
         "file": "M5gold001.gif"
     }, {
-        "name": "M5gold002",
+        "name": "Предсмертная похрипушка",
         "path": "tres5/",
         "file": "M5gold002.gif"
     }, {
-        "name": "M5gold003",
+        "name": "Колюшка",
         "path": "tres5/",
         "file": "M5gold003.gif"
     }, {
-        "name": "M5gold004",
+        "name": "Пламенная",
         "path": "tres5/",
         "file": "M5gold004.gif"
     }, {
-        "name": "M5gold005",
+        "name": "Напиши историю своего персонажа. Получи уровень",
         "path": "tres5/",
         "file": "M5gold005.gif"
     }, {
-        "name": "M5gold006",
+        "name": "Хотельное кольцо",
         "path": "tres5/",
         "file": "M5gold006.gif"
     }, {
-        "name": "M5gold007",
+        "name": "Зелье неуместной отрыжки",
         "path": "tres5/",
         "file": "M5gold007.gif"
     }, {
-        "name": "M5gold008",
+        "name": "Могильный звон",
         "path": "tres5/",
         "file": "M5gold008.gif"
     }, {
-        "name": "M5gold009",
+        "name": "Доспех из бумажных тарелок",
         "path": "tres5/",
         "file": "M5gold009.gif"
     }, {
-        "name": "M5gold010",
+        "name": "Трехручный меч",
         "path": "tres5/",
         "file": "M5gold010.gif"
     }, {
-        "name": "M5gold011",
+        "name": "Заставь мастера поперхнуться. Получи уровень",
         "path": "tres5/",
         "file": "M5gold011.gif"
     }, {
-        "name": "M5gold012",
+        "name": "Филосовский пельмень",
         "path": "tres5/",
         "file": "M5gold012.gif"
     }, {
-        "name": "M5gold013",
+        "name": "Кошка однохвостка",
         "path": "tres5/",
         "file": "M5gold013.gif"
     }, {
-        "name": "M5gold014",
+        "name": "Фляжка-куражка",
         "path": "tres5/",
         "file": "M5gold014.gif"
     }, {
-        "name": "M5gold015",
+        "name": "Барахлаты",
         "path": "tres5/",
         "file": "M5gold015.gif"
     }, {
-        "name": "M5gold016",
+        "name": "Острый лиф",
         "path": "tres5/",
         "file": "M5gold016.gif"
     }, {
-        "name": "M5gold017",
+        "name": "Рассмеши мастера. Получи уровень",
         "path": "tres5/",
         "file": "M5gold017.gif"
     }, {
-        "name": "M5gold018",
+        "name": "Матадорная смесь",
         "path": "tres5/",
         "file": "M5gold018.gif"
     }, {
-        "name": "M5gold019",
+        "name": "Газонокосилка",
         "path": "tres5/",
         "file": "M5gold019.gif"
     }, {
-        "name": "M5gold020",
+        "name": "Лук излишне дальнобойный",
         "path": "tres5/",
         "file": "M5gold020.gif"
     }, {
-        "name": "M5gold021",
+        "name": "Невидимый шлем",
         "path": "tres5/",
         "file": "M5gold021.gif"
     }, {
-        "name": "M5gold021",
-        "path": "tres5/",
-        "file": "M5gold021.gif"
-    }, {
-        "name": "M5gold022",
+        "name": "Эластановая кольчуга",
         "path": "tres5/",
         "file": "M5gold022.gif"
     }, {
-        "name": "M5gold023",
+        "name": "Посмейся на шуткой из 'Мойти Пайтона'. Получи уровень",
         "path": "tres5/",
         "file": "M5gold023.gif"
     }, {
-        "name": "M5gold024",
+        "name": "Читерский кубик",
         "path": "tres5/",
         "file": "M5gold024.gif"
     }, {
-        "name": "M5gold025",
+        "name": "Ножной прирост",
         "path": "tres5/",
         "file": "M5gold025.gif"
     }, {
-        "name": "M5gold026",
+        "name": "Косолапы",
         "path": "tres5/",
         "file": "M5gold026.gif"
     }, {
-        "name": "M5gold027",
+        "name": "Живой щит",
         "path": "tres5/",
         "file": "M5gold027.gif"
     }, {
-        "name": "M5gold028",
+        "name": "Прихлопная кувалда",
         "path": "tres5/",
         "file": "M5gold028.gif"
     }, {
-        "name": "M5gold029",
+        "name": "Запрети обсуждения. Получи уровень",
         "path": "tres5/",
         "file": "M5gold029.gif"
     }, {
-        "name": "M5gold030",
+        "name": "Усиленный паек",
         "path": "tres5/",
         "file": "M5gold030.gif"
     }, {
-        "name": "M5gold031",
+        "name": "Остаться должен только один!... Я!",
         "path": "tres5/",
         "file": "M5gold031.gif"
     }, {
-        "name": "M5gold032",
+        "name": "Колесовалка",
         "path": "tres5/",
         "file": "M5gold032.gif"
     }, {
-        "name": "M5gold033",
+        "name": "Секир доброты с размахом",
         "path": "tres5/",
         "file": "M5gold033.gif"
     }, {
-        "name": "M5gold034",
+        "name": "Фигурка монашки",
         "path": "tres5/",
         "file": "M5gold034.gif"
     }, {
-        "name": "M5gold035",
+        "name": "Барон Манчхгаузен",
         "path": "tres5/",
         "file": "M5gold035.gif"
     }, {
-        "name": "M5gold036",
+        "name": "Хотельное кольцо",
         "path": "tres5/",
         "file": "M5gold036.gif"
     }, {
-        "name": "M5gold037",
+        "name": "Сапоги самоплясы",
         "path": "tres5/",
         "file": "M5gold037.gif"
     }, {
-        "name": "M5gold038",
+        "name": "Ладонь-огонь",
         "path": "tres5/",
         "file": "M5gold038.gif"
     }, {
-        "name": "M5gold039",
+        "name": "Посох из красного дерева",
         "path": "tres5/",
         "file": "M5gold039.gif"
     }, {
-        "name": "M5gold040",
+        "name": "Гоночный раскрас",
         "path": "tres5/",
         "file": "M5gold040.gif"
     }, {
-        "name": "M5gold041",
+        "name": "Жгут",
         "path": "tres5/",
         "file": "M5gold041.gif"
     }, {
-        "name": "M5gold042",
+        "name": "Благословение",
         "path": "tres5/",
         "file": "M5gold042.gif"
     }, {
-        "name": "M5gold042",
+        "name": "Наковальня",
         "path": "tres5/",
         "file": "M5gold042.gif"
     }, {
-        "name": "M5gold044",
+        "name": "Штыкер",
         "path": "tres5/",
         "file": "M5gold044.gif"
     }, {
-        "name": "M5gold045",
+        "name": "Шампур сочного мясца",
         "path": "tres5/",
         "file": "M5gold045.gif"
     }, {
-        "name": "M5gold046",
+        "name": "Блатные номера",
         "path": "tres5/",
         "file": "M5gold046.gif"
     }, {
-        "name": "M5gold047",
+        "name": "Святая минералка",
         "path": "tres5/",
         "file": "M5gold047.gif"
     }, {
-        "name": "M5gold048",
+        "name": "Критическое попадание",
         "path": "tres5/",
         "file": "M5gold048.gif"
     }, {
-        "name": "M5gold049",
+        "name": "Пересчитай свой экспириенс. Получи уровень",
         "path": "tres5/",
         "file": "M5gold049.gif"
     }, {
-        "name": "M5gold050",
+        "name": "Святые ролики",
         "path": "tres5/",
         "file": "M5gold050.gif"
     }, {
-        "name": "M5gold051",
+        "name": "Устрашающий шлем",
         "path": "tres5/",
         "file": "M5gold051.gif"
     }, {
-        "name": "M5gold052",
+        "name": "Найди потайной ход. Получи уровень",
         "path": "tres5/",
         "file": "M5gold052.gif"
     }, {
-        "name": "M5gold053",
+        "name": "Ошибочное захоронение",
         "path": "tres5/",
         "file": "M5gold053.gif"
     }, {
-        "name": "M5gold054",
+        "name": "Медальон маньячного многоручия",
         "path": "tres5/",
         "file": "M5gold054.gif"
     }, {
-        "name": "M5gold055",
+        "name": "Зелье радиактивного действия",
         "path": "tres5/",
         "file": "M5gold055.gif"
     }, {
-        "name": "M5gold056",
+        "name": "Коньки",
         "path": "tres5/",
         "file": "M5gold056.gif"
     }, {
-        "name": "M5gold057",
+        "name": "Короткий меч",
         "path": "tres5/",
         "file": "M5gold057.gif"
     }, {
-        "name": "M5gold058",
+        "name": "Доверчивый Мастер-новичок. Получи уровень",
         "path": "tres5/",
         "file": "M5gold058.gif"
     }, {
-        "name": "M5gold059",
+        "name": "Одержимый смешок",
         "path": "tres5/",
         "file": "M5gold059.gif"
     }, {
-        "name": "M5gold060",
+        "name": "Потешниый вид",
         "path": "tres5/",
         "file": "M5gold060.gif"
     }]

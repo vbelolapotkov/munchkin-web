@@ -21,6 +21,7 @@
                         <li><button type="button" id="showLogBtn">Журнал</button></li>
                         {{#if isOwner}}
                             <li><button id="gameEnd">Завершить игру</button></li>
+                            <li><label><input type="checkbox" name="lockTable" id="#lockTableChk">Блокировка</label></li>
                         {{else}}
                             <li><button id="leaveGame">Выйти</button></li>
                         {{/if}}

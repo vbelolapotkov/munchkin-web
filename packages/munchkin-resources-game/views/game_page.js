@@ -475,6 +475,9 @@ Template.munchkinGamePage.events({
     },
     'click #showLogBtn': function () {
         isShowingLog.set(!isShowingLog.get());
+    },
+    'change input[name=lockTable]': function (e) {
+        Game.lock(this._id, e.target.checked);
     }
 });
 var initDragStart = function(e, from) {

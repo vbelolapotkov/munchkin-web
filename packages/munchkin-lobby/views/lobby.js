@@ -13,6 +13,9 @@ Template.munchkinLobby.helpers({
     timeStr: function () {
         var date = new Date(this.created);
         return formatDate(date);
+    },
+    isLocked: function () {
+        return !Game.isLocked(this._id, Meteor.userId());
     }
 });
 

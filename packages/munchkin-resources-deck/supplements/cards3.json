@@ -1,460 +1,452 @@
 {
     "imgPath": "/img/",
     "doors": [{
-        "name": "M3monster001",
+        "name": "Бард",
         "path": "doors3/",
         "file": "M3monster001.gif"
     }, {
-        "name": "M3monster002",
+        "name": "Гном",
         "path": "doors3/",
         "file": "M3monster002.gif"
     }, {
-        "name": "M3monster003",
+        "name": "Проклятие! Посмертное проклятие",
         "path": "doors3/",
         "file": "M3monster003.gif"
     }, {
-        "name": "M3monster004",
+        "name": "В глубокой депрессии. -5 к монстру",
         "path": "doors3/",
         "file": "M3monster004.gif"
     }, {
-        "name": "M3monster005",
+        "name": "Уровень 4. Готянка",
         "path": "doors3/",
         "file": "M3monster005.gif"
     }, {
-        "name": "M3monster006",
+        "name": "Уровень 15. Кудзу-Ядовитый мухолов",
         "path": "doors3/",
         "file": "M3monster006.gif"
     }, {
-        "name": "M3monster007",
+        "name": "Бард",
         "path": "doors3/",
         "file": "M3monster007.gif"
     }, {
-        "name": "M3monster008",
+        "name": "Гном",
         "path": "doors3/",
         "file": "M3monster008.gif"
     }, {
-        "name": "M3monster009",
+        "name": "Проклятие! Взрывающиеся наколенники",
         "path": "doors3/",
         "file": "M3monster009.gif"
     }, {
-        "name": "M3monster010",
+        "name": "Уровень 18. Тетушка-паладин",
         "path": "doors3/",
         "file": "M3monster010.gif"
     }, {
-        "name": "M3monster011",
+        "name": "Уровень 4. Жвачный голем",
         "path": "doors3/",
         "file": "M3monster011.gif"
     }, {
-        "name": "M3monster012",
+        "name": "Уровень 3. Задира с рапирой",
         "path": "doors3/",
         "file": "M3monster012.gif"
     }, {
-        "name": "M3monster013",
+        "name": "Полукровка",
         "path": "doors3/",
         "file": "M3monster013.gif"
     }, {
-        "name": "M3monster014",
+        "name": "Бард",
         "path": "doors3/",
         "file": "M3monster014.gif"
     }, {
-        "name": "M3monster015",
+        "name": "Гном",
         "path": "doors3/",
         "file": "M3monster015.gif"
     }, {
-        "name": "M3monster016",
+        "name": "Проклятие! Голодный рюкзак",
         "path": "doors3/",
         "file": "M3monster016.gif"
     }, {
-        "name": "M3monster017",
+        "name": "Уровень 5. Зосланец",
         "path": "doors3/",
         "file": "M3monster017.gif"
     }, {
-        "name": "M3monster018",
+        "name": "Уровень 20. Кали",
         "path": "doors3/",
         "file": "M3monster018.gif"
     }, {
-        "name": "M3monster019",
+        "name": "Уровень 13. Деревенщина",
         "path": "doors3/",
         "file": "M3monster019.gif"
     }, {
-        "name": "M3monster020",
+        "name": "Монстры заняты",
         "path": "doors3/",
         "file": "M3monster020.gif"
     }, {
-        "name": "M3monster021",
+        "name": "Бард",
         "path": "doors3/",
         "file": "M3monster021.gif"
     }, {
-        "name": "M3monster021",
-        "path": "doors3/",
-        "file": "M3monster021.gif"
-    }, {
-        "name": "M3monster022",
+        "name": "Халфлинг",
         "path": "doors3/",
         "file": "M3monster022.gif"
     }, {
-        "name": "M3monster023",
+        "name": "Проклятие! Временная амнезия",
         "path": "doors3/",
         "file": "M3monster023.gif"
     }, {
-        "name": "M3monster024",
+        "name": "Уровень 6. Бочка мартышек",
         "path": "doors3/",
         "file": "M3monster024.gif"
     }, {
-        "name": "M3monster025",
+        "name": "Уровень 7. Кобольды-камикадзе",
         "path": "doors3/",
         "file": "M3monster025.gif"
     }, {
-        "name": "M3monster026",
+        "name": "Уровень 2. Обитель жала",
         "path": "doors3/",
         "file": "M3monster026.gif"
     }, {
-        "name": "M3monster027",
+        "name": "Суперманчкин",
         "path": "doors3/",
         "file": "M3monster027.gif"
     }, {
-        "name": "M3monster028",
+        "name": "Бард",
         "path": "doors3/",
         "file": "M3monster028.gif"
     }, {
-        "name": "M3monster029",
+        "name": "Орк",
         "path": "doors3/",
         "file": "M3monster029.gif"
     }, {
-        "name": "M3monster030",
+        "name": "Проклятие! Капкан на туриста",
         "path": "doors3/",
         "file": "M3monster030.gif"
     }, {
-        "name": "M3monster031",
+        "name": "Уровень 2. Трясоглав",
         "path": "doors3/",
         "file": "M3monster031.gif"
     }, {
-        "name": "M3monster032",
+        "name": "Уровень 5. Лорд Яху",
         "path": "doors3/",
         "file": "M3monster032.gif"
     }, {
-        "name": "M3monster033",
+        "name": "Уровень 17. Мэрилич Монро (Андед)",
         "path": "doors3/",
         "file": "M3monster033.gif"
     }, {
-        "name": "M3monster034",
+        "name": "Гном",
         "path": "doors3/",
         "file": "M3monster034.gif"
     }, {
-        "name": "M3monster035",
+        "name": "Проклятие! Дварфский эль",
         "path": "doors3/",
         "file": "M3monster035.gif"
     }, {
-        "name": "M3monster036",
+        "name": "В неглиже. +5 к монстру",
         "path": "doors3/",
         "file": "M3monster036.gif"
     }, {
-        "name": "M3monster037",
+        "name": "Уровень 1. Золотая рыбка",
         "path": "doors3/",
         "file": "M3monster037.gif"
     }, {
-        "name": "M3monster038",
+        "name": "Уровень 2. Совершенно обычный милый кролик",
         "path": "doors3/",
         "file": "M3monster038.gif"
     }, {
-        "name": "M3monster039",
+        "name": "Нечестное богатство",
         "path": "doors3/",
         "file": "M3monster039.gif"
     }, {
-        "name": "M3monster040",
+        "name": "Клирик",
         "path": "doors3/",
         "file": "M3monster040.gif"
     }, {
-        "name": "M3monster041",
+        "name": "Вор",
         "path": "doors3/",
         "file": "M3monster041.gif"
     }, {
-        "name": "M3monster042",
+        "name": "Проклятие! Ловушка под твоим сундуком",
         "path": "doors3/",
         "file": "M3monster042.gif"
     }, {
-        "name": "M3monster042",
+        "name": "Уровень 10. Дупельгангстеры",
         "path": "doors3/",
-        "file": "M3monster042.gif"
+        "file": "M3monster043.gif"
     }, {
-        "name": "M3monster044",
+        "name": "Уровень 8. Шовинистский боров",
         "path": "doors3/",
         "file": "M3monster044.gif"
     }, {
-        "name": "M3monster045",
+        "name": "Уровень 1. Палка, палка - человечек",
         "path": "doors3/",
         "file": "M3monster045.gif"
     }, {
-        "name": "M3monster046",
+        "name": "Дварф",
         "path": "doors3/",
         "file": "M3monster046.gif"
     }, {
-        "name": "M3monster047",
+        "name": "Воин",
         "path": "doors3/",
         "file": "M3monster047.gif"
     }, {
-        "name": "M3monster048",
+        "name": "Из ада. +5 к монстру",
         "path": "doors3/",
         "file": "M3monster048.gif"
     }, {
-        "name": "M3monster049",
+        "name": "Уровень 9. Дриада",
         "path": "doors3/",
         "file": "M3monster049.gif"
     }, {
-        "name": "M3monster050",
+        "name": "Уровень 19. Медуза",
         "path": "doors3/",
         "file": "M3monster050.gif"
     }, {
-        "name": "M3monster051",
+        "name": "Уровень 1. Упитый пересмешник",
         "path": "doors3/",
         "file": "M3monster051.gif"
     }, {
-        "name": "M3monster052",
+        "name": "Типографская ошибка",
         "path": "doors3/",
         "file": "M3monster052.gif"
     }, {
-        "name": "M3monster053",
+        "name": "Эльф",
         "path": "doors3/",
         "file": "M3monster053.gif"
     }, {
-        "name": "M3monster054",
+        "name": "Волшебник",
         "path": "doors3/",
         "file": "M3monster054.gif"
     }, {
-        "name": "M3monster055",
+        "name": "С огромным мечом, уничижающим монстров. +10 к монстру",
         "path": "doors3/",
         "file": "M3monster055.gif"
     }, {
-        "name": "M3monster056",
+        "name": "Уровень 11. Грязные геты",
         "path": "doors3/",
         "file": "M3monster056.gif"
     }, {
-        "name": "M3monster057",
+        "name": "Уровень 14. На-падающий медведь",
         "path": "doors3/",
         "file": "M3monster057.gif"
     }, {
-        "name": "M3monster058",
+        "name": "Уровень 12. Тролии мертвоморья (Андед)",
         "path": "doors3/",
         "file": "M3monster058.gif"
     }, {
-        "name": "M3monster059",
+        "name": "Бродячая тварь",
         "path": "doors3/",
         "file": "M3monster059.gif"
     }, {
-        "name": "M3monster060",
+        "name": "Гном",
         "path": "doors3/",
         "file": "M3monster060.gif"
     }, {
-        "name": "M3monster061",
+        "name": "Проклятие! Клирическая ошибка",
         "path": "doors3/",
         "file": "M3monster061.gif"
     }, {
-        "name": "M3monster062",
+        "name": "Андед. +5 к монстру",
         "path": "doors3/",
         "file": "M3monster062.gif"
     }, {
-        "name": "M3monster063",
+        "name": "Уровень 16. Куродемон",
         "path": "doors3/",
         "file": "M3monster063.gif"
     }, {
-        "name": "M3monster064",
+        "name": "Уровень 3. Вьючный крыс",
         "path": "doors3/",
         "file": "M3monster064.gif"
     }, {
-        "name": "M3monster065",
+        "name": "Чит!",
         "path": "doors3/",
         "file": "M3monster065.gif"
     }, {
-        "name": "M3monster066",
+        "name": "Бродячая тварь",
         "path": "doors3/",
         "file": "M3monster066.gif"
     }],
     "treasures": [{
-        "name": "M3gold001",
+        "name": "Отвратные носки",
         "path": "tres3/",
         "file": "M3gold001.gif"
     }, {
-        "name": "M3gold002",
+        "name": "Ядированная",
         "path": "tres3/",
         "file": "M3gold002.gif"
     }, {
-        "name": "M3gold003",
+        "name": "Втерся в доверие. Получи уровень",
         "path": "tres3/",
         "file": "M3gold003.gif"
     }, {
-        "name": "M3gold004",
+        "name": "Запретительное постановление",
         "path": "tres3/",
         "file": "M3gold004.gif"
     }, {
-        "name": "M3gold005",
+        "name": "Большущая лира",
         "path": "tres3/",
         "file": "M3gold005.gif"
     }, {
-        "name": "M3gold006",
+        "name": "Убенцы",
         "path": "tres3/",
         "file": "M3gold006.gif"
     }, {
-        "name": "M3gold007",
+        "name": "Угрожай сменить систему. Получи уровень",
         "path": "tres3/",
         "file": "M3gold007.gif"
     }, {
-        "name": "M3gold008",
+        "name": "Королевская смесь",
         "path": "tres3/",
         "file": "M3gold008.gif"
     }, {
-        "name": "M3gold009",
+        "name": "Нахлобушки",
         "path": "tres3/",
         "file": "M3gold009.gif"
     }, {
-        "name": "M3gold010",
+        "name": "Благословенная",
         "path": "tres3/",
         "file": "M3gold010.gif"
     }, {
-        "name": "M3gold011",
+        "name": "Другое кольцо",
         "path": "tres3/",
         "file": "M3gold011.gif"
     }, {
-        "name": "M3gold012",
+        "name": "Дварфозаброс",
         "path": "tres3/",
         "file": "M3gold012.gif"
     }, {
-        "name": "M3gold013",
+        "name": "Удар без учета амортизации",
         "path": "tres3/",
         "file": "M3gold013.gif"
     }, {
-        "name": "M3gold014",
+        "name": "Тапочки по Фрейду",
         "path": "tres3/",
         "file": "M3gold014.gif"
     }, {
-        "name": "M3gold015",
+        "name": "Кольчужное бикини",
         "path": "tres3/",
         "file": "M3gold015.gif"
     }, {
-        "name": "M3gold016",
+        "name": "Двуручный меч",
         "path": "tres3/",
         "file": "M3gold016.gif"
     }, {
-        "name": "M3gold017",
+        "name": "Кошачье вмешательство",
         "path": "tres3/",
         "file": "M3gold017.gif"
     }, {
-        "name": "M3gold018",
+        "name": "Выбери меня",
         "path": "tres3/",
         "file": "M3gold018.gif"
     }, {
-        "name": "M3gold019",
+        "name": "Универсальный размер",
         "path": "tres3/",
         "file": "M3gold019.gif"
     }, {
-        "name": "M3gold020",
+        "name": "Ножная булава",
         "path": "tres3/",
         "file": "M3gold020.gif"
     }, {
-        "name": "M3gold021",
+        "name": "Ворпальный меч",
         "path": "tres3/",
         "file": "M3gold021.gif"
     }, {
-        "name": "M3gold021",
-        "path": "tres3/",
-        "file": "M3gold021.gif"
-    }, {
-        "name": "M3gold022",
+        "name": "Жгучий соус",
         "path": "tres3/",
         "file": "M3gold022.gif"
     }, {
-        "name": "M3gold023",
+        "name": "Ароматерный пирог",
         "path": "tres3/",
         "file": "M3gold023.gif"
     }, {
-        "name": "M3gold024",
+        "name": "Великолепная шляпа",
         "path": "tres3/",
         "file": "M3gold024.gif"
     }, {
-        "name": "M3gold025",
+        "name": "Блестящие кубики кручу-верчу. Получи уровень",
         "path": "tres3/",
         "file": "M3gold025.gif"
     }, {
-        "name": "M3gold026",
+        "name": "Зелье апатии",
         "path": "tres3/",
         "file": "M3gold026.gif"
     }, {
-        "name": "M3gold027",
+        "name": "Утка много чего",
         "path": "tres3/",
         "file": "M3gold027.gif"
     }, {
-        "name": "M3gold028",
+        "name": "Лич Бич",
         "path": "tres3/",
         "file": "M3gold028.gif"
     }, {
-        "name": "M3gold029",
+        "name": "Нарисуй своего персонажа. Получи уровень",
         "path": "tres3/",
         "file": "M3gold029.gif"
     }, {
-        "name": "M3gold030",
+        "name": "Женщина настойка",
         "path": "tres3/",
         "file": "M3gold030.gif"
     }, {
-        "name": "M3gold031",
+        "name": "Хотельное кольцо",
         "path": "tres3/",
         "file": "M3gold031.gif"
     }, {
-        "name": "M3gold032",
+        "name": "Гномексовый комбез",
         "path": "tres3/",
         "file": "M3gold032.gif"
     }, {
-        "name": "M3gold033",
+        "name": "Вспомни о днюхе мастера. Получи уровень",
         "path": "tres3/",
         "file": "M3gold033.gif"
     }, {
-        "name": "M3gold034",
+        "name": "Читерский кубик",
         "path": "tres3/",
         "file": "M3gold034.gif"
     }, {
-        "name": "M3gold035",
+        "name": "Ролевое ложе",
         "path": "tres3/",
         "file": "M3gold035.gif"
     }, {
-        "name": "M3gold036",
+        "name": "Авторезарь",
         "path": "tres3/",
         "file": "M3gold036.gif"
     }, {
-        "name": "M3gold037",
+        "name": "Наемничек",
         "path": "tres3/",
         "file": "M3gold037.gif"
     }, {
-        "name": "M3gold038",
+        "name": "Перепиши старую грязную карточку персонажа. Получи уровень",
         "path": "tres3/",
         "file": "M3gold038.gif"
     }, {
-        "name": "M3gold039",
+        "name": "Монстрячий корм",
         "path": "tres3/",
         "file": "M3gold039.gif"
     }, {
-        "name": "M3gold040",
+        "name": "С боку ручки",
         "path": "tres3/",
         "file": "M3gold040.gif"
     }, {
-        "name": "M3gold041",
+        "name": "Подземное казино",
         "path": "tres3/",
         "file": "M3gold041.gif"
     }, {
-        "name": "M3gold042",
+        "name": "Розззыгрыжжж",
         "path": "tres3/",
         "file": "M3gold042.gif"
     }, {
-        "name": "M3gold042",
+        "name": "Бессмысленный жест доброй воли. Получи уровень",
         "path": "tres3/",
-        "file": "M3gold042.gif"
+        "file": "M3gold043.gif"
     }, {
-        "name": "M3gold044",
+        "name": "Зажигательная смесь",
         "path": "tres3/",
         "file": "M3gold044.gif"
     }, {
-        "name": "M3gold045",
+        "name": "Бог из автомата",
         "path": "tres3/",
         "file": "M3gold045.gif"
     }, {
-        "name": "M3gold046",
+        "name": "Иногда полезный амулет",
         "path": "tres3/",
         "file": "M3gold046.gif"
     }]

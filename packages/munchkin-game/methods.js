@@ -15,3 +15,15 @@ Game.createGame = function (options, callback) {
         callback(error, result);
     });
 };
+
+Game.lock = function (gameId, state) {
+    var game = gamesCollection.findOne(gameId);
+    if(!game) return;
+    gamesCollection.update(game._id, {$set: {locked:state}});
+};
+
+Game.isLocked = function (gameId, userId) {
+    var game = gamesCollection.findOne(gameId);
+    var player = Player.getData(gameId, userId);
+    return game.locked && !player;
+};

@@ -1,460 +1,452 @@
 {
     "imgPath": "/img/",
     "doors": [{
-        "name": "M4monster001",
+        "name": "Воин",
         "path": "doors4/",
         "file": "M4monster001.gif"
     }, {
-        "name": "M4monster002",
+        "name": "Полу-... -5 к монстру",
         "path": "doors4/",
         "file": "M4monster002.gif"
     }, {
-        "name": "M4monster003",
+        "name": "Наемник Дварф",
         "path": "doors4/",
         "file": "M4monster003.gif"
     }, {
-        "name": "M4monster004",
+        "name": "Уровень 6. Жиртрест косматый",
         "path": "doors4/",
         "file": "M4monster004.gif"
     }, {
-        "name": "M4monster005",
+        "name": "Уровень 18. Ночальник живых мертвецов (Андед)",
         "path": "doors4/",
         "file": "M4monster005.gif"
     }, {
-        "name": "M4monster006",
+        "name": "Уровень 3. Тенек (Андед)",
         "path": "doors4/",
         "file": "M4monster006.gif"
     }, {
-        "name": "M4monster007",
+        "name": "Бродячая тварь",
         "path": "doors4/",
         "file": "M4monster007.gif"
     }, {
-        "name": "M4monster008",
+        "name": "Ездовой волк",
         "path": "doors4/",
         "file": "M4monster008.gif"
     }, {
-        "name": "M4monster009",
+        "name": "Волшебник",
         "path": "doors4/",
         "file": "M4monster009.gif"
     }, {
-        "name": "M4monster010",
+        "name": "Магиестойкий. +5 к монстру",
         "path": "doors4/",
         "file": "M4monster010.gif"
     }, {
-        "name": "M4monster011",
+        "name": "Наемник Эльф",
         "path": "doors4/",
         "file": "M4monster011.gif"
     }, {
-        "name": "M4monster012",
+        "name": "Уровень 13. Биполярный медведь",
         "path": "doors4/",
         "file": "M4monster012.gif"
     }, {
-        "name": "M4monster013",
+        "name": "Уровень 11. Растеряхухоль",
         "path": "doors4/",
         "file": "M4monster013.gif"
     }, {
-        "name": "M4monster014",
+        "name": "Уровень 10. Зефирный кролик",
         "path": "doors4/",
         "file": "M4monster014.gif"
     }, {
-        "name": "M4monster015",
+        "name": "Ездовая курица",
         "path": "doors4/",
         "file": "M4monster015.gif"
     }, {
-        "name": "M4monster016",
+        "name": "Вор",
         "path": "doors4/",
         "file": "M4monster016.gif"
     }, {
-        "name": "M4monster017",
+        "name": "Бронированный. +5 к монстру",
         "path": "doors4/",
         "file": "M4monster017.gif"
     }, {
-        "name": "M4monster018",
+        "name": "Наемник Клирик",
         "path": "doors4/",
         "file": "M4monster018.gif"
     }, {
-        "name": "M4monster019",
+        "name": "Уровень 2.Будильник",
         "path": "doors4/",
         "file": "M4monster019.gif"
     }, {
-        "name": "M4monster020",
+        "name": "Уровень 20. Катрина",
         "path": "doors4/",
         "file": "M4monster020.gif"
     }, {
-        "name": "M4monster021",
+        "name": "Уровень 2. Попкаэдр",
         "path": "doors4/",
         "file": "M4monster021.gif"
     }, {
-        "name": "M4monster021",
-        "path": "doors4/",
-        "file": "M4monster021.gif"
-    }, {
-        "name": "M4monster022",
+        "name": "Бродячая тварь",
         "path": "doors4/",
         "file": "M4monster022.gif"
     }, {
-        "name": "M4monster023",
+        "name": "Ездовая черепаха",
         "path": "doors4/",
         "file": "M4monster023.gif"
     }, {
-        "name": "M4monster024",
+        "name": "Орк",
         "path": "doors4/",
         "file": "M4monster024.gif"
     }, {
-        "name": "M4monster025",
+        "name": "С волынкой. +5 к монстру",
         "path": "doors4/",
         "file": "M4monster025.gif"
     }, {
-        "name": "M4monster026",
+        "name": "Наемник котяра",
         "path": "doors4/",
         "file": "M4monster026.gif"
     }, {
-        "name": "M4monster027",
+        "name": "Наемник Волшебник",
         "path": "doors4/",
         "file": "M4monster027.gif"
     }, {
-        "name": "M4monster028",
+        "name": "Уровень 1. Крошечный паучок",
         "path": "doors4/",
         "file": "M4monster028.gif"
     }, {
-        "name": "M4monster029",
+        "name": "Уровень 1. Плюшевый череп (Андед)",
         "path": "doors4/",
         "file": "M4monster029.gif"
     }, {
-        "name": "M4monster030",
+        "name": "Суперманчкин",
         "path": "doors4/",
         "file": "M4monster030.gif"
     }, {
-        "name": "M4monster031",
+        "name": "Ездовой тигр",
         "path": "doors4/",
         "file": "M4monster031.gif"
     }, {
-        "name": "M4monster032",
+        "name": "Халфлинг",
         "path": "doors4/",
         "file": "M4monster032.gif"
     }, {
-        "name": "M4monster033",
+        "name": "Из ада. +5 к монстру",
         "path": "doors4/",
         "file": "M4monster033.gif"
     }, {
-        "name": "M4monster034",
+        "name": "Бюджетный наемник",
         "path": "doors4/",
         "file": "M4monster034.gif"
     }, {
-        "name": "M4monster035",
+        "name": "Наемник Воин",
         "path": "doors4/",
         "file": "M4monster035.gif"
     }, {
-        "name": "M4monster036",
+        "name": "Уровень 15. Влас гончаров",
         "path": "doors4/",
         "file": "M4monster036.gif"
     }, {
-        "name": "M4monster037",
+        "name": "Уровень 4. Каррамбараниха",
         "path": "doors4/",
         "file": "M4monster037.gif"
     }, {
-        "name": "M4monster038",
+        "name": "Полукровка",
         "path": "doors4/",
         "file": "M4monster038.gif"
     }, {
-        "name": "M4monster039",
+        "name": "Ездовой ящер",
         "path": "doors4/",
         "file": "M4monster039.gif"
     }, {
-        "name": "M4monster040",
+        "name": "Бард",
         "path": "doors4/",
         "file": "M4monster040.gif"
     }, {
-        "name": "M4monster041",
+        "name": "Проклятие! Все относительно",
         "path": "doors4/",
         "file": "M4monster041.gif"
     }, {
-        "name": "M4monster042",
+        "name": "Голодный. +10 к монстру",
         "path": "doors4/",
         "file": "M4monster042.gif"
     }, {
-        "name": "M4monster042",
+        "name": "Наемник Гном",
         "path": "doors4/",
-        "file": "M4monster042.gif"
+        "file": "M4monster043.gif"
     }, {
-        "name": "M4monster044",
+        "name": "Уровень 5. Просто пес",
         "path": "doors4/",
         "file": "M4monster044.gif"
     }, {
-        "name": "M4monster045",
+        "name": "Уровень 17. Монстровик",
         "path": "doors4/",
         "file": "M4monster045.gif"
     }, {
-        "name": "M4monster046",
+        "name": "Уровень 16. Око зла",
         "path": "doors4/",
         "file": "M4monster046.gif"
     }, {
-        "name": "M4monster047",
+        "name": "Ездовой дракон",
         "path": "doors4/",
         "file": "M4monster047.gif"
     }, {
-        "name": "M4monster048",
+        "name": "Клирик",
         "path": "doors4/",
         "file": "M4monster048.gif"
     }, {
-        "name": "M4monster049",
+        "name": "Проклятие! Газующий скакун",
         "path": "doors4/",
         "file": "M4monster049.gif"
     }, {
-        "name": "M4monster050",
+        "name": "Саблезубый. +5 к монстру",
         "path": "doors4/",
         "file": "M4monster050.gif"
     }, {
-        "name": "M4monster051",
+        "name": "Наемник Халфлинг",
         "path": "doors4/",
         "file": "M4monster051.gif"
     }, {
-        "name": "M4monster052",
+        "name": "Уровень 1. Яйцо",
         "path": "doors4/",
         "file": "M4monster052.gif"
     }, {
-        "name": "M4monster053",
+        "name": "Уровень 12. Манчкин сфинкс",
         "path": "doors4/",
         "file": "M4monster053.gif"
     }, {
-        "name": "M4monster054",
+        "name": "Уровень 14. Крестный фей",
         "path": "doors4/",
         "file": "M4monster054.gif"
     }, {
-        "name": "M4monster055",
+        "name": "Ездовой орел",
         "path": "doors4/",
         "file": "M4monster055.gif"
     }, {
-        "name": "M4monster056",
+        "name": "Дварф",
         "path": "doors4/",
         "file": "M4monster056.gif"
     }, {
-        "name": "M4monster057",
+        "name": "Проклятие! Липкие полы",
         "path": "doors4/",
         "file": "M4monster057.gif"
     }, {
-        "name": "M4monster058",
+        "name": "Скрытный. +5 к монстру",
         "path": "doors4/",
         "file": "M4monster058.gif"
     }, {
-        "name": "M4monster059",
+        "name": "Оруженосица",
         "path": "doors4/",
         "file": "M4monster059.gif"
     }, {
-        "name": "M4monster060",
+        "name": "Уровень 5. Призрак-писака (Андед)",
         "path": "doors4/",
         "file": "M4monster060.gif"
     }, {
-        "name": "M4monster061",
+        "name": "Уровень 19. Ниндзище",
         "path": "doors4/",
         "file": "M4monster061.gif"
     }, {
-        "name": "M4monster062",
+        "name": "Уровень 7. Йак Йак Йак",
         "path": "doors4/",
         "file": "M4monster062.gif"
     }, {
-        "name": "M4monster063",
+        "name": "Огромный ездовой тушкан-мутант",
         "path": "doors4/",
         "file": "M4monster063.gif"
     }, {
-        "name": "M4monster064",
+        "name": "Эльф",
         "path": "doors4/",
         "file": "M4monster064.gif"
     }, {
-        "name": "M4monster065",
+        "name": "Проклятие! Понаемный налог",
         "path": "doors4/",
         "file": "M4monster065.gif"
     }, {
-        "name": "M4monster066",
+        "name": "Наемник Бард",
         "path": "doors4/",
         "file": "M4monster066.gif"
     }, {
-        "name": "M4monster067",
+        "name": "Наемник Орк",
         "path": "doors4/",
         "file": "M4monster067.gif"
     }, {
-        "name": "M4monster068",
+        "name": "Уровень 3. Виноградное желе",
         "path": "doors4/",
         "file": "M4monster068.gif"
     }, {
-        "name": "M4monster069",
+        "name": "Уровень 4. Слизень с узи",
         "path": "doors4/",
         "file": "M4monster069.gif"
     }, {
-        "name": "M4monster070",
+        "name": "Уровень 2. Мрутни (Андед)",
         "path": "doors4/",
         "file": "M4monster070.gif"
     }, {
-        "name": "M4monster071",
+        "name": "Могучий боевой конь",
         "path": "doors4/",
         "file": "M4monster071.gif"
     }, {
-        "name": "M4monster072",
+        "name": "Гном",
         "path": "doors4/",
         "file": "M4monster072.gif"
     }, {
-        "name": "M4monster073",
+        "name": "Проклятие! Нехватка провизии",
         "path": "doors4/",
         "file": "M4monster073.gif"
     }, {
-        "name": "M4monster074",
+        "name": "Большой петро",
         "path": "doors4/",
         "file": "M4monster074.gif"
     }, {
-        "name": "M4monster075",
+        "name": "Наемник Вор",
         "path": "doors4/",
         "file": "M4monster075.gif"
     }, {
-        "name": "M4monster076",
+        "name": "Уровень 8. Волосяной элементаль",
         "path": "doors4/",
         "file": "M4monster076.gif"
     }, {
-        "name": "M4monster077",
+        "name": "Уровень 9. Голофилин",
         "path": "doors4/",
         "file": "M4monster077.gif"
     }, {
-        "name": "M4monster078",
+        "name": "Чит!",
         "path": "doors4/",
         "file": "M4monster078.gif"
     }],
     "treasures": [{
-        "name": "M4gold001",
+        "name": "Кратофелаты",
         "path": "tres4/",
         "file": "M4gold001.gif"
     }, {
-        "name": "M4gold002",
+        "name": "Пришей наемника. Получи уровень",
         "path": "tres4/",
         "file": "M4gold002.gif"
     }, {
-        "name": "M4gold003",
+        "name": "Хотельное кольцо",
         "path": "tres4/",
         "file": "M4gold003.gif"
     }, {
-        "name": "M4gold004",
+        "name": "Автоматическая",
         "path": "tres4/",
         "file": "M4gold004.gif"
     }, {
-        "name": "M4gold005",
+        "name": "Убей скакуна. Получи уровень",
         "path": "tres4/",
         "file": "M4gold005.gif"
     }, {
-        "name": "M4gold006",
+        "name": "Рукастая каска",
         "path": "tres4/",
         "file": "M4gold006.gif"
     }, {
-        "name": "M4gold007",
+        "name": "Жгучий жезл",
         "path": "tres4/",
         "file": "M4gold007.gif"
     }, {
-        "name": "M4gold008",
+        "name": "Оденься как твой персонаж. Получи уровень",
         "path": "tres4/",
         "file": "M4gold008.gif"
     }, {
-        "name": "M4gold009",
+        "name": "Порошок съеживания",
         "path": "tres4/",
         "file": "M4gold009.gif"
     }, {
-        "name": "M4gold010",
+        "name": "Шлем жути",
         "path": "tres4/",
         "file": "M4gold010.gif"
     }, {
-        "name": "M4gold011",
+        "name": "Зелье говорливости",
         "path": "tres4/",
         "file": "M4gold011.gif"
     }, {
-        "name": "M4gold012",
+        "name": "Зелье смены пола",
         "path": "tres4/",
         "file": "M4gold012.gif"
     }, {
-        "name": "M4gold013",
+        "name": "Сапоги джигитовки",
         "path": "tres4/",
         "file": "M4gold013.gif"
     }, {
-        "name": "M4gold014",
+        "name": "Смердоносные ноги",
         "path": "tres4/",
         "file": "M4gold014.gif"
     }, {
-        "name": "M4gold015",
+        "name": "Умнящие пилюли",
         "path": "tres4/",
         "file": "M4gold015.gif"
     }, {
-        "name": "M4gold016",
+        "name": "Брачный зов",
         "path": "tres4/",
         "file": "M4gold016.gif"
     }, {
-        "name": "M4gold017",
+        "name": "Уведи наемника",
         "path": "tres4/",
         "file": "M4gold017.gif"
     }, {
-        "name": "M4gold018",
+        "name": "Серпаратор",
         "path": "tres4/",
         "file": "M4gold018.gif"
     }, {
-        "name": "M4gold019",
+        "name": "... Судьбы",
         "path": "tres4/",
         "file": "M4gold019.gif"
     }, {
-        "name": "M4gold020",
+        "name": "Бей нацистов. Получи уровень",
         "path": "tres4/",
         "file": "M4gold020.gif"
     }, {
-        "name": "M4gold021",
+        "name": "Утка Эрла",
         "path": "tres4/",
         "file": "M4gold021.gif"
     }, {
-        "name": "M4gold021",
-        "path": "tres4/",
-        "file": "M4gold021.gif"
-    }, {
-        "name": "M4gold022",
+        "name": "Классная доска",
         "path": "tres4/",
         "file": "M4gold022.gif"
     }, {
-        "name": "M4gold023",
+        "name": "Сбруя жгучего дыхания",
         "path": "tres4/",
         "file": "M4gold023.gif"
     }, {
-        "name": "M4gold024",
+        "name": "Разграбь свой собственный храм. Получи уровень",
         "path": "tres4/",
         "file": "M4gold024.gif"
     }, {
-        "name": "M4gold025",
+        "name": "Магистр управления персоналом",
         "path": "tres4/",
         "file": "M4gold025.gif"
     }, {
-        "name": "M4gold026",
+        "name": "Бюджетный броник",
         "path": "tres4/",
         "file": "M4gold026.gif"
     }, {
-        "name": "M4gold027",
+        "name": "Микстура злобы",
         "path": "tres4/",
         "file": "M4gold027.gif"
     }, {
-        "name": "M4gold028",
+        "name": "Разбуди вулкан под вражеским городом. Получи уровень",
         "path": "tres4/",
         "file": "M4gold028.gif"
     }, {
-        "name": "M4gold029",
+        "name": "Химическая палица",
         "path": "tres4/",
         "file": "M4gold029.gif"
     }, {
-        "name": "M4gold030",
+        "name": "Пристяжные крылья",
         "path": "tres4/",
         "file": "M4gold030.gif"
     }, {
-        "name": "M4gold031",
+        "name": "Читерский кубик",
         "path": "tres4/",
         "file": "M4gold031.gif"
     }, {
-        "name": "M4gold032",
+        "name": "Тугой лук",
         "path": "tres4/",
         "file": "M4gold032.gif"
     }, {
-        "name": "M4gold033",
+        "name": "Сияющая",
         "path": "tres4/",
         "file": "M4gold033.gif"
     }, {
-        "name": "M4gold034",
+        "name": "Соблазнискас",
         "path": "tres4/",
         "file": "M4gold034.gif"
     }]
