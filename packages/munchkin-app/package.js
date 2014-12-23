@@ -23,7 +23,9 @@ Package.onUse(function (api) {
     api.addFiles('views/styles.css','client');
     api.addFiles('views/loading.html','client');
     api.addFiles('views/access_denied.html', 'client');
-    
+    api.addFiles('static/about.html','client');
+    api.addFiles('static/rules.html','client');
+    api.addFiles('static/how_to_play.html','client');
 
     //EXPORT FOR TEST AND DEBUG ONLY
     // api.export('Munchkin', both);

@@ -30,7 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     line-height: 1;
-    width: 1280px;
+    width: 1260px;
     margin: 0 auto;
 }
 ol, ul {
@@ -90,7 +90,7 @@ a:hover {
 }
 
 .nav li a,.account,.account a {
-    font-family: "Courier New", sans;
+    font-family: "Munchkin Cyr","Courier New", sans;
     font-weight: bold;
     font-size: 18px;
     color: #fed19a;
@@ -131,7 +131,48 @@ a:hover {
     text-align: center;
 }
 .deniedMessage {
-    font-family: "Courier New", sans;
+    font-family: "CaslonAntiqueCyr","Courier New", sans;
     font-weight: bold;
+    font-size: 1.3em;
     color: red;
+}
+
+@font-face {
+    font-family: "Munchkin Cyr";
+    src: url('/fonts/Munchkin_Cyr.ttf');
+}
+
+@font-face {
+    font-family: "Blambot Casual Cyr";
+    src: url('/fonts/Blambot_Casual_Cyr.ttf');
+}
+
+@font-face {
+    font-family: "CaslonAntiqueCyr";
+    src: url('/fonts/CaslonAntiqueCyr.ttf');
+}
+
+.btn-default {
+    font-family: "CaslonAntiqueCyr","Courier New", sans;
+    font-size: 0.8em;
+    background-color: #7a4300;
+    color: #fed19a;
+    border: 2px solid #7a4300;
+    margin: 1px;
+}
+
+.btn-default:active,.active {
+    background-color: #fed19a;
+    color: #7a4300;
+}
+
+.btn-default:disabled {
+    background: #ddd;
+    border-color: gray;
+    color: gray;
+}
+
+label {
+    font-family: "CaslonAntiqueCyr","Courier New", sans;
+    color: #7a4300;
 }

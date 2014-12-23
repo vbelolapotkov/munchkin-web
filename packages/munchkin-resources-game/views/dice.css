@@ -5,11 +5,10 @@
 }
 
 .diceRollContainer {
-    background-color: #66CC99;
+    background-color: #ffd484;
     margin-bottom: 1%;
     border: 1px solid gray;
     padding: 1px;
-    /*border-radius: 5px;*/
 }
 
 .diceClose {
@@ -17,11 +16,17 @@
 }
 
 .diceRollContainer .diceCloseBtn {
-    border: 0 solid;
-    color: white;
-    background-color: red;
+    border: 0;
+    background-color: transparent;
+    color:gray;
+}
+
+.diceCloseBtn:hover {
+    color: #7a4300;
 }
 
 .diceRollContainer .diceMsg {
-    font-family: "Courier New", sans;
+    font-family: "CaslonAntiqueCyr", "Courier New", sans;
+    color: #7a4300;
+    padding: 5px;
 }

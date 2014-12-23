@@ -8,18 +8,42 @@
     padding: 30px 0;
 }
 
+
+
 .main,.main a {
-    font-size: 16px;
-    font-family: "Courier New", sans;
+    font-family: "CaslonAntiqueCyr","Courier New", sans;
     color: #7a4300;
 }
 
 .main h1 {
-    font-size: 18px;
+    font-family: "Munchkin Cyr", "Courier New", sans;
+    font-size: 1.3em;
     font-weight: bold;
+    /*padding-bottom: 1em;*/
+}
+
+.main h2 {
+    font-family: "Munchkin Cyr", "Courier New", sans;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding-bottom: 0.8em;
+    text-decoration: underline;
+}
+
+.main h3 {
+    font-family: "Munchkin Cyr", "Courier New", sans;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding-bottom: 0.5em;
+}
+
+.main p {
+    padding-bottom: 0.6em;
+    /*text-align: justify;*/
 }
 
 .main {
+    font-size: 1em;
     background-color: #fed19a;
     margin: 0 auto;
     padding: 20px;
@@ -35,9 +59,9 @@
 }
 
 .gamesOnServer th {
-    padding: 0 2%;
+    padding: 0.5% 2%;
     background-color: #7a4300;
-    font-weight: bold;
+    font-family: "Munchkin Cyr", "Courier New", sans;
     color: #fed19a;
 }
 
@@ -60,8 +84,4 @@ hr {
 .enterGameBtn {
     padding: 4px 10px;
     border: 2px solid #7a4300;
-    background-color: #7a4300;
-    font-family: "Courier New", sans;
-    font-weight: bold;
-    color: #fed19a;
 }

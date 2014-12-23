@@ -1,6 +1,6 @@
 input[name='gameName'] {
     font-size: 16px;
-    font-family: "Courier New", sans;
+    font-family: "CaslonAntiqueCyr", "Courier New", sans;
     color: #7a4300;
     background-color: #fffda9;
 }
@@ -8,14 +8,14 @@ input[name='gameName'] {
 input[type='submit'] {
     padding: 4px;
     border: 2px solid #7a4300;
-    background-color: #7a4300;
-    font-family: "Courier New", sans;
-    font-weight: bold;
-    color: #fed19a;
 }
 
 .newGameForm fieldset {
     border: 1px solid #7a4300;
     display: inline;
     padding: 5px;
+}
+
+.newGameForm legend {
+    padding: 1% 0;
 }

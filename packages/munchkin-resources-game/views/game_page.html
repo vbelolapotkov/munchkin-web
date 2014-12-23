@@ -12,18 +12,18 @@
             <div id="sideBarRight" class="sideBarRight">
                 <div id="gameControlsContainer">
                     <ul class="gameControls">
+                        <li><button type="button" id="shuffleDoor" class="btn-default">Перемешать Двери</button></li>
+                        <li><button type="button" id="shuffleTres" class="btn-default">Перемешать Сокр.</button></li>
                         <li>
-                            <button id="rollDice"><img src="/icons/dice.gif" alt="кубик"></button>
+                            <button id="rollDice" class="btn-default">Кубик</button>
                         </li>
-                        <li><button type="button" id="shuffleDoor">Перемешать Двери</button></li>
-                        <li><button type="button" id="shuffleTres">Перемешать Сокр.</button></li>
-                        <!-- <li><button>Чат</button></li> -->
-                        <li><button type="button" id="showLogBtn">Журнал</button></li>
+                        <li><button type="button" id="showLogBtn" class="btn-default {{isActive}}">Журнал</button></li>
                         {{#if isOwner}}
-                            <li><button id="gameEnd">Завершить игру</button></li>
-                            <li><label><input type="checkbox" name="lockTable" id="#lockTableChk">Блокировка</label></li>
+                            <li><button id="gameEnd" class="btn-default">Завершить игру</button></li>
+                            <br>
+                            <li><label><input type="checkbox" name="lockTable" id="#lockTableChk">Заблокировать игру</label></li>
                         {{else}}
-                            <li><button id="leaveGame">Выйти</button></li>
+                            <li><button id="leaveGame" class="btn-default">Выйти</button></li>
                         {{/if}}
 
                     </ul>

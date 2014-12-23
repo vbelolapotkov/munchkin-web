@@ -192,6 +192,9 @@ Template.munchkinGamePage.helpers({
     },
     showLog: function () {
         return isShowingLog.get();
+    },
+    isActive: function () {
+        return isShowingLog.get() && 'active';
     }
 });
 Template.munchkinGamePage.events({

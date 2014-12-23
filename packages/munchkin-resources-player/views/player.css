@@ -20,9 +20,11 @@ ul.itemsTabs > li
     border: 1px solid #666;
     border-radius: 10px 10px 0 0;
     background-color: #ffcc33;
-    padding: 0 0.5%;
+    padding: 0.2% 0.5%;
     min-height: 2.25em;
     vertical-align: top;
+    font-family: "Munchkin Cyr", "Courier New", sans;
+    color: #7a4300;
 }
 
 .kickPlayerBtn {
@@ -76,18 +78,6 @@ ul.itemsTabs li.selected
 }
 
 
-/*.tabs,.playerItemsArea {
-    display: inline-block;
-}
-
-.tabs .tab,.playerItemsArea {
-    border: 1px solid gray;
-    background-color: #ffd484;
-    padding: 2px;
-}
-
-*/
-
 .currentPlayer {
     border: 2px solid gray;
     border-radius: 5px;
@@ -103,11 +93,12 @@ ul.itemsTabs li.selected
     border: 1px solid gray;
     border-radius: 10px;
     padding: 5px;
-    /*overflow: auto;*/
 }
 
 .playerName {
     margin: 0 0.5%;
+    font-family: "CaslonAntiqueCyr", "Courier New", sans;
+    color: #7a4300;
 }
 
 .stats ul {
@@ -117,15 +108,14 @@ ul.itemsTabs li.selected
 .stats li {
     display: inline;
     vertical-align: middle;
-    /*margin-left: 5px;*/
+    font-family: "Munchkin Cyr", "Courier New", sans;
+    color: #7a4300;
 }
 
 .stats .icon {
     width: 1.3em;
     height: 1.3em;
-    vertical-align: text-top;
-    /*border: none;*/
-    /*margin-right: 3px;*/
+    vertical-align: middle;
 }
 
 .statInput {
@@ -136,12 +126,9 @@ ul.itemsTabs li.selected
 }
 
 .decBtn,.incBtn {
-    /*width: 1.3em;
-    height: 1.3em;*/
     background-color: #ffd484;
     border: none;
     padding: 0;
-    /*margin: 0;*/
     font-weight: bold;
     font-size: 1.2em;
 }

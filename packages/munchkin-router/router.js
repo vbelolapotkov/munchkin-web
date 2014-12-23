@@ -25,6 +25,22 @@ Routes.gamePage = {
     },
     onBeforeAction: requireLogin
 };
+
+Routes.about = {
+    path: '/about',
+    template: 'munchkinAbout'
+};
+
+Routes.rules = {
+    path: '/rules',
+    template: 'munchkinRules'
+};
+
+Routes.howToPlay = {
+    path: 'howtoplay',
+    template: 'munchkinHowToPlay'
+};
+
 Router.configure({
     layoutTemplate: 'munchkinLayout',
     loadingTemplate: 'munchkinLoading',
@@ -32,4 +48,7 @@ Router.configure({
 Router.map(function() {
     this.route('munchkinLobby', Routes.lobby);
     this.route('munchkinGamePage', Routes.gamePage);
+    this.route('about', Routes.about);
+    this.route('rules', Routes.rules);
+    this.route('howToPlay', Routes.howToPlay);
 });

@@ -1,11 +1,11 @@
 <template name="munchkinHeader">
     <div class="nav">
-        <img src="/icons/Super-munchkin.png" alt="">
+        <a href="{{pathFor 'munchkinLobby'}}"><img src="/icons/Super-munchkin.png" alt=""></a>
         <div id="manageAccount" class="account">{{> munchkinAccounts}}</div> 
         <ul>
-            <li><a href="#">Об игре</a></li>
-            <li><a href="#">Правила</a></li>
-            <li><a href="#">Шпаргалка</a></li>
+            <li><a href="{{pathFor 'about'}}">Об игре</a></li>
+            <li><a href="{{pathFor 'rules'}}">Правила</a></li>
+            <li><a href="{{pathFor 'howToPlay'}}">Шпаргалка</a></li>
             <li><a href="{{pathFor 'munchkinLobby'}}">Столы</a></li>
         </ul>
     </div>
