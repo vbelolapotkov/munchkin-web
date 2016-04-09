@@ -9,7 +9,7 @@ Package.onUse(function (api) {
 
     api.use('meteor-platform', both);
 
-    
+
 
     var cards = ['supplements/cards1.json',
                  'supplements/cards2.json',
@@ -19,7 +19,7 @@ Package.onUse(function (api) {
                  'supplements/cards7.json',
                  'supplements/cards8.json'];
 
-    api.addFiles(cards, 'server');
+    api.addAssets(cards, 'server');
     api.addFiles('collections.js',both);
     api.addFiles('methods.js', 'client');
     api.addFiles('server.js', 'server');

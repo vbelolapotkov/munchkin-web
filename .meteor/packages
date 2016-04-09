@@ -3,8 +3,22 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
-meteor-platform
 vbelolapotkov:munchkin-app
 vbelolapotkov:munchkin-router
 meteorhacks:kadira
 
+meteor-base
+mobile-experience
+mongo
+blaze-html-templates
+session
+jquery
+tracker
+logging
+reload
+random
+ejson
+spacebars
+check
+standard-minifier-css
+standard-minifier-js
